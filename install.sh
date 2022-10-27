@@ -16,4 +16,4 @@ if [[ ! -d ~/.config ]]; then
     mkdir ~/.config
 fi
 
-stow -v -d ~/dotfiles/tools -t ~ zsh starship tmux neovim wezterm sheldon
+stow -v -d ~/dotfiles/tools -t ~ zsh starship tmux neovim wezterm sheldon scripts
