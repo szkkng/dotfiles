@@ -1,0 +1,19 @@
+[user]
+	name = szkkng
+	email = zukkesukke23@gmail.com
+[init]
+	defaultBranch = main
+[alias]
+	st = status
+	br = branch
+	ci = commit
+	sw = switch
+	last = log -1
+	logol = log --oneline
+[pull]
+	ff = only
+[fetch]
+	prune = true
+[core]
+	autocrlf = input
+	ignorecase = false
