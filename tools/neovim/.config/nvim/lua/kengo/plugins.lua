@@ -52,7 +52,6 @@ return packer.startup(function(use)
   use "rebelot/kanagawa.nvim"
   use 'marko-cerovac/material.nvim'
 
-
   -- cmp plugins
   use "hrsh7th/nvim-cmp" 
   use "hrsh7th/cmp-buffer"
@@ -66,7 +65,7 @@ return packer.startup(function(use)
   use "williamboman/mason.nvim"
   use "williamboman/mason-lspconfig.nvim"
   use "neovim/nvim-lspconfig" 
-  -- use "williamboman/nvim-lsp-installer" 
+  use "glepnir/lspsaga.nvim"
  
   -- snippets
   use "L3MON4D3/LuaSnip"
