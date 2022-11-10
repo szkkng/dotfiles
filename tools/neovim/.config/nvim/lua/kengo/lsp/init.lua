@@ -5,3 +5,4 @@ end
 
 require("kengo.lsp.mason")
 require("kengo.lsp.handlers").setup()
+require("kengo.lsp.lspsaga")
