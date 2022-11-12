@@ -48,9 +48,7 @@ return packer.startup(function(use)
 
   -- themes
   use 'folke/tokyonight.nvim'
-  use 'cocopon/iceberg.vim'
   use "rebelot/kanagawa.nvim"
-  use 'marko-cerovac/material.nvim'
 
   -- cmp plugins
   use "hrsh7th/nvim-cmp" 
