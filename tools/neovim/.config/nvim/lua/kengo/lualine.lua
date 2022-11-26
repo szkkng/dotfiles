@@ -1,14 +1,11 @@
-local custom_iceberg = require'lualine.themes.iceberg_dark'
+local custom_kanagawa = require'lualine.themes.kanagawa'
 
-custom_iceberg.normal.c.bg = nil
--- custom_iceberg.inactive.a.bg = nil
--- custom_iceberg.inactive.b.bg = nil
-custom_iceberg.inactive.c.bg = nil
--- custom_iceberg.normal.b.bg = "1f1f28"
+custom_kanagawa.normal.c.bg = nil
+custom_kanagawa.inactive.c.bg = nil
 
 require('lualine').setup {
   options = {
-    theme = custom_iceberg
+    theme = custom_kanagawa
   },
   tabline = {
     lualine_a = {
