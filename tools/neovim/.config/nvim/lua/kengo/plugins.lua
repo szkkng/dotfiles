@@ -71,14 +71,10 @@ return packer.startup(function(use)
   use 'windwp/nvim-autopairs'
   use 'tpope/vim-commentary'
   use 'ur4ltz/surround.nvim'
-
   use 'JoosepAlviste/nvim-ts-context-commentstring'
   use 'nvim-lualine/lualine.nvim'
   use 'nvim-telescope/telescope.nvim'
-  use "akinsho/toggleterm.nvim"
-  use 'kyazdani42/nvim-tree.lua'
-
-  use 'TimUntersberger/neogit'
+  use "nvim-telescope/telescope-file-browser.nvim"
   use 'lewis6991/gitsigns.nvim'
   use 'sindrets/diffview.nvim'
   use 'norcalli/nvim-colorizer.lua'
