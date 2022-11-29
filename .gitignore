@@ -1,1 +1,5 @@
 tools/neovim/.config/nvim/plugin
+tools/fish/.config/fish/**
+!tools/fish/.config/fish/config.fish
+!tools/fish/.config/fish/conf.d/kanagawa.fish
+!tools/fish/.config/fish/fish_plugins
