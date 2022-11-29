@@ -31,6 +31,6 @@ return {
   window_background_opacity = 0.85,
   window_decorations = "RESIZE",
   enable_tab_bar = false,
-  default_prog = { '/bin/zsh', '-l', '-c', "tmux a -t 0 || tmux" },
+  default_prog = { '/opt/homebrew/bin/fish', '-l', '-c', "tmux a -t 0 || tmux" },
 
 }
