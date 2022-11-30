@@ -1,0 +1,65 @@
+""" Editing and Reloading .ideavimrc
+nnoremap \e :e ~/.ideavimrc<CR>
+nnoremap \r :action IdeaVim.ReloadVimRc.reload<CR>
+
+""" Options
+set ideajoin
+set clipboard+=unnamed
+set number
+set relativenumber
+set ignorecase
+set smartcase
+set incsearch
+set hlsearch
+
+""" Plugins
+set surround
+set commentary
+set highlightedyank
+
+""" Key Mappings
+let mapleader=" "
+
+inoremap jj <esc>
+
+nnoremap <leader>x :noh<CR>
+nnoremap <leader>w :w<CR>
+nnoremap <C-s> :%s/
+nnoremap - <C-x>
+nnoremap + <C-a>
+
+" Collapse/Expand
+nnoremap zh :action CollapseRegion<CR>
+nnoremap zl :action ExpandRegion<CR>
+nnoremap <leader>zh :action CollapseAllRegions<CR>
+nnoremap <leader>zl :action ExpandAllRegions<CR>
+
+" Navigation
+nnoremap <C-\> :action SplitVertically<CR>
+nnoremap <C--> :action SplitHorizontally<CR>
+nnoremap <C-=> :action Unsplit<CR>
+nnoremap <C-m> :action MoveEditorToOppositeTabGroup<CR>
+nnoremap <C-h> <C-w>h
+nnoremap <C-l> <C-w>l
+nnoremap <C-j> <C-w>j
+nnoremap <C-k> <C-w>k
+nnoremap th :action PreviousTab<CR>
+nnoremap tl :action NextTab<CR>
+
+" GoTo*
+nnoremap gc :action GotoClass<CR>
+nnoremap gi :action GotoImplementation<CR>
+nnoremap gd :action GotToDeclaration<CR>
+nnoremap gp :action GotToSuperMethod<CR>
+nnoremap gt :action GotoTest<CR>
+nnoremap ge :action GotoNextError<CR>
+nnoremap gE :action GotoPreviousError<CR>
+nnoremap gb :action Back<CR>
+nnoremap gf :action Forward<CR>
+
+" Terminal
+nnoremap <c-t> :action ActivateTerminalToolWindow<CR>
+nnoremap <leader>t :action Terminal.OpenInTerminal<CR>
+
+" Zen Mode
+nnoremap <leader>zm :action ToggleZenMode<CR>
