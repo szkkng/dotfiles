@@ -14,7 +14,6 @@ set hlsearch
 
 """ Plugins
 set surround
-set commentary
 set highlightedyank
 
 """ Key Mappings
@@ -46,16 +45,16 @@ nnoremap <C-k> <C-w>k
 nnoremap th :action PreviousTab<CR>
 nnoremap tl :action NextTab<CR>
 
-" GoTo*
+" Goto*
 nnoremap gc :action GotoClass<CR>
 nnoremap gi :action GotoImplementation<CR>
-nnoremap gd :action GotToDeclaration<CR>
-nnoremap gp :action GotToSuperMethod<CR>
+nnoremap gd :action GotoDeclaration<CR>
+nnoremap gp :action GotoSuperMethod<CR>
 nnoremap gt :action GotoTest<CR>
 nnoremap ge :action GotoNextError<CR>
 nnoremap gE :action GotoPreviousError<CR>
-nnoremap gb :action Back<CR>
 nnoremap gf :action Forward<CR>
+nnoremap gb :action Back<CR>
 
 " Terminal
 nnoremap <c-t> :action ActivateTerminalToolWindow<CR>
