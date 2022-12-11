@@ -51,20 +51,20 @@ return packer.startup(function(use)
   use "rebelot/kanagawa.nvim"
 
   -- cmp plugins
-  use "hrsh7th/nvim-cmp" 
+  use "hrsh7th/nvim-cmp"
   use "hrsh7th/cmp-buffer"
   use "hrsh7th/cmp-path"
   use "hrsh7th/cmp-cmdline"
-  use "saadparwaiz1/cmp_luasnip" 
+  use "saadparwaiz1/cmp_luasnip"
   use "hrsh7th/cmp-nvim-lsp"
   use "hrsh7th/cmp-nvim-lua"
 
   -- LSP
   use "williamboman/mason.nvim"
   use "williamboman/mason-lspconfig.nvim"
-  use "neovim/nvim-lspconfig" 
+  use "neovim/nvim-lspconfig"
   use "glepnir/lspsaga.nvim"
- 
+
   -- snippets
   use "L3MON4D3/LuaSnip"
 
@@ -80,6 +80,7 @@ return packer.startup(function(use)
   use 'norcalli/nvim-colorizer.lua'
   use 'zsugabubus/crazy8.nvim'
   use 'lukas-reineke/indent-blankline.nvim'
+  use "akinsho/toggleterm.nvim"
 
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins
