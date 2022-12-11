@@ -34,4 +34,9 @@ keymap('n', 'th', ':tabprev<CR>', opts)
 keymap('n', 'to', ':tabo<CR>', opts)
 
 -- Terminal --
-keymap('n', '<leader>te', ':!tmux split-window -v -p 30<CR> :!tmux send-keys -t 1 run.sh Enter<CR><CR>', opts)
+keymap('t', '<esc>', [[<C-\><C-n>]], opts)
+keymap('t', 'jk', [[<C-\><C-n>]], opts)
+keymap('n', '<leader>to', ':ToggleTerm<CR>', opts)
+keymap('n', '<leader>te', ':TermExec cmd="run.sh"<CR>', opts)
+-- keymap('n', '<leader>te', ':!tmux split-window -v -p 30<CR> :!tmux send-keys -t 1 run.sh Enter<CR><CR>', opts)
+
