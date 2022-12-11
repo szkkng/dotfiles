@@ -16,6 +16,7 @@ balias bb "BinaryBuilder"
 balias cat "bat"
 balias less "bat"
 balias vi "nvim"
+balias nv "neovide --frame buttonless --maximized"
 balias dev "dev.sh"
 
 starship init fish | source
