@@ -79,6 +79,7 @@ return packer.startup(function(use)
   use 'norcalli/nvim-colorizer.lua'
   use 'lukas-reineke/indent-blankline.nvim'
   use "akinsho/toggleterm.nvim"
+  use 'akinsho/bufferline.nvim'
 
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins

@@ -12,13 +12,13 @@ lualine.setup {
   options = {
     theme = custom_kanagawa
   },
-  tabline = {
-    lualine_a = {
-      {
-        'tabs',
-        mode = 1,
-      }
-    },
-    lualine_z = {'tabs'},
-  }
+  -- tabline = {
+  --   lualine_a = {
+  --     {
+  --       'tabs',
+  --       mode = 1,
+  --     }
+  --   },
+  --   lualine_z = {'tabs'},
+  -- }
 }
