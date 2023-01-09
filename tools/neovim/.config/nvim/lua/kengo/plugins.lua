@@ -80,6 +80,7 @@ return packer.startup(function(use)
   use 'lukas-reineke/indent-blankline.nvim'
   use "akinsho/toggleterm.nvim"
   use 'akinsho/bufferline.nvim'
+  use 'mrjones2014/nvim-ts-rainbow'
 
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins
