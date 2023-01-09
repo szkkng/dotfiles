@@ -7,9 +7,4 @@ bufferline.setup {
   options = {
     mode = "tabs",
   },
-  highlights = {
-    fill = {
-      bg = '#1F1F28'
-    }
-  }
 }
