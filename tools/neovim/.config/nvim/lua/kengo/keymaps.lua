@@ -40,6 +40,14 @@ keymap('n', '<leader>to', ':ToggleTerm<CR>', opts)
 keymap('n', '<leader>te', ':TermExec cmd="run.sh"<CR>', opts)
 -- keymap('n', '<leader>te', ':!tmux split-window -v -p 30<CR> :!tmux send-keys -t 1 run.sh Enter<CR><CR>', opts)
 
+-- Trouble --
+keymap('n', "<leader>xx", "<cmd>TroubleToggle<cr>", opts)
+keymap('n', "<leader>xw", "<cmd>TroubleToggle workspace_diagnostics<cr>", opts)
+keymap('n', "<leader>xd", "<cmd>TroubleToggle document_diagnostics<cr>", opts)
+keymap('n', "<leader>xl", "<cmd>TroubleToggle loclist<cr>", opts)
+keymap('n', "<leader>xq", "<cmd>TroubleToggle quickfix<cr>", opts)
+keymap('n', "gR", "<cmd>TroubleToggle lsp_references<cr>", opts)
+
 -- Neovide --
 vim.g.neovide_input_use_logo = 1
 keymap('', '<D-v>', '+p<CR>', opts)
