@@ -5,14 +5,16 @@ end
 
 ts.setup {
   ensure_installed = { "c", "cpp", "lua" },
-  context_commentstring = {
-    enable = true
-  },
   highlight = {
     enable = true,
-    disable = { "lua" }
+    disable = { "lua" },
   },
   indent = {
     enable = true
-  }
+  },
+  rainbow = {
+    enable = true,
+    extended_mode = true,
+    max_file_lines = nil,
+  },
 }
