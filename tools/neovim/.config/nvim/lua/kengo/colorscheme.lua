@@ -3,9 +3,10 @@ if not status_ok then
   return
 end
 
-tokyonight.setup({
-  style = "moon",
-  transparent = true,
+-- Default options:
+require('kanagawa').setup({
+    transparent = true, 
 })
 
-vim.cmd[[colorscheme tokyonight]]
+-- setup must be called before loading
+vim.cmd("colorscheme kanagawa")
