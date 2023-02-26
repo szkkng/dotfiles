@@ -1,30 +1,36 @@
 local wezterm = require 'wezterm';
 
 return {
-
-  force_reverse_video_cursor = true,
-
-  colors = {
-    foreground = "#c8d3f5",
-    background = "#222436",
-    cursor_bg = "#c8d3f5",
-    cursor_border = "#c8d3f5",
-    cursor_fg = "#222436",
-    selection_bg = "#3654a7",
-    selection_fg = "#c8d3f5",
-
-    ansi = { "#1b1d2b", "#ff757f", "#c3e88d", "#ffc777", "#82aaff", "#c099ff", "#86e1fc", "#828bb8" },
-    brights = { "#444a73", "#ff757f", "#c3e88d", "#ffc777", "#82aaff", "#c099ff", "#86e1fc", "#c8d3f5" },
-  },
-
   font = wezterm.font ("FiraCode Nerd Font"),
   font_size = 14,
 
   tab_bar_at_bottom = true,
 
-  window_background_opacity = 0.85,
+  window_background_opacity = 0.92,
   window_decorations = "RESIZE",
   enable_tab_bar = false,
   default_prog = { '/opt/homebrew/bin/fish', '-l', '-c', "tmux a -t 0 || tmux" },
 
+  -- Copyright (c) 2021 Tommaso Laurenzi
+  -- Released under the MIT license.
+  -- https://github.com/rebelot/kanagawa.nvim/blob/master/LICENSE
+  force_reverse_video_cursor = true,
+  colors = {
+    foreground = "#dcd7ba",
+    background = "#1f1f28",
+
+    cursor_bg = "#c8c093",
+    cursor_fg = "#c8c093",
+    cursor_border = "#c8c093",
+
+    selection_fg = "#c8c093",
+    selection_bg = "#2d4f67",
+
+    scrollbar_thumb = "#16161d",
+    split = "#16161d",
+
+    ansi = { "#090618", "#c34043", "#76946a", "#c0a36e", "#7e9cd8", "#957fb8", "#6a9589", "#c8c093" },
+    brights = { "#727169", "#e82424", "#98bb6c", "#e6c384", "#7fb4ca", "#938aa9", "#7aa89f", "#dcd7ba" },
+    indexed = { [16] = "#ffa066", [17] = "#ff5d62" },
+  },
 }
