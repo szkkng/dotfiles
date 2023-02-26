@@ -1,7 +1,9 @@
-local keymap = vim.keymap.set
-local saga = require('lspsaga')
+local status_ok, saga = pcall(require, "lspsaga")
+if not status_ok then
+  return
+end
 
-saga.init_lsp_saga({
+saga.setup({
     -- Options with default value
     -- "single" | "double" | "rounded" | "bold" | "plus"
     border_style = "rounded",
@@ -107,6 +109,8 @@ saga.init_lsp_saga({
     -- like server_filetype_map = { metals = { "sbt", "scala" } }
     server_filetype_map = {},
 })
+
+local keymap = vim.keymap.set
 
 -- Lsp finder find the symbol definition implement reference
 -- if there is no implement it will hide
