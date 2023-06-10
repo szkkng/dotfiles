@@ -1,4 +1,5 @@
 local wezterm = require 'wezterm';
+local act = wezterm.action;
 
 local SOLID_LEFT_ARROW = utf8.char(0x2590)
 local SOLID_RIGHT_ARROW = utf8.char(0x258c)
@@ -66,6 +67,17 @@ return {
     right = 0,
     top = 0,
     bottom = 0,
+  },
+
+  leader = { key = "j", mods = "CTRL", timeout_milliseconds = 1000 },
+  keys = {
+    { key = '-', mods = 'LEADER', action = act.SplitVertical { domain = 'CurrentPaneDomain' } },
+    { key = '|', mods = 'LEADER', action = act.SplitHorizontal { domain = 'CurrentPaneDomain' } },
+    { key = 'h', mods = 'LEADER', action = act.ActivatePaneDirection 'Left' },
+    { key = 'l', mods = 'LEADER', action = act.ActivatePaneDirection 'Right' },
+    { key = 'k', mods = 'LEADER', action = act.ActivatePaneDirection 'Up' },
+    { key = 'j', mods = 'LEADER', action = act.ActivatePaneDirection 'Down' },
+    { key = 'L', mods = 'LEADER', action = act.ShowDebugOverlay },
   },
 
   -- Copyright (c) 2021 Tommaso Laurenzi
