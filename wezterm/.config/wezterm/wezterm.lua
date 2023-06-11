@@ -59,6 +59,7 @@ return {
   show_new_tab_button_in_tab_bar = false,
   tab_max_width = 50,
 
+  adjust_window_size_when_changing_font_size = false,
   window_close_confirmation = "NeverPrompt",
   window_background_opacity = 0.9,
   window_decorations = "RESIZE",
