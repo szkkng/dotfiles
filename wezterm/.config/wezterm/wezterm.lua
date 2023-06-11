@@ -51,7 +51,7 @@ wezterm.on(
 return {
   default_prog = { '/opt/homebrew/bin/fish', '-l' },
   font = wezterm.font ("FiraCode Nerd Font"),
-  font_size = 12,
+  font_size = 14,
   line_height = 1.2,
 
   use_fancy_tab_bar = false,
