@@ -1,4 +1,5 @@
 local wezterm = require 'wezterm';
+local scheme, _ = wezterm.color.load_scheme(os.getenv("HOME") .. '/.config/wezterm/colors/kanagawa.toml')
 local act = wezterm.action;
 
 local SOLID_LEFT_ARROW = utf8.char(0x2590)
@@ -17,11 +18,11 @@ end
 wezterm.on(
   'format-tab-title',
   function(tab, tabs, panes, config, hover, max_width)
-    local background = '#1f1f28'
-    local foreground = '#727169'
+    local background = scheme.background
+    local foreground = scheme.brights[1]
 
     if tab.is_active then
-      foreground = '#dcd7ba'
+      foreground = scheme.foreground
       background = '#2a2a37'
     end
 
@@ -54,6 +55,13 @@ return {
   font_size = 14,
   line_height = 1.2,
 
+  color_scheme = 'kanagawa',
+  colors = {
+    tab_bar = {
+      background = scheme.background,
+    },
+  },
+
   use_fancy_tab_bar = false,
   hide_tab_bar_if_only_one_tab = true,
   show_new_tab_button_in_tab_bar = false,
@@ -79,32 +87,5 @@ return {
     { key = 'k', mods = 'LEADER', action = act.ActivatePaneDirection 'Up' },
     { key = 'j', mods = 'LEADER', action = act.ActivatePaneDirection 'Down' },
     { key = 'L', mods = 'LEADER', action = act.ShowDebugOverlay },
-  },
-
-  -- Copyright (c) 2021 Tommaso Laurenzi
-  -- Released under the MIT license.
-  -- https://github.com/rebelot/kanagawa.nvim/blob/master/LICENSE
-  force_reverse_video_cursor = true,
-  colors = {
-    foreground = "#dcd7ba",
-    background = "#1f1f28",
-
-    cursor_bg = "#c8c093",
-    cursor_fg = "#c8c093",
-    cursor_border = "#c8c093",
-
-    selection_fg = "#c8c093",
-    selection_bg = "#2d4f67",
-
-    tab_bar = {
-      background = '#1f1f28'
-    },
-
-    scrollbar_thumb = "#16161d",
-    split = "#16161d",
-
-    ansi = { "#090618", "#c34043", "#76946a", "#c0a36e", "#7e9cd8", "#957fb8", "#6a9589", "#c8c093" },
-    brights = { "#727169", "#e82424", "#98bb6c", "#e6c384", "#7fb4ca", "#938aa9", "#7aa89f", "#dcd7ba" },
-    indexed = { [16] = "#ffa066", [17] = "#ff5d62" },
   },
 }
