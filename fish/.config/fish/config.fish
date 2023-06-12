@@ -9,15 +9,13 @@ end
 
 balias ls "exa"
 balias ll "exa -l --git"
-balias t "tmux"
-balias ta "tmux a"
-balias cdj "cd ~/vst-dev/"
-balias bb "BinaryBuilder"
+balias cdv "cd $HOME/vst-dev/"
+balias cdw "cd $HOME/web-dev/"
 balias cat "bat"
 balias less "bat"
 balias vi "nvim"
-balias nv "neovide --frame buttonless --maximized"
-balias dev "dev.sh"
+balias cl "clion"
+balias ws "webstorm"
 
 starship init fish | source
 set -gx VOLTA_HOME "$HOME/.volta"
