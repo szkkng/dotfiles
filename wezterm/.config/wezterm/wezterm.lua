@@ -32,6 +32,8 @@ return {
     bottom = 5,
   },
 
+  scrollback_lines = 1000,
+
   leader = { key = "j", mods = "CTRL", timeout_milliseconds = 1000 },
   keys = {
     { key = '-', mods = 'LEADER', action = act.SplitVertical { domain = 'CurrentPaneDomain' } },
