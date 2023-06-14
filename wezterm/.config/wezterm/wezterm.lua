@@ -3,6 +3,27 @@ local scheme, _ = wezterm.color.load_scheme(os.getenv("HOME") .. '/.config/wezte
 local act = wezterm.action;
 require 'on'
 
+local copy_mode = nil
+if wezterm.gui then
+  copy_mode = wezterm.gui.default_key_tables().copy_mode
+  local my_copy_mode = {
+    { key='/', mods='NONE', action=act.Search { CaseSensitiveString='' } },
+    { key='n', mods='NONE', action=act.CopyMode 'NextMatch' },
+    { key='N', mods='NONE', action=act.CopyMode 'PriorMatch' },
+    {
+      key = 'Enter',
+      mods = 'NONE',
+      action = act.Multiple {
+        { CopyTo = 'ClipboardAndPrimarySelection' },
+        { CopyMode = 'Close' },
+      },
+    },
+  }
+  for _, val in ipairs(my_copy_mode) do
+    table.insert(copy_mode, val)
+  end
+end
+
 return {
   default_prog = { '/opt/homebrew/bin/fish', '-l' },
   font = wezterm.font ("FiraCode Nerd Font"),
@@ -43,5 +64,9 @@ return {
     { key = 'k', mods = 'LEADER', action = act.ActivatePaneDirection 'Up' },
     { key = 'j', mods = 'LEADER', action = act.ActivatePaneDirection 'Down' },
     { key = 'L', mods = 'LEADER', action = act.ShowDebugOverlay },
+    { key = 'C', mods = 'LEADER', action = act.ActivateCopyMode },
+  },
+  key_tables = {
+    copy_mode = copy_mode,
   },
 }
