@@ -4,6 +4,7 @@ local act = wezterm.action;
 require 'on'
 
 local copy_mode = nil
+local search_mode = nil
 if wezterm.gui then
   copy_mode = wezterm.gui.default_key_tables().copy_mode
   local my_copy_mode = {
@@ -21,6 +22,14 @@ if wezterm.gui then
   }
   for _, val in ipairs(my_copy_mode) do
     table.insert(copy_mode, val)
+  end
+
+  search_mode = wezterm.gui.default_key_tables().search_mode
+  local my_search_mode = {
+    { key="Enter", mods="NONE", action="ActivateCopyMode" },
+  }
+  for _, val in ipairs(my_search_mode) do
+    table.insert(search_mode, val)
   end
 end
 
@@ -68,5 +77,6 @@ return {
   },
   key_tables = {
     copy_mode = copy_mode,
+    search_mode = search_mode,
   },
 }
