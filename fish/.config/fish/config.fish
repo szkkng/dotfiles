@@ -16,6 +16,7 @@ balias less "bat"
 balias vi "nvim"
 balias cl "clion"
 balias ws "webstorm"
+balias sb "supabase"
 
 starship init fish | source
 set -gx VOLTA_HOME "$HOME/.volta"
