@@ -16,7 +16,7 @@ balias less "bat"
 balias vi "nvim"
 balias cl "clion"
 balias ws "webstorm"
-balias sb "supabase"
+balias supa "supabase"
 balias devch "/Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrome --user-data-dir=~/.chrome-disable-web-security --disable-web-security"
 
 starship init fish | source
