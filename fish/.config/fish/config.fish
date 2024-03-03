@@ -7,8 +7,8 @@ function fish_user_key_bindings
   bind \cr 'peco_select_history (commandline -b)'
 end
 
-balias ls "exa"
-balias ll "exa -l --git"
+balias ls "eza"
+balias ll "eza -l --git"
 balias cdv "cd $HOME/vst-dev/"
 balias cdw "cd $HOME/web-dev/"
 balias cat "bat"
