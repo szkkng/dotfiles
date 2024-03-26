@@ -1,7 +1,5 @@
 tap "homebrew/bundle"
-tap "homebrew/cask"
 tap "homebrew/cask-fonts"
-tap "homebrew/core"
 tap "homebrew/services"
 brew "bat"
 brew "ccache"
@@ -28,6 +26,7 @@ brew "doxygen"
 brew "graphviz"
 brew "jq"
 brew "gnu-sed"
+brew "supabase/tap/supabase"
 cask "ngrok/ngrok/ngrok"
 cask "font-fira-code-nerd-font"
 cask "keycastr"
@@ -37,3 +36,4 @@ mas "LINE", id: 539883307
 mas "Logic Pro", id: 634148309
 mas "Magnet", id: 441258766
 mas "Spark", id: 1176895641
+mas "Klack", id: 6446206067
