@@ -1,17 +1,24 @@
-require('kengo.options')
-require('kengo.keymaps')
-require('kengo.colorscheme')
-require('kengo.plugins')
-require('kengo.gitsigns')
-require('kengo.telescope')
-require('kengo.lualine')
-require('kengo.autopairs')
-require('kengo.treesitter')
-require('kengo.surround')
-require('kengo.cmp')
-require('kengo.lsp')
-require('kengo.colorizer')
-require('kengo.blankline')
-require('kengo.toggleterm')
-require('kengo.bufferline')
-require('kengo.trouble')
+require "user.launch"
+require "user.options"
+require "user.keymaps"
+require "user.autocmds"
+spec "user.autopairs"
+spec "user.colorscheme"
+spec "user.devicons"
+spec "user.treesitter"
+spec "user.mason"
+spec "user.lspconfig"
+spec "user.lspsaga"
+spec "user.cmp"
+spec "user.gitsigns"
+spec "user.telescope"
+spec "user.none-ls"
+spec "user.whichkey"
+spec "user.nvimtree"
+spec "user.comment"
+spec "user.hlchunk"
+spec "user.lualine"
+spec "user.fidget"
+spec "user.ufo"
+spec "user.copilot"
+require "user.lazy"
