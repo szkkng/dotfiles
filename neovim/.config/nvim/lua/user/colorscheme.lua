@@ -1,11 +1,11 @@
 local M = {
-  "catppuccin/nvim",
+  "rebelot/kanagawa.nvim",
   lazy = false,
   priority = 1000,
 }
 
 function M.config()
-  vim.cmd.colorscheme "catppuccin"
+  vim.cmd.colorscheme "kanagawa"
 end
 
 return M
