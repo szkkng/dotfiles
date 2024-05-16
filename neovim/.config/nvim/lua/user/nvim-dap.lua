@@ -3,25 +3,10 @@ local M = {
 }
 
 function M.config()
-  local dap = require "dap"
-  dap.adapters.lldb = {
-    type = "executable",
-    command = "/opt/homebrew/Cellar/llvm/18.1.5/bin/lldb-dap",
-    name = "lldb",
-  }
-  dap.configurations.cpp = {
-    {
-      name = "Launch",
-      type = "lldb",
-      request = "launch",
-      program = function()
-        return vim.fn.input("Path to executable: ", vim.fn.getcwd() .. "/", "file")
-      end,
-      cwd = "${workspaceFolder}",
-      stopOnEntry = true,
-      args = {},
-      runInTerminal = false,
-    },
+  local wk = require "which-key"
+  wk.register {
+    ["<leader>db"] = { "<cmd>DapToggleBreakpoint<cr>", "Add breakpoint at line" },
+    ["<leader>dr"] = { "<cmd>DapContinue<cr>", "Start or continue the debugger" },
   }
 end
 
