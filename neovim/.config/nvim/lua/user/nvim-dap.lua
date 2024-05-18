@@ -7,6 +7,7 @@ function M.config()
   wk.register {
     ["<leader>db"] = { "<cmd>DapToggleBreakpoint<cr>", "Add breakpoint at line" },
     ["<leader>dr"] = { "<cmd>DapContinue<cr>", "Start or continue the debugger" },
+    ["<leader>dt"] = { "<cmd>DapTerminate<cr>", "Terminate the debug session" },
   }
 end
 
