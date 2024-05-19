@@ -11,3 +11,11 @@ vim.api.nvim_create_autocmd("BufWritePre", {
     vim.lsp.buf.format { async = false }
   end,
 })
+
+vim.api.nvim_create_autocmd({ "FileType" }, {
+  desc = "Force commentstring to include spaces",
+  callback = function(event)
+    local cs = vim.bo[event.buf].commentstring
+    vim.bo[event.buf].commentstring = cs:gsub("(%S)%%s", "%1 %%s"):gsub("%%s(%S)", "%%s %1")
+  end,
+})
