@@ -46,19 +46,14 @@ nnoremap <C-j> <C-w>j
 nnoremap <C-k> <C-w>k
 
 " Goto*
-nnoremap gc <Action>(GotoClass)
-nnoremap gi <Action>(GotoImplementation)
-nnoremap gd <Action>(GotoDeclaration)
-nnoremap gp <Action>(GotoSuperMethod)
-nnoremap gt <Action>(GotoTest)
-nnoremap ge <Action>(GotoNextError)
-nnoremap gE <Action>(GotoPreviousError)
-nnoremap gf <Action>(Forward)
-nnoremap gb <Action>(Back)
-
-" Terminal
-nmap <c-t> <Action>(ActivateTerminalToolWindow)
-nmap <leader>t <Action>(Terminal.OpenInTerminal)
+nmap gi <Action>(GotoImplementation)
+nmap gd <Action>(GotoDeclaration)
+nmap gp <Action>(GotoSuperMethod)
+nmap gt <Action>(GotoTest)
+nmap ge <Action>(GotoNextError)
+nmap gE <Action>(GotoPreviousError)
+nmap gf <Action>(Forward)
+nmap gb <Action>(Back)
 
 " Zen Mode
 nmap <leader>zm <Action>(ToggleZenMode)
