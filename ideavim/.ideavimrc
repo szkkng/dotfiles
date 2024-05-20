@@ -1,6 +1,6 @@
 """ Editing and Reloading .ideavimrc
 nnoremap \e :e ~/.ideavimrc<CR>
-nnoremap \r :action IdeaVim.ReloadVimRc.reload<CR>
+nmap \r <Action>(IdeaVim.ReloadVimRc.reload)
 
 """ Options
 set ideajoin
@@ -28,37 +28,37 @@ nnoremap - <C-x>
 nnoremap + <C-a>
 
 " Collapse/Expand
-nnoremap zh :action CollapseRegion<CR>
-nnoremap zl :action ExpandRegion<CR>
-nnoremap <leader>zh :action CollapseAllRegions<CR>
-nnoremap <leader>zl :action ExpandAllRegions<CR>
+nmap zh <Action>(CollapseRegion)
+nmap zl <Action>(ExpandRegion)
+nmap <leader>zh <Action>(CollapseAllRegions)
+nmap <leader>zl <Action>(ExpandAllRegions)
 
 " Navigation
-nnoremap <C-\> :action SplitVertically<CR>
-nnoremap <C--> :action SplitHorizontally<CR>
-nnoremap <C-=> :action Unsplit<CR>
-nnoremap <C-m> :action MoveEditorToOppositeTabGroup<CR>
+nmap <C-\> <Action>(SplitVertically)
+nmap <C--> <Action>(SplitHorizontally)
+nmap <C-=> <Action>(Unsplit)
+nmap <C-m> <Action>(MoveEditorToOppositeTabGroup)
+nmap th <Action>(PreviousTab)
+nmap tl <Action>(NextTab)
 nnoremap <C-h> <C-w>h
 nnoremap <C-l> <C-w>l
 nnoremap <C-j> <C-w>j
 nnoremap <C-k> <C-w>k
-nnoremap th :action PreviousTab<CR>
-nnoremap tl :action NextTab<CR>
 
 " Goto*
-nnoremap gc :action GotoClass<CR>
-nnoremap gi :action GotoImplementation<CR>
-nnoremap gd :action GotoDeclaration<CR>
-nnoremap gp :action GotoSuperMethod<CR>
-nnoremap gt :action GotoTest<CR>
-nnoremap ge :action GotoNextError<CR>
-nnoremap gE :action GotoPreviousError<CR>
-nnoremap gf :action Forward<CR>
-nnoremap gb :action Back<CR>
+nnoremap gc <Action>(GotoClass)
+nnoremap gi <Action>(GotoImplementation)
+nnoremap gd <Action>(GotoDeclaration)
+nnoremap gp <Action>(GotoSuperMethod)
+nnoremap gt <Action>(GotoTest)
+nnoremap ge <Action>(GotoNextError)
+nnoremap gE <Action>(GotoPreviousError)
+nnoremap gf <Action>(Forward)
+nnoremap gb <Action>(Back)
 
 " Terminal
-nnoremap <c-t> :action ActivateTerminalToolWindow<CR>
-nnoremap <leader>t :action Terminal.OpenInTerminal<CR>
+nmap <c-t> <Action>(ActivateTerminalToolWindow)
+nmap <leader>t <Action>(Terminal.OpenInTerminal)
 
 " Zen Mode
-nnoremap <leader>zm :action ToggleZenMode<CR>
+nmap <leader>zm <Action>(ToggleZenMode)
