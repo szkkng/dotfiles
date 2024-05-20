@@ -26,6 +26,8 @@ nnoremap <leader>w :w<CR>
 nnoremap <C-s> :%s/
 nnoremap - <C-x>
 nnoremap + <C-a>
+nmap <leader>r <Action>(Run)
+nmap <leader>q <Action>(Stop)
 
 " Collapse/Expand
 nmap zh <Action>(CollapseRegion)
@@ -34,16 +36,14 @@ nmap <leader>zh <Action>(CollapseAllRegions)
 nmap <leader>zl <Action>(ExpandAllRegions)
 
 " Navigation
-nmap <C-\> <Action>(SplitVertically)
-nmap <C--> <Action>(SplitHorizontally)
-nmap <C-=> <Action>(Unsplit)
-nmap <C-m> <Action>(MoveEditorToOppositeTabGroup)
-nmap th <Action>(PreviousTab)
-nmap tl <Action>(NextTab)
 nnoremap <C-h> <C-w>h
 nnoremap <C-l> <C-w>l
 nnoremap <C-j> <C-w>j
 nnoremap <C-k> <C-w>k
+nmap <leader>wv <Action>(MoveTabRight) " SplitVertically
+nmap <leader>wc <Action>(Unsplit)
+nmap <leader>wo <Action>(MoveEditorToOppositeTabGroup)
+nmap <leader>wm <Action>(MaximizeEditorInSplit)
 
 " Goto*
 nmap gi <Action>(GotoImplementation)
@@ -52,8 +52,12 @@ nmap gp <Action>(GotoSuperMethod)
 nmap gt <Action>(GotoTest)
 nmap ge <Action>(GotoNextError)
 nmap gE <Action>(GotoPreviousError)
-nmap gf <Action>(Forward)
-nmap gb <Action>(Back)
+nmap gc <Action>(VcsShowNextChangeMarker)
+nmap gC <Action>(VcsShowPrevChangeMarker)
+
+" Debug
+nmap <leader>dr <Action>(Debug)
+nmap <leader>db <Action>(ToggleLineBreakpoint)
 
 " Zen Mode
 nmap <leader>zm <Action>(ToggleZenMode)
