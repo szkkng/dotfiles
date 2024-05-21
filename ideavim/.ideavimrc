@@ -34,10 +34,10 @@ nmap <leader>zh <Action>(CollapseAllRegions)
 nmap <leader>zl <Action>(ExpandAllRegions)
 
 " Navigation
-nnoremap <C-h> <C-w>h
-nnoremap <C-l> <C-w>l
-nnoremap <C-j> <C-w>j
-nnoremap <C-k> <C-w>k
+nnoremap <M-h> <C-w>h
+nnoremap <M-l> <C-w>l
+nnoremap <M-j> <C-w>j
+nnoremap <M-k> <C-w>k
 nmap <leader>wv <Action>(MoveTabRight) " SplitVertically
 nmap <leader>wc <Action>(Unsplit)
 nmap <leader>wo <Action>(MoveEditorToOppositeTabGroup)
@@ -58,7 +58,13 @@ nmap <leader>dr <Action>(Debug)
 nmap <leader>db <Action>(ToggleLineBreakpoint)
 
 " Refactor
-nmap <leader>re :action RenameElement<CR>
+nmap <leader>re <Action>(RenameElement)
+
+" Search
+nmap <leader>ff <Action>(GotoFile)
+nmap <leader>fc <Action>(GotoClass)
+nmap <leader>ft <Action>(FindInPath)
+nmap <leader>fr <Action>(RecentFiles)
 
 " Zen Mode
 nmap <leader>zm <Action>(ToggleZenMode)
