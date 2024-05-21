@@ -19,8 +19,6 @@ set highlightedyank
 """ Key Mappings
 let mapleader=" "
 
-inoremap jj <esc>
-
 nnoremap <leader>x :noh<CR>
 nnoremap <leader>w :w<CR>
 nnoremap <C-s> :%s/
@@ -58,6 +56,9 @@ nmap gC <Action>(VcsShowPrevChangeMarker)
 " Debug
 nmap <leader>dr <Action>(Debug)
 nmap <leader>db <Action>(ToggleLineBreakpoint)
+
+" Refactor
+nmap <leader>re :action RenameElement<CR>
 
 " Zen Mode
 nmap <leader>zm <Action>(ToggleZenMode)
