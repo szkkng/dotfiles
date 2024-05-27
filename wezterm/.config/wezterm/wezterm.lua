@@ -40,6 +40,7 @@ return {
   line_height = 1.2,
 
   color_scheme = 'kanagawa',
+  force_reverse_video_cursor = true,
   colors = {
     tab_bar = {
       background = scheme.background,
