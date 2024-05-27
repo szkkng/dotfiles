@@ -38,10 +38,10 @@ nnoremap <M-h> <C-w>h
 nnoremap <M-l> <C-w>l
 nnoremap <M-j> <C-w>j
 nnoremap <M-k> <C-w>k
-nmap <leader>wv <Action>(MoveTabRight) " SplitVertically
-nmap <leader>wc <Action>(Unsplit)
-nmap <leader>wo <Action>(MoveEditorToOppositeTabGroup)
-nmap <leader>wm <Action>(MaximizeEditorInSplit)
+nmap <leader>mv <Action>(MoveTabRight) " SplitVertically
+nmap <leader>mc <Action>(Unsplit)
+nmap <leader>mo <Action>(MoveEditorToOppositeTabGroup)
+nmap <leader>mm <Action>(MaximizeEditorInSplit)
 
 " Goto*
 nmap gi <Action>(GotoImplementation)
