@@ -4,6 +4,9 @@ theme = "kanagawa"
 line-number = "relative"
 mouse = false
 
+[editor.lsp]
+display-messages = true
+
 [editor.cursor-shape]
 insert = "bar"
 normal = "block"
@@ -11,3 +14,6 @@ select = "underline"
 
 [editor.file-picker]
 hidden = false
+
+[editor.indent-guides]
+render = true
