@@ -18,3 +18,7 @@ hidden = false
 
 [editor.indent-guides]
 render = true
+
+[keys.normal]
+"+" = "increment"
+"minus" = "decrement"
