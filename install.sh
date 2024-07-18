@@ -22,3 +22,7 @@ fish -c "curl -sL https://git.io/fisher | source && fisher update"
 
 curl https://get.volta.sh | bash
 ~/.volta/bin/volta install node
+
+ghcup install ghc --set
+ghcup install stack --set
+ghcup install hls --set

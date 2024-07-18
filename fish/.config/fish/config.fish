@@ -2,6 +2,7 @@ set fish_greeting
 
 fish_add_path /opt/homebrew/bin
 fish_add_path $HOME/.scripts
+fish_add_path $HOME/.ghcup/bin
 
 function fish_user_key_bindings
   bind \cr 'peco_select_history (commandline -b)'
