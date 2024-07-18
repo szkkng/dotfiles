@@ -3,6 +3,7 @@ theme = "kanagawa"
 [editor]
 line-number = "relative"
 mouse = false
+rulers = [120]
 
 [editor.lsp]
 display-messages = true
