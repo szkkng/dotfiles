@@ -2034,6 +2034,50 @@
             }
           }
         }
+      },
+      "cmake-language-server": {
+        "version": "0.1.10",
+        "bottle": {
+          "rebuild": 0,
+          "root_url": "https://ghcr.io/v2/homebrew/core",
+          "files": {
+            "arm64_sonoma": {
+              "cellar": ":any_skip_relocation",
+              "url": "https://ghcr.io/v2/homebrew/core/cmake-language-server/blobs/sha256:522357a6dc704e876a07ae04542aca9cb3308282c9d0a45f15464448d9a08fa0",
+              "sha256": "522357a6dc704e876a07ae04542aca9cb3308282c9d0a45f15464448d9a08fa0"
+            },
+            "arm64_ventura": {
+              "cellar": ":any_skip_relocation",
+              "url": "https://ghcr.io/v2/homebrew/core/cmake-language-server/blobs/sha256:522357a6dc704e876a07ae04542aca9cb3308282c9d0a45f15464448d9a08fa0",
+              "sha256": "522357a6dc704e876a07ae04542aca9cb3308282c9d0a45f15464448d9a08fa0"
+            },
+            "arm64_monterey": {
+              "cellar": ":any_skip_relocation",
+              "url": "https://ghcr.io/v2/homebrew/core/cmake-language-server/blobs/sha256:522357a6dc704e876a07ae04542aca9cb3308282c9d0a45f15464448d9a08fa0",
+              "sha256": "522357a6dc704e876a07ae04542aca9cb3308282c9d0a45f15464448d9a08fa0"
+            },
+            "sonoma": {
+              "cellar": ":any_skip_relocation",
+              "url": "https://ghcr.io/v2/homebrew/core/cmake-language-server/blobs/sha256:522357a6dc704e876a07ae04542aca9cb3308282c9d0a45f15464448d9a08fa0",
+              "sha256": "522357a6dc704e876a07ae04542aca9cb3308282c9d0a45f15464448d9a08fa0"
+            },
+            "ventura": {
+              "cellar": ":any_skip_relocation",
+              "url": "https://ghcr.io/v2/homebrew/core/cmake-language-server/blobs/sha256:522357a6dc704e876a07ae04542aca9cb3308282c9d0a45f15464448d9a08fa0",
+              "sha256": "522357a6dc704e876a07ae04542aca9cb3308282c9d0a45f15464448d9a08fa0"
+            },
+            "monterey": {
+              "cellar": ":any_skip_relocation",
+              "url": "https://ghcr.io/v2/homebrew/core/cmake-language-server/blobs/sha256:522357a6dc704e876a07ae04542aca9cb3308282c9d0a45f15464448d9a08fa0",
+              "sha256": "522357a6dc704e876a07ae04542aca9cb3308282c9d0a45f15464448d9a08fa0"
+            },
+            "x86_64_linux": {
+              "cellar": ":any_skip_relocation",
+              "url": "https://ghcr.io/v2/homebrew/core/cmake-language-server/blobs/sha256:121fcd6bee7edc1b8477636bad12a0094415aa17ef73be3d853bfae0bdfc93f5",
+              "sha256": "121fcd6bee7edc1b8477636bad12a0094415aa17ef73be3d853bfae0bdfc93f5"
+            }
+          }
+        }
       }
     },
     "cask": {
@@ -2068,7 +2112,7 @@
         }
       },
       "ngrok": {
-        "version": "3.12.1,4FUeVQHt2kb,a",
+        "version": "3.13.0,7kjBS17S7vv,a",
         "options": {
           "full_name": "ngrok/ngrok/ngrok"
         }
