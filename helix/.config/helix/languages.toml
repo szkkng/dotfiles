@@ -4,3 +4,8 @@
 name = 'typescript'
 formatter = { command = 'npx', args = ["prettier", "--parser", "typescript"] }
 auto-format = true
+
+[[language]]
+name = 'cpp'
+formatter = { command = 'clang-format', args = [] }
+auto-format = true
