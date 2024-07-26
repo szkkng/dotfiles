@@ -4,24 +4,23 @@ local keymap = vim.api.nvim_set_keymap
 vim.g.mapleader = " "
 
 keymap("n", "<leader>x", ":noh<CR>", opts)
-keymap("n", "<leader>w", ":w<CR>", opts)
+keymap("n", "<leader>,", ":w<CR>", opts)
 keymap("n", "<C-S>", ":%s/", opts)
 
 keymap("n", "-", "<C-x>", opts)
 keymap("n", "+", "<C-a>", opts)
-
-keymap("n", "sv", ":vs<CR>", opts)
-keymap("n", "sh", ":sp<CR>", opts)
 
 -- Stay in indent mode --
 keymap("v", "<", "<gv", opts)
 keymap("v", ">", ">gv", opts)
 
 -- Window navigation --
-keymap("n", "<m-l>", "<C-w>l", opts)
-keymap("n", "<m-h>", "<C-w>h", opts)
-keymap("n", "<m-k>", "<C-w>k", opts)
-keymap("n", "<m-j>", "<C-w>j", opts)
+keymap("n", "<leader>wv", ":vs<CR>", opts)
+keymap("n", "<leader>wh", ":sp<CR>", opts)
+keymap("n", "<leader>wl", "<C-w>l", opts)
+keymap("n", "<leader>wh", "<C-w>h", opts)
+keymap("n", "<leader>wk", "<C-w>k", opts)
+keymap("n", "<leader>wj", "<C-w>j", opts)
 
 -- Resize the window --
 keymap("n", "<m-Up>", ":resize +2<CR>", opts)
