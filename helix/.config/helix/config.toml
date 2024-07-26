@@ -22,3 +22,6 @@ render = true
 [keys.normal]
 "+" = "increment"
 "minus" = "decrement"
+
+[keys.normal.space]
+"," = ":w"
