@@ -35,6 +35,7 @@ cask "font-fira-code-nerd-font"
 cask "keycastr"
 cask "raycast"
 cask "wezterm"
+cask "zed"
 mas "LINE", id: 539883307
 mas "Logic Pro", id: 634148309
 mas "Magnet", id: 441258766

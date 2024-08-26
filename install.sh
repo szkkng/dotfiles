@@ -16,7 +16,7 @@ if [[ ! -d ~/.config ]]; then
     mkdir ~/.config
 fi
 
-stow -v -d ~/dotfiles -t ~ fish starship helix ideavim neovim wezterm git
+stow -v -d ~/dotfiles -t ~ fish starship helix ideavim neovim zed wezterm git
 
 fish -c "curl -sL https://git.io/fisher | source && fisher update"
 
