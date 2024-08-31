@@ -3,34 +3,32 @@ local keymap = vim.api.nvim_set_keymap
 
 vim.g.mapleader = " "
 
-keymap("n", "<leader>x", ":noh<CR>", opts)
-keymap("n", "<leader>,", ":w<CR>", opts)
-keymap("n", "<C-S>", ":%s/", opts)
+keymap("n", "<leader>x", "<cmd>noh<CR>", opts)
+keymap("n", "<leader>,", "<cmd>w<CR>", opts)
+keymap("n", "<C-S>", "<cmd>%s/", opts)
 
 keymap("n", "-", "<C-x>", opts)
 keymap("n", "+", "<C-a>", opts)
 
--- Stay in indent mode --
+-- better indenting
 keymap("v", "<", "<gv", opts)
 keymap("v", ">", ">gv", opts)
 
--- Window navigation --
-keymap("n", "<leader>wv", ":vs<CR>", opts)
-keymap("n", "<leader>wh", ":sp<CR>", opts)
+-- buffers
+keymap("n", "gp", "<cmd>bprevious<CR>", opts)
+keymap("n", "gn", "<cmd>bnext<CR>", opts)
+
+-- window
+keymap("n", "<leader>wv", "<cmd>vs<CR>", opts)
+keymap("n", "<leader>ws", "<cmd>sp<CR>", opts)
 keymap("n", "<leader>wl", "<C-w>l", opts)
 keymap("n", "<leader>wh", "<C-w>h", opts)
 keymap("n", "<leader>wk", "<C-w>k", opts)
 keymap("n", "<leader>wj", "<C-w>j", opts)
-
--- Resize the window --
-keymap("n", "<m-Up>", ":resize +2<CR>", opts)
-keymap("n", "<m-Down>", ":resize -2<CR>", opts)
-keymap("n", "<m-Left>", ":vertical resize -2<CR>", opts)
-keymap("n", "<m-Right>", ":vertical resize +2<CR>", opts)
-
--- Tab navigation --
-keymap("n", "tn", ":tabnew<CR>", opts)
-keymap("n", "tx", ":tabc<CR>", opts)
-keymap("n", "tl", ":tabnext<CR>", opts)
-keymap("n", "th", ":tabprev<CR>", opts)
-keymap("n", "to", ":tabo<CR>", opts)
+keymap("n", "<leader>wH", "<C-w>H", opts)
+keymap("n", "<leader>wL", "<C-w>L", opts)
+keymap("n", "<leader>wq", "<cmd>confirm q<CR>", opts)
+keymap("n", "<M-C-Up>", "<cmd>resize +2<CR>", opts)
+keymap("n", "<M-C-Down>", "<cmd>resize -2<CR>", opts)
+keymap("n", "<M-C-Left>", "<cmd>vertical resize -2<CR>", opts)
+keymap("n", "<M-C-Right>", "<cmd>vertical resize +2<CR>", opts)
