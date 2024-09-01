@@ -62,13 +62,8 @@ function M.config()
     },
     window = {
       completion = {
-        border = "single",
         scrollbar = false,
-        winhighlight = "Normal:CmpNormal,FloatBorder:CmpNormal",
-      },
-      documentation = {
-        border = "single",
-        winhighlight = "Normal:CmpNormal,FloatBorder:CmpNormal",
+        winhighlight = "Normal:NormalFloat,FloatBorder:CmpNormal",
       },
     },
   }
