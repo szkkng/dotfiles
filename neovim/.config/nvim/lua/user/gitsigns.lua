@@ -12,6 +12,11 @@ return {
       vim.keymap.set("n", "[c", function()
         gitsigns.nav_hunk "prev"
       end, opts)
+      vim.keymap.set("n", "<leader>gr", gitsigns.reset_hunk, opts)
+      vim.keymap.set("v", "<leader>gr", function()
+        gitsigns.reset_hunk { vim.fn.line ".", vim.fn.line "v" }
+      end)
+      vim.keymap.set("n", "<leader>gp", gitsigns.preview_hunk_inline, opts)
       vim.keymap.set("n", "<leader>gb", function()
         gitsigns.blame_line { full = true }
       end, opts)
