@@ -6,7 +6,6 @@ local options = {
   clipboard = "unnamedplus",
   number = true,
   relativenumber = true,
-  cursorline = true,
   wrap = false,
   expandtab = true,
   incsearch = true,
