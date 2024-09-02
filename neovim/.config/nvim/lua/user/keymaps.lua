@@ -5,7 +5,7 @@ vim.g.mapleader = " "
 
 keymap("n", "<leader>x", "<cmd>noh<CR>", opts)
 keymap("n", "<leader>,", "<cmd>w<CR>", opts)
-keymap("n", "<C-S>", "<cmd>%s/", opts)
+keymap("n", "<C-S>", ":%s/", opts)
 
 keymap("n", "-", "<C-x>", opts)
 keymap("n", "+", "<C-a>", opts)
