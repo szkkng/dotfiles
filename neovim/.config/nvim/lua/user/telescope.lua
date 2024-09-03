@@ -6,6 +6,9 @@ local M = {
       build = "cmake -S. -Bbuild -DCMAKE_BUILD_TYPE=Release && cmake --build build --config Release",
       lazy = true,
     },
+    {
+      "nvim-telescope/telescope-dap.nvim",
+    },
   },
 }
 
@@ -15,6 +18,11 @@ function M.config()
   vim.keymap.set("n", "<leader>ff", builtin.find_files, {})
   vim.keymap.set("n", "<leader>ft", builtin.live_grep, {})
   vim.keymap.set("n", "<leader>fh", builtin.help_tags, {})
+
+  vim.keymap.set("n", "<leader>dl", "<cmd>Telescope dap list_breakpoints<CR>", {})
+  vim.keymap.set("n", "<leader>dv", "<cmd>Telescope dap variables<CR>", {})
+  vim.keymap.set("n", "<leader>df", "<cmd>Telescope dap frames<CR>", {})
+  vim.keymap.set("n", "<leader>dh", "<cmd>Telescope dap commands<CR>", {})
 
   local actions = require "telescope.actions"
 
@@ -82,6 +90,7 @@ function M.config()
   }
 
   require("telescope").load_extension "fzf"
+  require("telescope").load_extension "dap"
 end
 
 return M
