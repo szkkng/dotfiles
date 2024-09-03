@@ -29,21 +29,6 @@ return {
 
     vim.diagnostic.config(default_diagnostic_config)
 
-    local function lsp_keymaps(bufnr)
-      local opts = { noremap = true, buffer = bufnr, silent = true }
-      vim.keymap.set("n", "<leader>la", vim.lsp.buf.code_action, opts)
-      vim.keymap.set("n", "<leader>lq", vim.diagnostic.setloclist, opts)
-      vim.keymap.set("n", "<leader>lr", vim.lsp.buf.rename, opts)
-      vim.keymap.set("n", "<leader>li", "<cmd>LspInfo<cr>", opts)
-      vim.keymap.set("n", "gD", vim.lsp.buf.declaration, opts)
-      vim.keymap.set("n", "gd", vim.lsp.buf.definition, opts)
-      vim.keymap.set("n", "gI", vim.lsp.buf.implementation, opts)
-      vim.keymap.set("n", "gr", vim.lsp.buf.references, opts)
-      vim.keymap.set("n", "gl", vim.diagnostic.open_float, opts)
-      vim.keymap.set("n", "[d", vim.diagnostic.goto_prev, opts)
-      vim.keymap.set("n", "]d", vim.diagnostic.goto_next, opts)
-    end
-
     local function common_capabilities()
       local capabilities = vim.lsp.protocol.make_client_capabilities()
       capabilities.textDocument.completion.completionItem.snippetSupport = true
@@ -52,9 +37,7 @@ return {
 
     for _, server in pairs(servers) do
       local opts = {
-        on_attach = function(_, bufnr)
-          lsp_keymaps(bufnr)
-        end,
+        on_attach = function() end,
         capabilities = common_capabilities(),
       }
 
