@@ -1,15 +1,24 @@
-local M = {
+return {
   "nvim-treesitter/nvim-treesitter",
   event = { "BufReadPost", "BufNewFile" },
   build = ":TSUpdate",
-}
-
-function M.config()
-  require("nvim-treesitter.configs").setup {
-    ensure_installed = { "cpp", "javascript", "typescript", "tsx", "lua", "markdown", "markdown_inline", "bash" },
+  opts = {
+    ensure_installed = {
+      "bash",
+      "cpp",
+      "cmake",
+      "haskell",
+      "javascript",
+      "lua",
+      "markdown",
+      "markdown_inline",
+      "yaml",
+      "typescript",
+      "tsx",
+    },
     highlight = { enable = true },
-    indent = { enable = true },
-  }
-end
-
-return M
+  },
+  config = function(_, opts)
+    require("nvim-treesitter.configs").setup(opts)
+  end,
+}
