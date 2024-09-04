@@ -1,7 +1,5 @@
 local wezterm = require "wezterm"
-local scheme, _ = wezterm.color.load_scheme(os.getenv "HOME" .. "/.config/wezterm/colors/kanagawa.toml")
 local act = wezterm.action
-require "on"
 
 local copy_mode = nil
 local search_mode = nil
@@ -39,18 +37,14 @@ return {
   font_size = 14,
   line_height = 1.2,
 
-  color_scheme = "kanagawa",
+  color_scheme = "Catppuccin Mocha",
   force_reverse_video_cursor = true,
-  colors = {
-    tab_bar = {
-      background = scheme.background,
-    },
-  },
 
   use_fancy_tab_bar = false,
   hide_tab_bar_if_only_one_tab = true,
   show_new_tab_button_in_tab_bar = false,
   tab_max_width = 50,
+  tab_bar_at_bottom = true,
 
   adjust_window_size_when_changing_font_size = false,
   window_close_confirmation = "NeverPrompt",
