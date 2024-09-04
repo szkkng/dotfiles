@@ -1,4 +1,4 @@
-local M = {
+return {
   "nvim-telescope/telescope.nvim",
   dependencies = {
     {
@@ -10,23 +10,7 @@ local M = {
       "nvim-telescope/telescope-dap.nvim",
     },
   },
-}
-
-function M.config()
-  local builtin = require "telescope.builtin"
-  vim.keymap.set("n", "<leader>b", builtin.buffers, {})
-  vim.keymap.set("n", "<leader>ff", builtin.find_files, {})
-  vim.keymap.set("n", "<leader>ft", builtin.live_grep, {})
-  vim.keymap.set("n", "<leader>fh", builtin.help_tags, {})
-
-  vim.keymap.set("n", "<leader>dl", "<cmd>Telescope dap list_breakpoints<CR>", {})
-  vim.keymap.set("n", "<leader>dv", "<cmd>Telescope dap variables<CR>", {})
-  vim.keymap.set("n", "<leader>df", "<cmd>Telescope dap frames<CR>", {})
-  vim.keymap.set("n", "<leader>dh", "<cmd>Telescope dap commands<CR>", {})
-
-  local actions = require "telescope.actions"
-
-  require("telescope").setup {
+  opts = {
     defaults = {
       vimgrep_arguments = {
         "rg",
@@ -56,10 +40,10 @@ function M.config()
         previewer = false,
         mappings = {
           i = {
-            ["<C-d>"] = actions.delete_buffer,
+            ["<C-d>"] = require("telescope.actions").delete_buffer,
           },
           n = {
-            ["dd"] = actions.delete_buffer,
+            ["dd"] = require("telescope.actions").delete_buffer,
           },
         },
       },
@@ -87,10 +71,22 @@ function M.config()
         initial_mode = "normal",
       },
     },
-  }
+  },
+  config = function(_, opts)
+    require("telescope").setup(opts)
 
-  require("telescope").load_extension "fzf"
-  require("telescope").load_extension "dap"
-end
+    local builtin = require "telescope.builtin"
+    vim.keymap.set("n", "<leader>b", builtin.buffers)
+    vim.keymap.set("n", "<leader>ff", builtin.find_files)
+    vim.keymap.set("n", "<leader>ft", builtin.live_grep)
+    vim.keymap.set("n", "<leader>fh", builtin.help_tags)
 
-return M
+    vim.keymap.set("n", "<leader>dl", "<cmd>Telescope dap list_breakpoints<CR>")
+    vim.keymap.set("n", "<leader>dv", "<cmd>Telescope dap variables<CR>")
+    vim.keymap.set("n", "<leader>df", "<cmd>Telescope dap frames<CR>")
+    vim.keymap.set("n", "<leader>dh", "<cmd>Telescope dap commands<CR>")
+
+    require("telescope").load_extension "fzf"
+    require("telescope").load_extension "dap"
+  end,
+}

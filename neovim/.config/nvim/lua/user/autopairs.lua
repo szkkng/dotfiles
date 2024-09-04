@@ -1,12 +1,7 @@
-local M = {
+return {
   "windwp/nvim-autopairs",
-}
-
-M.config = function()
-  require("nvim-autopairs").setup {
+  opts = {
     check_ts = true,
     disable_filetype = { "TelescopePrompt", "spectre_panel" },
-  }
-end
-
-return M
+  },
+}
