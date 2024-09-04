@@ -1,11 +1,8 @@
-local M = {
-  "rebelot/kanagawa.nvim",
+return {
+  "catppuccin/nvim",
   lazy = false,
   priority = 1000,
+  config = function()
+    vim.cmd.colorscheme "catppuccin"
+  end,
 }
-
-function M.config()
-  vim.cmd.colorscheme "kanagawa"
-end
-
-return M
