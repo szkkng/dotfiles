@@ -2,34 +2,29 @@
 vim.g.loaded_netrw = 1
 vim.g.loaded_netrwPlugin = 1
 
-local options = {
-  clipboard = "unnamedplus",
-  number = true,
-  relativenumber = true,
-  wrap = false,
-  expandtab = true,
-  incsearch = true,
-  tabstop = 4,
-  ignorecase = true,
-  smartcase = true,
-  hlsearch = true,
-  swapfile = false,
-  splitbelow = true,
-  splitright = true,
-  scrolloff = 4,
-  errorbells = false,
-  shiftwidth = 4,
-  numberwidth = 4,
-  termguicolors = true,
-  showmode = false,
-  signcolumn = "yes",
-  mouse = "",
-  completeopt = { "menuone", "noselect" },
-  pumheight = 10,
-  cmdheight = 0,
-  guifont = "FiraCode Nerd Font",
-}
-
-for k, v in pairs(options) do
-  vim.opt[k] = v
-end
+local opt = vim.opt
+opt.clipboard = "unnamedplus"
+opt.completeopt = "menu,menuone,noselect"
+opt.confirm = true
+opt.cmdheight = 0
+opt.expandtab = true
+opt.ignorecase = true
+opt.list = true
+opt.mouse = ""
+opt.number = true
+opt.pumblend = 10
+opt.pumheight = 10
+opt.relativenumber = true
+opt.scrolloff = 4
+opt.shiftround = true
+opt.shiftwidth = 2
+opt.shortmess:append { W = true, I = true, c = true, C = true }
+opt.showmode = false
+opt.signcolumn = "yes"
+opt.smartcase = true
+opt.splitbelow = true
+opt.splitright = true
+opt.swapfile = false
+opt.tabstop = 2
+opt.termguicolors = true
+opt.wrap = false
