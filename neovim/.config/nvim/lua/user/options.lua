@@ -21,7 +21,6 @@ local options = {
   shiftwidth = 4,
   numberwidth = 4,
   termguicolors = true,
-  colorcolumn = "120",
   showmode = false,
   signcolumn = "yes",
   mouse = "",
