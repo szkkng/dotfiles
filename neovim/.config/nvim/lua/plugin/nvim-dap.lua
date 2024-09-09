@@ -1,6 +1,26 @@
 return {
   "mfussenegger/nvim-dap",
-  event = "VeryLazy",
+  dependencies = {
+    {
+      "rcarriga/nvim-dap-ui",
+      dependencies = {
+        "nvim-neotest/nvim-nio",
+      },
+    },
+    {
+      "jay-babu/mason-nvim-dap.nvim",
+      opts = {
+        ensure_installed = { "codelldb" },
+        handlers = {},
+      },
+    },
+    {
+      "theHamsta/nvim-dap-virtual-text",
+      opts = {
+        virt_text_pos = "eol",
+      },
+    },
+  },
   keys = {
     { "<leader>db", "<cmd>DapToggleBreakpoint<CR>" },
     { "<leader>dB", "<cmd>lua require('dap').clear_breakpoints()<CR>" },
@@ -10,5 +30,21 @@ return {
     { "<leader>d2", "<cmd>DapStepInto<CR>" },
     { "<leader>d3", "<cmd>DapStepOut<CR>" },
   },
-  config = function() end,
+  config = function()
+    local dap, dapui = require "dap", require "dapui"
+    dapui.setup()
+    dap.listeners.before.attach.dapui_config = function()
+      dapui.open()
+    end
+    dap.listeners.before.launch.dapui_config = function()
+      dapui.open()
+    end
+    dap.listeners.before.event_terminated.dapui_config = function()
+      dapui.close()
+    end
+    dap.listeners.before.event_exited.dapui_config = function()
+      dapui.close()
+    end
+  end,
 }
+

@@ -1,28 +1,35 @@
 return {
-  "williamboman/mason-lspconfig.nvim",
-  dependencies = {
+  {
     "williamboman/mason.nvim",
-  },
-  config = function()
-    local servers = {
-      "clangd",
-      "lua_ls",
-      "cssls",
-      "html",
-      "eslint",
-      "tsserver",
-      "bashls",
-      "jsonls",
-    }
-
-    require("mason").setup {
+    cmd = "Mason",
+    opts = {
       ui = {
         border = "rounded",
       },
-    }
+    },
+  },
+  {
+    "williamboman/mason-lspconfig.nvim",
+    event = { "BufReadPre", "BufNewFile" },
+    dependencies = {
+      "williamboman/mason.nvim",
+    },
+    opts = function()
+      local servers = {
+        "clangd",
+        "lua_ls",
+        "cssls",
+        "html",
+        "eslint",
+        "tsserver",
+        "bashls",
+        "jsonls",
+      }
 
-    require("mason-lspconfig").setup {
-      ensure_installed = servers,
-    }
-  end,
+      return {
+        ensure_installed = servers,
+      }
+    end,
+  },
 }
+
