@@ -3,7 +3,7 @@ return {
   dependencies = {
     "nvim-lua/plenary.nvim",
   },
-  event = "VeryLazy",
+  event = { "BufReadPre", "BufNewFile" },
   config = function()
     local null_ls = require "null-ls"
     local formatting = null_ls.builtins.formatting
@@ -18,3 +18,4 @@ return {
     }
   end,
 }
+

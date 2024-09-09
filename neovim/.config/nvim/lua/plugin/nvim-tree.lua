@@ -4,8 +4,8 @@ return {
     "nvim-tree/nvim-web-devicons",
   },
   opts = {},
-  event = "VeryLazy",
   keys = {
     { "<leader>e", "<cmd>NvimTreeToggle<CR>" },
   },
 }
+
