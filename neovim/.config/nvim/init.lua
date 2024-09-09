@@ -20,6 +20,6 @@ spec "plugin.nvim-tree"
 spec "plugin.nvim-ts-context-commentstring"
 spec "plugin.hlchunk"
 spec "plugin.lualine"
-spec "plugin.ufo"
 spec "plugin.copilot"
 require "core.lazy"
+
