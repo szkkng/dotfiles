@@ -3,7 +3,11 @@ return {
   dependencies = {
     "nvim-tree/nvim-web-devicons",
   },
-  opts = {},
+  opts = {
+    update_focused_file = {
+      enable = true,
+    },
+  },
   keys = {
     { "<leader>e", "<cmd>NvimTreeToggle<CR>" },
   },
