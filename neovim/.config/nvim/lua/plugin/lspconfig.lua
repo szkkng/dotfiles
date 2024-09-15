@@ -12,9 +12,8 @@ return {
       "lua_ls",
       "cssls",
       "html",
-      "tsserver",
       "eslint",
-      "tsserver",
+      "ts_ls",
       "eslint",
       "bashls",
       "jsonls",
@@ -54,3 +53,4 @@ return {
     end
   end,
 }
+
