@@ -14,6 +14,7 @@ return {
         formatting.stylua,
         formatting.prettier,
         null_ls.builtins.completion.spell,
+        null_ls.builtins.formatting.nixfmt,
       },
     }
   end,
