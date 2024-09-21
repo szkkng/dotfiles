@@ -31,6 +31,41 @@ if wezterm.gui then
   end
 end
 
+local tabline = wezterm.plugin.require "https://github.com/michaelbrusegard/tabline.wez"
+tabline.setup {
+  options = {
+    icons_enabled = false,
+    section_separators = {
+      left = "",
+      right = "",
+    },
+    component_separators = {
+      left = "",
+      right = "",
+    },
+    tab_separators = {
+      left = "",
+      right = "",
+    },
+  },
+  sections = {
+    tabline_a = { "hostname" },
+    tabline_b = { "" },
+    tabline_c = { "" },
+    tab_active = {
+      "tab_index",
+      { "parent", padding = 0 },
+      "/",
+      { "cwd", padding = { left = 0, right = 1 } },
+      { "zoomed", padding = 0 },
+    },
+    tab_inactive = { "tab_index", { "process", padding = { left = 0, right = 1 } } },
+    tabline_x = { "ram", "cpu" },
+    tabline_y = { "" },
+    tabline_z = { "battery" },
+  },
+}
+
 return {
   default_prog = { "/opt/homebrew/bin/fish", "-l" },
   font = wezterm.font "JetbrainsMono Nerd Font",
@@ -96,3 +131,4 @@ return {
     search_mode = search_mode,
   },
 }
+
