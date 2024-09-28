@@ -27,59 +27,42 @@
           ...
         }:
         {
-          # List packages installed in system profile. To search by name, run:
-          # $ nix-env -qaP | grep wget
-          # environment.systemPackages = [
-          #   pkgs.vim
-          # ];
-          # environment.shells = [
-          #   pkgs.fish
-          # ];
-
-          # Auto upgrade nix package and the daemon service.
+          nixpkgs.config.allowUnfree = true;
+          nixpkgs.hostPlatform = "aarch64-darwin";
           services.nix-daemon.enable = true;
-          # nix.package = pkgs.nix;
-
-          # Necessary for using flakes on this system.
+          nix.package = pkgs.nix;
           nix.settings.experimental-features = "nix-command flakes";
+          system.stateVersion = 5;
+          system.configurationRevision = self.rev or self.dirtyRev or null;
 
-          # Create /etc/zshrc that loads the nix-darwin environment.
-          # programs.zsh.enable = true; # default shell on catalina
-          programs.fish.enable = true;
-
-          system = {
-            # https://macos-defaults.com/
-            defaults = {
-              dock = {
-                autohide = true;
-                show-recents = false;
-                mineffect = "scale";
-                static-only = true;
-              };
-              finder = {
-                AppleShowAllExtensions = true;
-                CreateDesktop = false;
-                ShowPathbar = true;
-                ShowStatusBar = true;
-              };
-              screencapture = {
-                location = "~/screenshots";
-              };
-              ".GlobalPreferences" = {
-                "com.apple.mouse.scaling" = 2.0;
-              };
-            };
-
-            # Set Git commit hash for darwin-version.
-            configurationRevision = self.rev or self.dirtyRev or null;
-
-            # Used for backwards compatibility, please read the changelog before changing.
-            # $ darwin-rebuild changelog
-            stateVersion = 5;
+          users.users.kengo = {
+            name = "kengo";
+            home = "/Users/kengo";
           };
 
-          # The platform the configuration will be used on.
-          nixpkgs.hostPlatform = "aarch64-darwin";
+          programs.fish.enable = true;
+
+          system.defaults = {
+            # https://macos-defaults.com/
+            dock = {
+              autohide = true;
+              show-recents = false;
+              mineffect = "scale";
+              static-only = true;
+            };
+            finder = {
+              AppleShowAllExtensions = true;
+              CreateDesktop = false;
+              ShowPathbar = true;
+              ShowStatusBar = true;
+            };
+            screencapture = {
+              location = "~/screenshots";
+            };
+            ".GlobalPreferences" = {
+              "com.apple.mouse.scaling" = 2.0;
+            };
+          };
         };
       homeconfig =
         { pkgs, lib, ... }:
