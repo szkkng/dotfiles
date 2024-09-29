@@ -76,6 +76,7 @@
               imports = [
                 ./modules/home.nix
                 ./modules/fish.nix
+                ./modules/git.nix
                 ./modules/starship.nix
                 ./modules/neovim
                 ./modules/jetbrains
