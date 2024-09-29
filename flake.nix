@@ -78,6 +78,7 @@
                 ./modules/fish.nix
                 ./modules/git.nix
                 ./modules/starship.nix
+                ./modules/wezterm
                 ./modules/neovim
                 ./modules/jetbrains
               ];
