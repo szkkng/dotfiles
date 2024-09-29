@@ -64,25 +64,8 @@
             };
           };
         };
-      homeconfig =
-        { pkgs, lib, ... }:
-        {
-          home.username = "kengo";
-          home.homeDirectory = lib.mkForce "/Users/kengo";
-          # this is internal compatibility configuration
-          # for home-manager, don't change this!
-          home.stateVersion = "23.05";
-          # Let home-manager install and manage itself.
-          programs.home-manager.enable = true;
-
-          home.packages = with pkgs; [
-            cowsay
-          ];
-        };
     in
     {
-      # Build darwin flake using:
-      # $ darwin-rebuild build --flake .#kengo-macbook-pro
       darwinConfigurations."kengo-macbook-pro" = nix-darwin.lib.darwinSystem {
         modules = [
           configuration
@@ -90,15 +73,15 @@
           {
             home-manager.useGlobalPkgs = true;
             home-manager.useUserPackages = true;
-            home-manager.users."kengo" = homeconfig;
-
-            # Optionally, use home-manager.extraSpecialArgs to pass
-            # arguments to home.nix
+            home-manager.users."kengo" = {
+              imports = [
+                ./modules/home.nix
+              ];
+            };
           }
         ];
       };
 
-      # Expose the package set, including overlays, for convenience.
       darwinPackages = self.darwinConfigurations."kengo-macbook-pro".pkgs;
     };
 }
