@@ -40,8 +40,6 @@
             home = "/Users/kengo";
           };
 
-          programs.fish.enable = true;
-
           system.defaults = {
             # https://macos-defaults.com/
             dock = {
@@ -77,6 +75,7 @@
             home-manager.users."kengo" = {
               imports = [
                 ./modules/home.nix
+                ./modules/fish.nix
               ];
             };
           }
