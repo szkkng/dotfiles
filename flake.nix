@@ -40,6 +40,25 @@
             home = "/Users/kengo";
           };
 
+          homebrew = {
+            enable = true;
+            casks = [
+              "1password"
+              "discord"
+              "font-jetbrains-mono-nerd-font"
+              "wezterm"
+              "keycastr"
+              "raycast"
+            ];
+            masApps = {
+              "LINE" = 539883307;
+              "Logic Pro" = 634148309;
+              "Magnet" = 441258766;
+              "Spark" = 1176895641;
+              "Klack" = 6446206067;
+            };
+          };
+
           system.defaults = {
             # https://macos-defaults.com/
             dock = {
