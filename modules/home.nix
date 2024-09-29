@@ -9,15 +9,12 @@
     eza
     fd
     fira-code-nerdfont
-    git
     gnused
     jq
     keycastr
-    neovim
     ninja
     peco
     ripgrep
-    starship
     supabase-cli
     tree
   ];
