@@ -78,6 +78,7 @@
                 ./modules/fish.nix
                 ./modules/starship.nix
                 ./modules/neovim
+                ./modules/jetbrains
               ];
             };
           }
