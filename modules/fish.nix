@@ -7,7 +7,6 @@
       fish_add_path $HOME/.scripts
       fish_add_path $HOME/.ghcup/bin
       fish_add_path -p ~/.nix-profile/bin /nix/var/nix/profiles/default/bin
-
     '';
     shellInitLast = ''
       set -gx VOLTA_HOME "$HOME/.volta"
@@ -22,31 +21,16 @@
         name = "autopair";
         src = pkgs.fishPlugins.autopair.src;
       }
+      {
+        name = "fzf";
+        src = pkgs.fishPlugins.fzf.src;
+      }
     ];
     shellAliases = {
       ls = "eza";
       ll = "eza -l --git";
       vi = "nvim";
       sed = "gsed";
-    };
-    functions = {
-      # https://github.com/oh-my-fish/plugin-peco/blob/master/functions/peco_select_history.fish
-      peco_select_history = ''
-        if test (count $argv) = 0
-         set peco_flags --layout=bottom-up
-        else
-         set peco_flags --layout=bottom-up --query "$argv"
-        end
-
-        history|peco $peco_flags|read foo
-
-        if [ $foo ]
-          commandline $foo
-        else
-          commandline ""
-        end
-      '';
-      fish_user_key_bindings = "bind \\cr peco_select_history";
     };
   };
 }

@@ -36,6 +36,7 @@
                 ./modules/fish.nix
                 ./modules/git.nix
                 ./modules/starship.nix
+                ./modules/fzf.nix
                 ./modules/wezterm
                 ./modules/neovim
                 ./modules/jetbrains

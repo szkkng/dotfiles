@@ -13,7 +13,6 @@
     jq
     keycastr
     ninja
-    peco
     ripgrep
     supabase-cli
     tree
