@@ -6,6 +6,8 @@
       set fish_greeting
       fish_add_path $HOME/.scripts
       fish_add_path $HOME/.ghcup/bin
+      fish_add_path -p ~/.nix-profile/bin /nix/var/nix/profiles/default/bin
+
     '';
     shellInitLast = ''
       set -gx VOLTA_HOME "$HOME/.volta"
