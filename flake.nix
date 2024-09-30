@@ -40,6 +40,7 @@
                 ./modules/fzf.nix
                 ./modules/fd.nix
                 ./modules/jq.nix
+                ./modules/ripgrep.nix
                 ./modules/eza.nix
                 ./modules/wezterm
                 ./modules/neovim
