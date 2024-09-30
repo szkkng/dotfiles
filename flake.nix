@@ -39,6 +39,7 @@
                 ./modules/bat.nix
                 ./modules/fzf.nix
                 ./modules/fd.nix
+                ./modules/jq.nix
                 ./modules/eza.nix
                 ./modules/wezterm
                 ./modules/neovim
