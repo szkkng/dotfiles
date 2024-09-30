@@ -5,7 +5,6 @@
   programs.home-manager.enable = true;
   home.packages = with pkgs; [
     cmake
-    eza
     fd
     fira-code-nerdfont
     gnused
