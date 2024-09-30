@@ -16,6 +16,18 @@
   homebrew = {
     enable = true;
     casks = [
+      "anki"
+      "ableton-live-suite"
+      "brave-browser"
+      "chatgpt"
+      "deepl"
+      "fl-studio"
+      "jetbrains-toolbox"
+      "spotify"
+      "obsidian"
+      "reaper"
+      "cycling74-max"
+      "splice"
       "1password"
       "discord"
       "font-jetbrains-mono-nerd-font"
@@ -24,6 +36,7 @@
       "raycast"
     ];
     masApps = {
+      "Amazon Kindle" = 302584613;
       "LINE" = 539883307;
       "Logic Pro" = 634148309;
       "Magnet" = 441258766;
