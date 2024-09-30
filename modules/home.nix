@@ -8,7 +8,6 @@
     delta
     gnused
     ninja
-    ripgrep
     supabase-cli
   ];
 }
