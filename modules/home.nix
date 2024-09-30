@@ -14,7 +14,6 @@
     ninja
     ripgrep
     supabase-cli
-    tree
   ];
 }
 
