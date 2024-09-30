@@ -5,7 +5,6 @@
   programs.home-manager.enable = true;
   home.packages = with pkgs; [
     cmake
-    fd
     delta
     gnused
     jq
