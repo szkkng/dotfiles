@@ -27,8 +27,6 @@
       }
     ];
     shellAliases = {
-      ls = "eza";
-      ll = "eza -l --git";
       vi = "nvim";
       sed = "gsed";
     };

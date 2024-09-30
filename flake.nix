@@ -38,6 +38,7 @@
                 ./modules/starship.nix
                 ./modules/bat.nix
                 ./modules/fzf.nix
+                ./modules/eza.nix
                 ./modules/wezterm
                 ./modules/neovim
                 ./modules/jetbrains
