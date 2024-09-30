@@ -6,10 +6,8 @@
   home.packages = with pkgs; [
     cmake
     fd
-    fira-code-nerdfont
     gnused
     jq
-    keycastr
     ninja
     ripgrep
     supabase-cli
