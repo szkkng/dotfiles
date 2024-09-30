@@ -7,7 +7,6 @@
     cmake
     delta
     gnused
-    jq
     ninja
     ripgrep
     supabase-cli
