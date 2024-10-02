@@ -11,6 +11,11 @@
       mapleader = " ";
     };
 
+    diagnostics = {
+      virtual_text = false;
+      severity_sort = true;
+    };
+
     imports = [
       ./core/option.nix
       ./core/keymap.nix
