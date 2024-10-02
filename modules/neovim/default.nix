@@ -16,6 +16,7 @@
       ./core/keymap.nix
       ./core/autocmd.nix
       ./plugin/lualine.nix
+      ./plugin/treesitter.nix
     ];
   };
 }
