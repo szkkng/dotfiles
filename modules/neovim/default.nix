@@ -12,9 +12,9 @@
     };
 
     imports = [
-      ./core/options.nix
-      ./core/keymaps.nix
-      ./core/autocmds.nix
+      ./core/option.nix
+      ./core/keymap.nix
+      ./core/autocmd.nix
       ./plugin/lualine.nix
     ];
   };
