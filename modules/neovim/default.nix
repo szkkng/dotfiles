@@ -21,6 +21,7 @@
       ./plugin/web-devicons.nix
       ./plugin/nvim-tree.nix
       ./plugin/telescope.nix
+      ./plugin/lsp.nix
     ];
   };
 }
