@@ -20,6 +20,7 @@
       ./plugin/treesitter.nix
       ./plugin/web-devicons.nix
       ./plugin/nvim-tree.nix
+      ./plugin/telescope.nix
     ];
   };
 }
