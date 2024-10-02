@@ -1,12 +1,12 @@
-{ config, ... }:
+{ config, nixvim, ... }:
 {
-  programs.neovim = {
+  programs.nixvim = {
     enable = true;
-    defaultEditor = true;
-  };
+    colorschemes.catppuccin.enable = true;
 
-  xdg.configFile."nvim" = {
-    source = config.lib.file.mkOutOfStoreSymlink ./config;
+    imports = [
+
+    ];
   };
 }
 
