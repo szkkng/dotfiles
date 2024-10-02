@@ -5,7 +5,7 @@
     colorschemes.catppuccin.enable = true;
 
     imports = [
-
+      ./plugin/lualine.nix
     ];
   };
 }
