@@ -14,6 +14,7 @@
     imports = [
       ./core/options.nix
       ./core/keymaps.nix
+      ./core/autocmds.nix
       ./plugin/lualine.nix
     ];
   };
