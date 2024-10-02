@@ -18,6 +18,8 @@
       ./plugin/autopairs.nix
       ./plugin/lualine.nix
       ./plugin/treesitter.nix
+      ./plugin/web-devicons.nix
+      ./plugin/nvim-tree.nix
     ];
   };
 }
