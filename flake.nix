@@ -11,6 +11,10 @@
       url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    nixvim = {
+      url = "github:nix-community/nixvim";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
   outputs =
@@ -19,6 +23,7 @@
       nixpkgs,
       nix-darwin,
       home-manager,
+      nixvim,
     }:
     {
       darwinConfigurations."kengo-macbook-pro" = nix-darwin.lib.darwinSystem {
@@ -43,8 +48,9 @@
                 ./modules/ripgrep.nix
                 ./modules/eza.nix
                 ./modules/wezterm
-                ./modules/neovim
                 ./modules/jetbrains
+                ./modules/neovim
+                nixvim.homeManagerModules.nixvim
               ];
             };
           }
