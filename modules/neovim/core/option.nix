@@ -16,6 +16,7 @@
     scrolloff = 4;
     shiftround = true;
     shiftwidth = 2;
+    shortmess = "ltToOCF" + "WIcCS";
     showmode = false;
     signcolumn = "yes";
     smartcase = true;
