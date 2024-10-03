@@ -32,6 +32,7 @@
       ./plugin/hlchunk.nix
       ./plugin/copilot.nix
       ./plugin/cmp.nix
+      ./plugin/dap.nix
     ];
   };
 }
