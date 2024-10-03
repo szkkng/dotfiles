@@ -28,6 +28,7 @@
       ./plugin/telescope.nix
       ./plugin/lsp.nix
       ./plugin/gitsigns.nix
+      ./plugin/lspsaga.nix
     ];
   };
 }
