@@ -1,4 +1,3 @@
-{ ... }:
 {
   opts = {
     clipboard = "unnamedplus";
