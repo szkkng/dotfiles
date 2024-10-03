@@ -33,6 +33,7 @@
       ./plugin/copilot.nix
       ./plugin/cmp.nix
       ./plugin/dap.nix
+      ./plugin/ts-context-commentstring.nix
     ];
   };
 }
