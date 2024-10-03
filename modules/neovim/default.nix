@@ -30,6 +30,7 @@
       ./plugin/gitsigns.nix
       ./plugin/lspsaga.nix
       ./plugin/hlchunk.nix
+      ./plugin/copilot.nix
     ];
   };
 }
