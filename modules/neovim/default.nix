@@ -27,6 +27,7 @@
       ./plugin/nvim-tree.nix
       ./plugin/telescope.nix
       ./plugin/lsp.nix
+      ./plugin/gitsigns.nix
     ];
   };
 }
