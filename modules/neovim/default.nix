@@ -1,4 +1,4 @@
-{ ... }:
+{ pkgs, ... }:
 {
   programs.nixvim = {
     enable = true;
@@ -29,6 +29,7 @@
       ./plugin/lsp.nix
       ./plugin/gitsigns.nix
       ./plugin/lspsaga.nix
+      ./plugin/hlchunk.nix
     ];
   };
 }
