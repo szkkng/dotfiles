@@ -31,6 +31,7 @@
       ./plugin/lspsaga.nix
       ./plugin/hlchunk.nix
       ./plugin/copilot.nix
+      ./plugin/cmp.nix
     ];
   };
 }
