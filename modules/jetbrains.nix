@@ -1,4 +1,3 @@
-{ ... }:
 {
   home.file = {
     ".ideavimrc".text = ''

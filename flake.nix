@@ -43,7 +43,7 @@
               backupFileExtension = "backup";
               users."kengo" = {
                 imports = [
-                  ./modules/neovim
+                  ./modules/nixvim
                   ./modules/home.nix
                   ./modules/fish.nix
                   ./modules/git.nix
