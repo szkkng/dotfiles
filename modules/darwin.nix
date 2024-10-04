@@ -32,7 +32,6 @@
       "discord"
       "font-jetbrains-mono"
       "font-jetbrains-mono-nerd-font"
-      "wezterm"
       "keycastr"
       "raycast"
     ];
