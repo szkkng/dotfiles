@@ -15,6 +15,10 @@
       url = "github:nix-community/nixvim";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    wezterm = {
+      url = "github:wez/wezterm?dir=nix";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
   outputs =
@@ -24,6 +28,7 @@
       nix-darwin,
       home-manager,
       nixvim,
+      ...
     }:
     {
       darwinConfigurations."kengo-macbook-pro" = nix-darwin.lib.darwinSystem {
@@ -32,6 +37,7 @@
           ./modules/darwin.nix
           home-manager.darwinModules.home-manager
           {
+            home-manager.extraSpecialArgs = inputs;
             home-manager.useGlobalPkgs = true;
             home-manager.useUserPackages = false;
             home-manager.backupFileExtension = "backup";
