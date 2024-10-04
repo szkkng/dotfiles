@@ -9,6 +9,7 @@
     gnused
     ninja
     supabase-cli
+    karabiner-elements
   ];
 }
 

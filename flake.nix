@@ -57,6 +57,7 @@
                   ./modules/zoxide.nix
                   ./modules/wezterm.nix
                   ./modules/ideavim.nix
+                  ./modules/karabiner.nix
                 ];
               };
             };
