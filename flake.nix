@@ -27,7 +27,6 @@
       nixpkgs,
       nix-darwin,
       home-manager,
-      nixvim,
       ...
     }:
     {
@@ -37,27 +36,28 @@
           ./modules/darwin.nix
           home-manager.darwinModules.home-manager
           {
-            home-manager.extraSpecialArgs = inputs;
-            home-manager.useGlobalPkgs = true;
-            home-manager.useUserPackages = false;
-            home-manager.backupFileExtension = "backup";
-            home-manager.users."kengo" = {
-              imports = [
-                ./modules/home.nix
-                ./modules/fish.nix
-                ./modules/git.nix
-                ./modules/starship.nix
-                ./modules/bat.nix
-                ./modules/fzf.nix
-                ./modules/fd.nix
-                ./modules/jq.nix
-                ./modules/ripgrep.nix
-                ./modules/eza.nix
-                ./modules/wezterm
-                ./modules/jetbrains
-                ./modules/neovim
-                nixvim.homeManagerModules.nixvim
-              ];
+            home-manager = {
+              extraSpecialArgs = inputs;
+              useGlobalPkgs = true;
+              useUserPackages = false;
+              backupFileExtension = "backup";
+              users."kengo" = {
+                imports = [
+                  ./modules/neovim
+                  ./modules/home.nix
+                  ./modules/fish.nix
+                  ./modules/git.nix
+                  ./modules/starship.nix
+                  ./modules/bat.nix
+                  ./modules/fzf.nix
+                  ./modules/fd.nix
+                  ./modules/jq.nix
+                  ./modules/ripgrep.nix
+                  ./modules/eza.nix
+                  ./modules/wezterm.nix
+                  ./modules/jetbrains.nix
+                ];
+              };
             };
           }
         ];
