@@ -14,10 +14,6 @@
     '';
     plugins = [
       {
-        name = "z";
-        src = pkgs.fishPlugins.z.src;
-      }
-      {
         name = "autopair";
         src = pkgs.fishPlugins.autopair.src;
       }

@@ -54,6 +54,7 @@
                   ./modules/jq.nix
                   ./modules/ripgrep.nix
                   ./modules/eza.nix
+                  ./modules/zoxide.nix
                   ./modules/wezterm.nix
                   ./modules/jetbrains.nix
                 ];
