@@ -8,6 +8,7 @@
     };
     settings = {
       defaults = {
+        path_display = [ "truncate" ];
         vimgrep_arguments = [
           "rg"
           "--color=never"
