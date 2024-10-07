@@ -1,3 +1,4 @@
+{ ... }:
 {
   home.file.".ideavimrc".text = ''
     """ Editing and Reloading .ideavimrc

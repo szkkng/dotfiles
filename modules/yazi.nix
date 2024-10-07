@@ -1,3 +1,4 @@
+{ ... }:
 {
   programs.yazi = {
     enable = true;
