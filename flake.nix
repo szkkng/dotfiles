@@ -19,6 +19,7 @@
       url = "github:wez/wezterm?dir=nix";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    catppuccin.url = "github:catppuccin/nix";
   };
 
   outputs =
@@ -58,6 +59,7 @@
                   ./modules/wezterm.nix
                   ./modules/ideavim.nix
                   ./modules/karabiner.nix
+                  ./modules/catppuccin.nix
                 ];
               };
             };
