@@ -60,6 +60,7 @@
                   ./modules/ideavim.nix
                   ./modules/karabiner.nix
                   ./modules/catppuccin.nix
+                  ./modules/yazi.nix
                 ];
               };
             };
