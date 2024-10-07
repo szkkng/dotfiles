@@ -1,3 +1,4 @@
+{ ... }:
 {
   programs.fd = {
     enable = true;
