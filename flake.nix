@@ -45,6 +45,7 @@
               users."kengo" = {
                 imports = [
                   ./modules/nixvim
+                  ./modules/wezterm
                   ./modules/home.nix
                   ./modules/fish.nix
                   ./modules/git.nix
@@ -56,7 +57,6 @@
                   ./modules/ripgrep.nix
                   ./modules/eza.nix
                   ./modules/zoxide.nix
-                  ./modules/wezterm.nix
                   ./modules/ideavim.nix
                   ./modules/karabiner.nix
                   ./modules/catppuccin.nix
