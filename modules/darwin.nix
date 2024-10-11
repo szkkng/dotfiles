@@ -7,6 +7,7 @@
   nix.settings.experimental-features = "nix-command flakes";
   system.stateVersion = 5;
   system.configurationRevision = self.rev or self.dirtyRev or null;
+  security.pam.enableSudoTouchIdAuth = true;
 
   users.users.kengo = {
     name = "kengo";
