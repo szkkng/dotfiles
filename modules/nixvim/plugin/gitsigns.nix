@@ -32,17 +32,17 @@
     {
       mode = "n";
       key = "<leader>gb";
-      action = "<cmd>lua require('gitsigns').blame_line({ full = true })";
+      action = "<cmd>lua require('gitsigns').blame_line({ full = true })<CR>";
     }
     {
       mode = "n";
       key = "<leader>gd";
-      action = "<cmd>lua require('gitsigns').diffthis()";
+      action = "<cmd>lua require('gitsigns').diffthis()<CR>";
     }
     {
       mode = "n";
       key = "<leader>g-";
-      action = "<cmd>lua require('gitsigns').toggle_deleted()";
+      action = "<cmd>lua require('gitsigns').toggle_deleted()<CR>";
     }
   ];
 }
