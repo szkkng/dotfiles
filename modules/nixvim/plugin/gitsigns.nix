@@ -22,7 +22,7 @@
     {
       mode = "v";
       key = "<leader>gr";
-      action = "<cmd>lua require('gitsigns').nav_hunk({ vim.fn.line '.', vim.fn.line 'v' })<CR>";
+      action = "<cmd>lua require('gitsigns').reset_hunk({ vim.fn.line '.', vim.fn.line 'v' })<CR>";
     }
     {
       mode = "n";
