@@ -15,11 +15,11 @@
             buffer = bufnr})
         '';
       };
-      nil-ls = {
+      nil_ls = {
         enable = true;
         settings.formatting.command = [ "nixfmt" ];
       };
-      lua-ls = {
+      lua_ls = {
         enable = true;
       };
       cssls = {
@@ -31,7 +31,7 @@
       eslint = {
         enable = true;
       };
-      ts-ls = {
+      ts_ls = {
         enable = true;
       };
       bashls = {
