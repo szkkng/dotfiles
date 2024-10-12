@@ -10,6 +10,10 @@
           "--offset-encoding=utf-16"
           "--completion-style=detailed"
         ];
+        onAttach.function = ''
+          vim.keymap.set("n", "<leader>ls", "<cmd>ClangdSwitchSourceHeader<CR>", {
+            buffer = bufnr})
+        '';
       };
       nil-ls = {
         enable = true;
