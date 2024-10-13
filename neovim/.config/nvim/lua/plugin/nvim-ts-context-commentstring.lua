@@ -1,9 +1,9 @@
 return {
   "JoosepAlviste/nvim-ts-context-commentstring",
   config = function()
-    require("ts_context_commentstring").setup {
+    require("ts_context_commentstring").setup({
       enable_autocmd = false,
-    }
+    })
 
     vim.schedule(function()
       local get_option = vim.filetype.get_option
