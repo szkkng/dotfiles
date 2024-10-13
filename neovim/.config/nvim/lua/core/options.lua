@@ -18,7 +18,7 @@ opt.relativenumber = true
 opt.scrolloff = 4
 opt.shiftround = true
 opt.shiftwidth = 2
-opt.shortmess:append { W = true, I = true, c = true, C = true }
+opt.shortmess:append({ W = true, I = true, c = true, C = true })
 opt.showmode = false
 opt.signcolumn = "yes"
 opt.smartcase = true
@@ -28,3 +28,4 @@ opt.swapfile = false
 opt.tabstop = 2
 opt.termguicolors = true
 opt.wrap = false
+

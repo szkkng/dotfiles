@@ -5,3 +5,4 @@ return {
     "--offset-encoding=utf-16",
   },
 }
+

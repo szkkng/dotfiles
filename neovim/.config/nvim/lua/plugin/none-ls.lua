@@ -5,10 +5,10 @@ return {
   },
   event = { "BufReadPre", "BufNewFile" },
   config = function()
-    local null_ls = require "null-ls"
+    local null_ls = require("null-ls")
     local formatting = null_ls.builtins.formatting
 
-    null_ls.setup {
+    null_ls.setup({
       debug = false,
       sources = {
         formatting.stylua,
@@ -16,7 +16,7 @@ return {
         null_ls.builtins.completion.spell,
         null_ls.builtins.formatting.nixfmt,
       },
-    }
+    })
   end,
 }
 

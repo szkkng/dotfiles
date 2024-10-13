@@ -46,7 +46,7 @@ return {
       end
 
       if server == "lua_ls" then
-        require("neodev").setup {}
+        require("neodev").setup({})
       end
 
       require("lspconfig")[server].setup(opts)
