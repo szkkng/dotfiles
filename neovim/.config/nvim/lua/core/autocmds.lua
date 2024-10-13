@@ -1,12 +1,11 @@
-vim.api.nvim_set_hl(0, "YankHighlight", { bg = "#54546D" })
-vim.api.nvim_create_autocmd({ "TextYankPost" }, {
+-- Highlight on yank
+vim.api.nvim_create_autocmd("TextYankPost", {
   callback = function()
-    vim.highlight.on_yank({ higroup = "YankHighlight", timeout = 250 })
+    vim.highlight.on_yank()
   end,
 })
 
-vim.api.nvim_create_autocmd("BufWritePre", {
-  buffer = buffer,
+vim.api.nvim_create_autocmd({ "BufWritePre" }, {
   callback = function()
     vim.lsp.buf.format({ async = false })
   end,
