@@ -1,4 +1,4 @@
-local wezterm = require "wezterm"
+local wezterm = require("wezterm")
 local act = wezterm.action
 
 local copy_mode = nil
@@ -6,16 +6,16 @@ local search_mode = nil
 if wezterm.gui then
   copy_mode = wezterm.gui.default_key_tables().copy_mode
   local my_copy_mode = {
-    { key = "/", mods = "NONE", action = act.Search { CaseSensitiveString = "" } },
-    { key = "n", mods = "NONE", action = act.CopyMode "NextMatch" },
-    { key = "N", mods = "NONE", action = act.CopyMode "PriorMatch" },
+    { key = "/", mods = "NONE", action = act.Search({ CaseSensitiveString = "" }) },
+    { key = "n", mods = "NONE", action = act.CopyMode("NextMatch") },
+    { key = "N", mods = "NONE", action = act.CopyMode("PriorMatch") },
     {
       key = "Enter",
       mods = "NONE",
-      action = act.Multiple {
+      action = act.Multiple({
         { CopyTo = "ClipboardAndPrimarySelection" },
         { CopyMode = "Close" },
-      },
+      }),
     },
   }
   for _, val in ipairs(my_copy_mode) do
@@ -31,8 +31,8 @@ if wezterm.gui then
   end
 end
 
-local tabline = wezterm.plugin.require "https://github.com/michaelbrusegard/tabline.wez"
-tabline.setup {
+local tabline = wezterm.plugin.require("https://github.com/michaelbrusegard/tabline.wez")
+tabline.setup({
   options = {
     icons_enabled = false,
     section_separators = {
@@ -64,11 +64,11 @@ tabline.setup {
     tabline_y = { "" },
     tabline_z = { "battery" },
   },
-}
+})
 
 return {
   default_prog = { "/Users/kengo/.nix-profile/bin/fish", "-l" },
-  font = wezterm.font "JetbrainsMono Nerd Font",
+  font = wezterm.font("JetbrainsMono Nerd Font"),
   font_size = 14,
   line_height = 1.2,
 
@@ -96,12 +96,12 @@ return {
 
   leader = { key = "j", mods = "CTRL", timeout_milliseconds = 1000 },
   keys = {
-    { key = "-", mods = "LEADER", action = act.SplitVertical { domain = "CurrentPaneDomain" } },
-    { key = "|", mods = "LEADER", action = act.SplitHorizontal { domain = "CurrentPaneDomain" } },
-    { key = "h", mods = "LEADER", action = act.ActivatePaneDirection "Left" },
-    { key = "l", mods = "LEADER", action = act.ActivatePaneDirection "Right" },
-    { key = "k", mods = "LEADER", action = act.ActivatePaneDirection "Up" },
-    { key = "j", mods = "LEADER", action = act.ActivatePaneDirection "Down" },
+    { key = "-", mods = "LEADER", action = act.SplitVertical({ domain = "CurrentPaneDomain" }) },
+    { key = "|", mods = "LEADER", action = act.SplitHorizontal({ domain = "CurrentPaneDomain" }) },
+    { key = "h", mods = "LEADER", action = act.ActivatePaneDirection("Left") },
+    { key = "l", mods = "LEADER", action = act.ActivatePaneDirection("Right") },
+    { key = "k", mods = "LEADER", action = act.ActivatePaneDirection("Up") },
+    { key = "j", mods = "LEADER", action = act.ActivatePaneDirection("Down") },
     { key = "c", mods = "LEADER", action = act.ActivateCopyMode },
     { key = "L", mods = "LEADER", action = act.ShowDebugOverlay },
     {
@@ -112,18 +112,18 @@ return {
     {
       key = "LeftArrow",
       mods = "ALT",
-      action = act.AdjustPaneSize { "Left", 1 },
+      action = act.AdjustPaneSize({ "Left", 1 }),
     },
     {
       key = "DownArrow",
       mods = "ALT",
-      action = act.AdjustPaneSize { "Down", 1 },
+      action = act.AdjustPaneSize({ "Down", 1 }),
     },
-    { key = "UpArrow", mods = "ALT", action = act.AdjustPaneSize { "Up", 1 } },
+    { key = "UpArrow", mods = "ALT", action = act.AdjustPaneSize({ "Up", 1 }) },
     {
       key = "RightArrow",
       mods = "ALT",
-      action = act.AdjustPaneSize { "Right", 1 },
+      action = act.AdjustPaneSize({ "Right", 1 }),
     },
   },
   key_tables = {
