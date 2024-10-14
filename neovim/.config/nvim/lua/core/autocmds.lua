@@ -1,18 +1,36 @@
+local function augroup(name)
+  return vim.api.nvim_create_augroup("szkkng_" .. name, { clear = true })
+end
+
 -- Highlight on yank
 vim.api.nvim_create_autocmd("TextYankPost", {
+  group = augroup("highlight_yank"),
   callback = function()
     vim.highlight.on_yank()
   end,
 })
 
-vim.api.nvim_create_autocmd({ "BufWritePre" }, {
+-- Resize splits if window got resized
+vim.api.nvim_create_autocmd({ "VimResized" }, {
+  group = augroup("resize_splits"),
   callback = function()
-    vim.lsp.buf.format({ async = false })
+    local current_tab = vim.fn.tabpagenr()
+    vim.cmd("tabdo wincmd =")
+    vim.cmd("tabnext " .. current_tab)
   end,
 })
 
--- Add new line to the end of the file
+-- Format on save
 vim.api.nvim_create_autocmd({ "BufWritePre" }, {
+  group = augroup("format_on_save"),
+  callback = function()
+    vim.lsp.buf.format()
+  end,
+})
+
+-- Insert final newline
+vim.api.nvim_create_autocmd({ "BufWritePre" }, {
+  group = augroup("insert_final_newline"),
   pattern = "*",
   callback = function()
     local num_lines = vim.api.nvim_buf_line_count(0)
@@ -20,14 +38,6 @@ vim.api.nvim_create_autocmd({ "BufWritePre" }, {
     if last_nonblank <= num_lines then
       vim.api.nvim_buf_set_lines(0, last_nonblank, num_lines, true, { "" })
     end
-  end,
-})
-
-vim.api.nvim_create_autocmd({ "FileType" }, {
-  desc = "Force commentstring to include spaces",
-  callback = function(event)
-    local cs = vim.bo[event.buf].commentstring
-    vim.bo[event.buf].commentstring = cs:gsub("(%S)%%s", "%1 %%s"):gsub("%%s(%S)", "%%s %1")
   end,
 })
 
