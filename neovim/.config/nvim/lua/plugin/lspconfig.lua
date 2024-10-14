@@ -36,13 +36,12 @@ return {
 
     for _, server in pairs(servers) do
       local opts = {
-        on_attach = function() end,
         capabilities = common_capabilities(),
       }
 
       local require_ok, settings = pcall(require, "plugin.server." .. server)
       if require_ok then
-        opts = vim.tbl_deep_extend("force", settings, opts)
+        opts = vim.tbl_deep_extend("force", opts, settings)
       end
 
       if server == "lua_ls" then
