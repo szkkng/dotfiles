@@ -4,6 +4,9 @@ fish_add_path /opt/homebrew/bin
 fish_add_path $HOME/.scripts
 fish_add_path $HOME/.ghcup/bin
 
+balias y "yazi"
+balias v "nvim"
+balias vi "nvim"
 balias ls "eza"
 balias ll "eza -l --git"
 balias la "eza -la"
@@ -12,7 +15,6 @@ balias cdv "cd $HOME/vst-dev/"
 balias cdw "cd $HOME/web-dev/"
 balias cat "bat"
 balias less "bat"
-balias vi "nvim"
 balias cl "clion"
 balias ws "webstorm"
 balias supa "supabase"
