@@ -18,5 +18,6 @@ spec("plugin.nvim-ts-context-commentstring")
 spec("plugin.hlchunk")
 spec("plugin.lualine")
 spec("plugin.copilot")
+spec("plugin.zen-mode")
 require("core.lazy")
 
