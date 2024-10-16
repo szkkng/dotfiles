@@ -1,22 +1,23 @@
 [user]
-	name = szkkng
-	email = hi@kengo.dev
+  name = szkkng
+  email = hi@kengo.dev
 [init]
-	defaultBranch = main
+  defaultBranch = main
 [alias]
-	st = status
-	br = branch
-	ci = commit
-	sw = switch
-	last = log -1
-	logol = log --oneline
+  st = status
+  br = branch
+  co = commit
+  sw = switch
+  di = diff
+  last = log -1
+  ll = log --oneline
 [pull]
-	ff = only
+  ff = only
 [fetch]
-	prune = true
+  prune = true
 [core]
-	autocrlf = input
-	ignorecase = false
+  autocrlf = input
+  ignorecase = false
   pager = delta
 [interactive]
   diffFilter = delta --color-only
