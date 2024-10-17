@@ -9,6 +9,7 @@
   co = commit
   sw = switch
   di = diff
+  sm = submodule
   last = log -1
   ll = log --oneline
 [pull]
