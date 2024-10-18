@@ -18,6 +18,10 @@ return {
   config = function(_, opts)
     require("lspsaga").setup(opts)
 
+    vim.keymap.set("n", "<leader>lh", function()
+      vim.lsp.inlay_hint.enable(not vim.lsp.inlay_hint.is_enabled())
+    end)
+
     vim.keymap.set("n", "<leader>la", "<cmd>Lspsaga code_action<CR>")
     vim.keymap.set("n", "<leader>ld", "<cmd>Lspsaga peek_definition<CR>")
     vim.keymap.set("n", "<leader>lt", "<cmd>Lspsaga peek_type_definition<CR>")
