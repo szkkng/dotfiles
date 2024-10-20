@@ -24,6 +24,7 @@ return {
         "ts_ls",
         "bashls",
         "jsonls",
+        "neocmake",
       }
 
       return {

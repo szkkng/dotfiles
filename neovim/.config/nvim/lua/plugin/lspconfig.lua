@@ -18,6 +18,7 @@ return {
       "bashls",
       "jsonls",
       "yamlls",
+      "neocmake",
     }
 
     local default_diagnostic_config = {
