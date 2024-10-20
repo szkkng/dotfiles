@@ -23,8 +23,16 @@ vim.api.nvim_create_autocmd({ "VimResized" }, {
 -- Format on save
 vim.api.nvim_create_autocmd({ "BufWritePre" }, {
   group = augroup("format_on_save"),
+  pattern = "*",
+  callback = function(args)
+    require("conform").format({ bufnr = args.buf })
+  end,
+})
+
+vim.api.nvim_create_autocmd({ "BufWritePost" }, {
+  group = augroup("try_lint"),
   callback = function()
-    vim.lsp.buf.format()
+    require("lint").try_lint()
   end,
 })
 
