@@ -27,7 +27,6 @@
       "brave-browser"
       "chatgpt"
       "deepl"
-      "fl-studio"
       "jetbrains-toolbox"
       "spotify"
       "obsidian"
