@@ -22,23 +22,15 @@
       upgrade = true;
     };
     casks = [
-      "anki"
+      "1password"
       "ableton-live-suite"
-      "brave-browser"
       "chatgpt"
       "deepl"
-      "jetbrains-toolbox"
-      "spotify"
-      "obsidian"
-      "reaper"
-      "cycling74-max"
-      "splice"
-      "1password"
-      "discord"
       "font-jetbrains-mono"
       "font-jetbrains-mono-nerd-font"
-      "keycastr"
-      "raycast"
+      "jetbrains-toolbox"
+      "cycling74-max"
+      "splice"
     ];
     masApps = {
       "Amazon Kindle" = 302584613;
