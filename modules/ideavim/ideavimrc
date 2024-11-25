@@ -11,6 +11,8 @@ set ignorecase
 set smartcase
 set incsearch
 set hlsearch
+set scrolloff=5
+set history=500
 
 """ Plugins
 set surround
@@ -49,6 +51,7 @@ nmap gd <Action>(GotoDeclaration)
 nmap gp <Action>(GotoSuperMethod)
 nmap gt <Action>(GotoTest)
 nmap gD <Action>(GotoTypeDeclaration)
+nmap gs <Action>(SwitchHeaderSource)
 nmap ]c <Action>(VcsShowNextChangeMarker)
 nmap [c <Action>(VcsShowPrevChangeMarker)
 nmap ]e <Action>(GotoNextError)
