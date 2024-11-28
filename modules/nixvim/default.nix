@@ -5,7 +5,18 @@
   programs.nixvim = {
     enable = true;
 
-    colorschemes.catppuccin.enable = true;
+    colorschemes.catppuccin = {
+      enable = true;
+      settings = {
+        integrations = {
+          indent_blankline = {
+            enabled = true;
+            scope_color = "lavender";
+            colored_indent_levels = false;
+          };
+        };
+      };
+    };
 
     globals = {
       # disable netrw for nvim-tree (strongly advised)
@@ -35,7 +46,7 @@
       ./plugin/lsp.nix
       ./plugin/gitsigns.nix
       ./plugin/lspsaga.nix
-      ./plugin/hlchunk.nix
+      ./plugin/indent-blankline.nix
       ./plugin/copilot.nix
       ./plugin/cmp.nix
       ./plugin/dap.nix
