@@ -25,6 +25,7 @@
       ./core/keymap.nix
       ./core/autocmd.nix
       ./plugin/autopairs.nix
+      ./plugin/conform.nix
       ./plugin/lualine.nix
       ./plugin/luasnip.nix
       ./plugin/treesitter.nix
