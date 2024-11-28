@@ -1,6 +1,0 @@
-{ ... }:
-{
-  plugins.luasnip = {
-    enable = true;
-  };
-}
