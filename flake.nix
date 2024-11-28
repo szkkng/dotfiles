@@ -11,10 +11,6 @@
       url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-    nixvim = {
-      url = "github:nix-community/nixvim";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
     wezterm = {
       url = "github:wez/wezterm?dir=nix";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -44,7 +40,7 @@
               backupFileExtension = "backup";
               users."kengo" = {
                 imports = [
-                  ./modules/nixvim
+                  ./modules/neovim
                   ./modules/wezterm
                   ./modules/ideavim
                   ./modules/karabiner
