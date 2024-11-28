@@ -15,4 +15,3 @@
     "nvim/init.lua".enable = false;
   };
 }
-

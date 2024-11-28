@@ -12,4 +12,3 @@ return {
     { "<leader>e", "<cmd>NvimTreeToggle<CR>" },
   },
 }
-

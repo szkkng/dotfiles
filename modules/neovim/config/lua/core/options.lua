@@ -28,4 +28,3 @@ opt.swapfile = false
 opt.tabstop = 2
 opt.termguicolors = true
 opt.wrap = false
-

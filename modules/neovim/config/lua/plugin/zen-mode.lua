@@ -9,4 +9,3 @@ return {
     { "<leader>z", "<cmd>ZenMode<CR>" },
   },
 }
-

@@ -21,4 +21,3 @@ spec("plugin.lualine")
 spec("plugin.copilot")
 spec("plugin.zen-mode")
 require("core.lazy")
-
