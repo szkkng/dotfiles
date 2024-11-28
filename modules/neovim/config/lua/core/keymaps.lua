@@ -32,4 +32,3 @@ keymap("n", "<M-C-Up>", "<cmd>resize +2<CR>", opts)
 keymap("n", "<M-C-Down>", "<cmd>resize -2<CR>", opts)
 keymap("n", "<M-C-Left>", "<cmd>vertical resize -2<CR>", opts)
 keymap("n", "<M-C-Right>", "<cmd>vertical resize +2<CR>", opts)
-

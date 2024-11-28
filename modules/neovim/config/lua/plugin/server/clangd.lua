@@ -8,4 +8,3 @@ return {
     vim.keymap.set("n", "gs", "<cmd>ClangdSwitchSourceHeader<CR>")
   end,
 }
-
