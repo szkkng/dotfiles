@@ -11,4 +11,3 @@
 
   xdg.configFile."wezterm/wezterm.lua".source = ./config/wezterm.lua;
 }
-

@@ -131,4 +131,3 @@ return {
     search_mode = search_mode,
   },
 }
-
