@@ -71,4 +71,3 @@
       darwinPackages = self.darwinConfigurations."kengo-macbook-pro".pkgs;
     };
 }
-

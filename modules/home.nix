@@ -19,4 +19,3 @@
     karabiner-elements
   ];
 }
-
