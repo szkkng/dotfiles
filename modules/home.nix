@@ -6,6 +6,7 @@
   home.packages = with pkgs; [
     arc-browser
     cmake
+    cargo
     delta
     discord
     gnused
