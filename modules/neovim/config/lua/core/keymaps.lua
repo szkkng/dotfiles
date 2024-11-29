@@ -36,7 +36,7 @@ keymap("n", "<M-C-Right>", "<cmd>vertical resize +2<CR>")
 local diagnostic_goto = function(next, severity)
   vim.diagnostic.jump({ count = next and 1 or -1, severity = severity or nil, float = true })
 end
-keymap("n", "<leader>do", vim.diagnostic.open_float)
+keymap("n", "<leader>cd", vim.diagnostic.open_float)
 vim.keymap.set("n", "]d", function()
   diagnostic_goto(true)
 end)
