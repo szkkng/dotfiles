@@ -1,34 +1,54 @@
-local opts = { noremap = true, silent = true }
-local keymap = vim.api.nvim_set_keymap
+local keymap = vim.keymap.set
 
 vim.g.mapleader = " "
 
-keymap("n", "<leader>x", "<cmd>noh<CR>", opts)
-keymap("n", "<leader>,", "<cmd>w<CR>", opts)
-keymap("n", "<C-S>", ":%s/", opts)
+keymap("n", "<leader>x", "<cmd>noh<CR>")
+keymap("n", "<leader>,", "<cmd>w<CR>")
+keymap("n", "<C-S>", ":%s/")
 
-keymap("n", "-", "<C-x>", opts)
-keymap("n", "+", "<C-a>", opts)
+keymap("n", "-", "<C-x>")
+keymap("n", "+", "<C-a>")
 
 -- better indenting
-keymap("v", "<", "<gv", opts)
-keymap("v", ">", ">gv", opts)
+keymap("v", "<", "<gv")
+keymap("v", ">", ">gv")
 
 -- buffers
-keymap("n", "gp", "<cmd>bprevious<CR>", opts)
-keymap("n", "gn", "<cmd>bnext<CR>", opts)
+keymap("n", "gp", "<cmd>bprevious<CR>")
+keymap("n", "gn", "<cmd>bnext<CR>")
 
 -- window
-keymap("n", "<leader>wv", "<cmd>vs<CR>", opts)
-keymap("n", "<leader>ws", "<cmd>sp<CR>", opts)
-keymap("n", "<leader>wl", "<C-w>l", opts)
-keymap("n", "<leader>wh", "<C-w>h", opts)
-keymap("n", "<leader>wk", "<C-w>k", opts)
-keymap("n", "<leader>wj", "<C-w>j", opts)
-keymap("n", "<leader>wH", "<C-w>H", opts)
-keymap("n", "<leader>wL", "<C-w>L", opts)
-keymap("n", "<leader>wq", "<cmd>confirm q<CR>", opts)
-keymap("n", "<M-C-Up>", "<cmd>resize +2<CR>", opts)
-keymap("n", "<M-C-Down>", "<cmd>resize -2<CR>", opts)
-keymap("n", "<M-C-Left>", "<cmd>vertical resize -2<CR>", opts)
-keymap("n", "<M-C-Right>", "<cmd>vertical resize +2<CR>", opts)
+keymap("n", "<leader>wv", "<cmd>vs<CR>")
+keymap("n", "<leader>ws", "<cmd>sp<CR>")
+keymap("n", "<leader>wl", "<C-w>l")
+keymap("n", "<leader>wh", "<C-w>h")
+keymap("n", "<leader>wk", "<C-w>k")
+keymap("n", "<leader>wj", "<C-w>j")
+keymap("n", "<leader>wH", "<C-w>H")
+keymap("n", "<leader>wL", "<C-w>L")
+keymap("n", "<leader>wq", "<cmd>confirm q<CR>")
+keymap("n", "<M-C-Up>", "<cmd>resize +2<CR>")
+keymap("n", "<M-C-Down>", "<cmd>resize -2<CR>")
+keymap("n", "<M-C-Left>", "<cmd>vertical resize -2<CR>")
+keymap("n", "<M-C-Right>", "<cmd>vertical resize +2<CR>")
+
+-- diagnostics
+keymap("n", "<leader>do", vim.diagnostic.open_float)
+vim.keymap.set("n", "]d", function()
+  vim.diagnostic.jump({ count = 1, float = true })
+end)
+vim.keymap.set("n", "[d", function()
+  vim.diagnostic.jump({ count = -1, float = true })
+end)
+vim.keymap.set("n", "]w", function()
+  vim.diagnostic.jump({ count = 1, float = true, severity = vim.diagnostic.severity.WARN })
+end)
+vim.keymap.set("n", "[w", function()
+  vim.diagnostic.jump({ count = -1, float = true, severity = vim.diagnostic.severity.WARN })
+end)
+vim.keymap.set("n", "]e", function()
+  vim.diagnostic.jump({ count = 1, float = true, severity = vim.diagnostic.severity.ERROR })
+end)
+vim.keymap.set("n", "[e", function()
+  vim.diagnostic.jump({ count = -1, float = true, severity = vim.diagnostic.severity.ERROR })
+end)
