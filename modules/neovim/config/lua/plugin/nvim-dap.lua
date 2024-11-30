@@ -31,6 +31,11 @@ return {
     { "<leader>d3", "<cmd>DapStepOut<CR>" },
   },
   config = function()
+    local sign = vim.fn.sign_define
+    sign("DapBreakpoint", { text = "●", texthl = "DapBreakpoint", linehl = "", numhl = "" })
+    sign("DapBreakpointCondition", { text = "●", texthl = "DapBreakpointCondition", linehl = "", numhl = "" })
+    sign("DapLogPoint", { text = "◆", texthl = "DapLogPoint", linehl = "", numhl = "" })
+
     local dap, dapui = require("dap"), require("dapui")
     dapui.setup()
     dap.listeners.before.attach.dapui_config = function()
