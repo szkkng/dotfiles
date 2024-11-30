@@ -26,6 +26,8 @@ return {
     opts = function()
       return {
         defaults = {
+          prompt_prefix = " ",
+          selection_caret = " ",
           vimgrep_arguments = {
             "rg",
             "--color=never",

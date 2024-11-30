@@ -4,6 +4,21 @@ return {
     "nvim-tree/nvim-web-devicons",
   },
   opts = {
+    renderer = {
+      icons = {
+        glyphs = {
+          git = {
+            unstaged = "󰄱",
+            staged = "󰱒",
+            unmerged = "",
+            renamed = "",
+            untracked = "󰢤",
+            deleted = "",
+            ignored = "",
+          },
+        },
+      },
+    },
     update_focused_file = {
       enable = true,
     },
