@@ -8,6 +8,7 @@ return {
       indent_blankline = {
         scope_color = "lavender",
       },
+      mason = true,
     },
   },
   config = function(_, opts)
