@@ -4,6 +4,7 @@ return {
   priority = 1000,
   opts = {
     integrations = {
+      blink_cmp = true,
       indent_blankline = {
         scope_color = "lavender",
       },
