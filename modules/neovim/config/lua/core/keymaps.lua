@@ -14,8 +14,8 @@ keymap("v", "<", "<gv")
 keymap("v", ">", ">gv")
 
 -- buffers
-keymap("n", "gp", "<cmd>bprevious<CR>")
-keymap("n", "gn", "<cmd>bnext<CR>")
+keymap("n", "]b", "<cmd>bnext<CR>")
+keymap("n", "[b", "<cmd>bprevious<CR>")
 
 -- window
 keymap("n", "<leader>wv", "<cmd>vs<CR>")
