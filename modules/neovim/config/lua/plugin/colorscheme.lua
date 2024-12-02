@@ -9,6 +9,7 @@ return {
         scope_color = "lavender",
       },
       mason = true,
+      noice = true,
     },
   },
   config = function(_, opts)
