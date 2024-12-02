@@ -12,6 +12,9 @@ return {
         "nvim-telescope/telescope-fzf-native.nvim",
         build = "cmake -S. -Bbuild -DCMAKE_BUILD_TYPE=Release && cmake --build build --config Release",
       },
+      {
+        "nvim-telescope/telescope-ui-select.nvim",
+      },
     },
     keys = {
       { "<leader>b", "<cmd>Telescope buffers<CR>" },
@@ -87,11 +90,17 @@ return {
             initial_mode = "normal",
           },
         },
+        extensions = {
+          ["ui-select"] = {
+            require("telescope.themes").get_dropdown({}),
+          },
+        },
       }
     end,
     config = function(_, opts)
       require("telescope").setup(opts)
       require("telescope").load_extension("fzf")
+      require("telescope").load_extension("ui-select")
     end,
   },
 }
