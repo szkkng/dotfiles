@@ -20,7 +20,6 @@ return {
         keymap("n", "gr", require("telescope.builtin").lsp_references)
         keymap("n", "gI", require("telescope.builtin").lsp_implementations)
         keymap("n", "gS", require("telescope.builtin").lsp_document_symbols)
-        keymap("n", "<leader>lr", vim.lsp.buf.rename)
         keymap("n", "<leader>la", vim.lsp.buf.code_action)
 
         local client = vim.lsp.get_client_by_id(event.data.client_id)
