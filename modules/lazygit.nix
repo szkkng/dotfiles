@@ -12,6 +12,12 @@
       gui = {
         nerdFontsVersion = "3";
       };
+      keybinding = {
+        universal = {
+          scrollUpMain = "<up>";
+          scrollDownMain = "<down>";
+        };
+      };
     };
   };
 }
