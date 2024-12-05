@@ -60,6 +60,7 @@
                   ./modules/eza.nix
                   ./modules/zoxide.nix
                   ./modules/catppuccin.nix
+                  ./modules/lazygit.nix
                   ./modules/yazi.nix
                 ];
               };
