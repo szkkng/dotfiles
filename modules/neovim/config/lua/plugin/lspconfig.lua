@@ -43,6 +43,7 @@ return {
       "jsonls",
       "yamlls",
       "neocmake",
+      "nil_ls",
     }
 
     local default_diagnostic_config = {
