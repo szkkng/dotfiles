@@ -5,6 +5,7 @@
   programs.home-manager.enable = true;
   home.packages = with pkgs; [
     arc-browser
+    bun
     cmake
     cargo
     delta
