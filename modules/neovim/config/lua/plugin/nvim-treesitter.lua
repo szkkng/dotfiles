@@ -9,6 +9,7 @@ return {
       "cmake",
       "haskell",
       "javascript",
+      "json",
       "lua",
       "markdown",
       "markdown_inline",
