@@ -63,4 +63,9 @@
       "com.apple.mouse.scaling" = 2.0;
     };
   };
+
+  system.keyboard = {
+    enableKeyMapping = true;
+    remapCapsLockToControl = true;
+  };
 }
