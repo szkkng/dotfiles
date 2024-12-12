@@ -5,6 +5,7 @@
   programs.home-manager.enable = true;
   home.packages = with pkgs; [
     arc-browser
+    brave
     bun
     cmake
     cargo
