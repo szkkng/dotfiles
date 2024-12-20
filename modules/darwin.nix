@@ -30,7 +30,6 @@
       "font-jetbrains-mono-nerd-font"
       "jetbrains-toolbox"
       "cycling74-max"
-      "splice"
     ];
     masApps = {
       "Amazon Kindle" = 302584613;
