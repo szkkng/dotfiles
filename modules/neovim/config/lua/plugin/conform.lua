@@ -12,6 +12,7 @@ return {
       typescriptreact = { "prettierd" },
       json = { "prettierd" },
       markdown = { "prettierd" },
+      yaml = { "prettierd" },
       nix = { "nixfmt" },
     },
     format_on_save = {
@@ -20,4 +21,3 @@ return {
     },
   },
 }
-
