@@ -55,6 +55,7 @@
                   ./modules/bat.nix
                   ./modules/fzf.nix
                   ./modules/fd.nix
+                  ./modules/gh.nix
                   ./modules/jq.nix
                   ./modules/ripgrep.nix
                   ./modules/eza.nix
