@@ -21,6 +21,9 @@
       autoUpdate = true;
       upgrade = true;
     };
+    brews = [
+      "sccache"
+    ];
     casks = [
       "1password"
       "ableton-live-suite"
