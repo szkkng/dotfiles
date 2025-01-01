@@ -4,7 +4,7 @@ return {
   config = function()
     local lint = require("lint")
     lint.linters_by_ft = {
-      -- cmake = { "cmakelint" },
+      ghaction = { "actionlint" },
     }
 
     vim.api.nvim_create_autocmd({ "BufReadPre", "BufNewFile", "InsertLeave" }, {
