@@ -73,7 +73,6 @@ return {
   line_height = 1.2,
 
   color_scheme = "Catppuccin Mocha",
-  force_reverse_video_cursor = true,
 
   use_fancy_tab_bar = false,
   hide_tab_bar_if_only_one_tab = true,
