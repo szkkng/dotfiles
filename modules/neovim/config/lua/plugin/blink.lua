@@ -1,21 +1,33 @@
 return {
   "saghen/blink.cmp",
   event = "InsertEnter",
-  version = "v0.*",
+  version = "*",
   ---@module 'blink.cmp'
   ---@type blink.cmp.Config
   opts = {
     keymap = { preset = "enter" },
-    sources = {
-      completion = {
-        enabled_providers = { "lsp", "path", "snippets", "buffer" },
+
+    completion = {
+      accept = {
+        auto_brackets = {
+          enabled = true,
+        },
+      },
+      menu = {
+        draw = {
+          treesitter = { "lsp" },
+        },
+      },
+      documentation = {
+        auto_show = true,
+        auto_show_delay_ms = 200,
       },
     },
-    windows = {
-      autocomplete = {
-        scrollbar = false,
-      },
+
+    sources = {
+      default = { "lsp", "path", "snippets", "buffer" },
+      cmdline = {},
     },
   },
-  opts_extend = { "sources.completion.enabled_providers" },
+  opts_extend = { "sources.default" },
 }
