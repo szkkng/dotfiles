@@ -2,9 +2,10 @@ return {
   "neovim/nvim-lspconfig",
   event = { "BufReadPre", "BufNewFile" },
   dependencies = {
-    {
-      "folke/neodev.nvim",
-    },
+    { "williamboman/mason.nvim", config = true },
+    "williamboman/mason-lspconfig.nvim",
+    "WhoIsSethDaniel/mason-tool-installer.nvim",
+    "saghen/blink.cmp",
   },
   config = function()
     vim.api.nvim_create_autocmd("LspAttach", {
@@ -32,18 +33,21 @@ return {
     })
 
     local servers = {
-      "clangd",
-      "lua_ls",
-      "cssls",
-      "html",
-      "eslint",
-      "ts_ls",
-      "eslint",
-      "bashls",
-      "jsonls",
-      "yamlls",
-      "neocmake",
-      "nil_ls",
+      clangd = {
+        on_attach = function()
+          vim.keymap.set("n", "gs", "<cmd>ClangdSwitchSourceHeader<CR>")
+        end,
+      },
+      lua_ls = {},
+      cssls = {},
+      html = {},
+      ts_ls = {},
+      eslint = {},
+      bashls = {},
+      jsonls = {},
+      yamlls = {},
+      neocmake = {},
+      nil_ls = {},
     }
 
     local default_diagnostic_config = {
@@ -62,27 +66,28 @@ return {
 
     vim.diagnostic.config(default_diagnostic_config)
 
-    local function common_capabilities()
-      local capabilities = vim.lsp.protocol.make_client_capabilities()
-      capabilities.textDocument.completion.completionItem.snippetSupport = true
-      return capabilities
-    end
+    local capabilities = vim.lsp.protocol.make_client_capabilities()
+    capabilities = require("blink.cmp").get_lsp_capabilities(capabilities)
 
-    for _, server in pairs(servers) do
-      local opts = {
-        capabilities = common_capabilities(),
-      }
+    require("mason").setup()
 
-      local require_ok, settings = pcall(require, "plugin.server." .. server)
-      if require_ok then
-        opts = vim.tbl_deep_extend("force", opts, settings)
-      end
+    local ensure_installed = vim.tbl_keys(servers or {})
+    vim.list_extend(ensure_installed, {
+      "actionlint",
+      "stylua",
+      "gersemi",
+      "prettierd",
+    })
+    require("mason-tool-installer").setup({ ensure_installed = ensure_installed })
 
-      if server == "lua_ls" then
-        require("neodev").setup({})
-      end
-
-      require("lspconfig")[server].setup(opts)
-    end
+    require("mason-lspconfig").setup({
+      handlers = {
+        function(server_name)
+          local server = servers[server_name] or {}
+          server.capabilities = vim.tbl_deep_extend("force", {}, capabilities, server.capabilities or {})
+          require("lspconfig")[server_name].setup(server)
+        end,
+      },
+    })
   end,
 }
