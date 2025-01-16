@@ -89,5 +89,6 @@ nmap <leader>ft <Action>(FindInPath)
 nmap <leader>fr <Action>(RecentFiles)
 nmap <leader>fl <Action>(RecentLocations)
 
-" Zen Mode
-nmap <leader>zm <Action>(ToggleZenMode)
+" Mode
+nmap <leader>mz <Action>(ToggleZenMode)
+nmap <leader>md <Action>(ToggleDistractionFreeMode)
