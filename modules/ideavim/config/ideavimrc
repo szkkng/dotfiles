@@ -1,5 +1,5 @@
 """ Editing and Reloading .ideavimrc
-nnoremap \e :e ~/.ideavimrc<CR>
+nnoremap \e :e ~/.config/ideavim/ideavimrc<CR>
 nmap \r <Action>(IdeaVim.ReloadVimRc.reload)
 
 """ Options
