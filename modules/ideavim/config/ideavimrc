@@ -18,6 +18,7 @@ set history=500
 set surround
 set highlightedyank
 set commentary
+set nerdtree
 
 """ Key Mappings
 let mapleader=" "
@@ -80,11 +81,13 @@ nmap <leader>dv <Action>(ViewBreakpoints)
 " Refactor
 nmap <leader>rn <Action>(RenameElement)
 
-" Search
+" File
+nmap <leader>fn :NERDTreeToggle<CR>
 nmap <leader>ff <Action>(GotoFile)
 nmap <leader>fc <Action>(GotoClass)
 nmap <leader>ft <Action>(FindInPath)
 nmap <leader>fr <Action>(RecentFiles)
+nmap <leader>fl <Action>(RecentLocations)
 
 " Zen Mode
 nmap <leader>zm <Action>(ToggleZenMode)
