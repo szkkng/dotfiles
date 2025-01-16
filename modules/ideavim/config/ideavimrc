@@ -58,12 +58,27 @@ nmap ]e <Action>(GotoNextError)
 nmap [e <Action>(GotoPreviousError)
 nmap K <Action>(ShowHoverInfo)
 
+" Git
+nmap <leader>gc <Action>(Vcs.Show.Local.Changes)
+nmap <leader>ga <Action>(Annotate)
+nmap <leader>gw <Action>(ActivateVersionControlToolWindow)
+nmap <leader>gr <Action>(Vcs.RollbackChangedLines)
+nmap <leader>gp <Action>(Vcs.ShowDiffChangedLines)
+
 " Debug
 nmap <leader>dr <Action>(Debug)
+nmap <leader>dR <Action>(Resume)
 nmap <leader>db <Action>(ToggleLineBreakpoint)
+nmap <leader>di <Action>(StepInto)
+nmap <leader>do <Action>(StepOver)
+nmap <leader>dO <Action>(StepOut)
+nmap <leader>de <Action>(EditBreakpoint)
+nmap <leader>dE <Action>(EvaluateExpression)
+nmap <leader>dt <Action>(ActivateDebugToolWindow)
+nmap <leader>dv <Action>(ViewBreakpoints)
 
 " Refactor
-nmap <leader>re <Action>(RenameElement)
+nmap <leader>rn <Action>(RenameElement)
 
 " Search
 nmap <leader>ff <Action>(GotoFile)
