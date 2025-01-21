@@ -23,9 +23,5 @@
         src = pkgs.fishPlugins.fzf.src;
       }
     ];
-    shellAliases = {
-      vi = "nvim";
-      sed = "gsed";
-    };
   };
 }

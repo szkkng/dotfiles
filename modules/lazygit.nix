@@ -20,4 +20,8 @@
       };
     };
   };
+
+  home.shellAliases = {
+    lg = "lazygit";
+  };
 }
