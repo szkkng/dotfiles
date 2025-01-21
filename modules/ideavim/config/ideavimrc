@@ -58,6 +58,8 @@ nmap ]c <Action>(VcsShowNextChangeMarker)
 nmap [c <Action>(VcsShowPrevChangeMarker)
 nmap ]e <Action>(GotoNextError)
 nmap [e <Action>(GotoPreviousError)
+nmap ]] <Action>(MethodDown)
+nmap [[ <Action>(MethodUp)
 nmap K <Action>(ShowHoverInfo)
 
 " Git
@@ -80,7 +82,9 @@ nmap <leader>dt <Action>(ActivateDebugToolWindow)
 nmap <leader>dv <Action>(ViewBreakpoints)
 
 " Refactor
-nmap <leader>rn <Action>(RenameElement)
+nmap <leader>lr <Action>(RenameElement)
+nmap <leader>la <Action>(ShowIntentionActions)
+nmap <leader>lc <Action>(ChangeSignature)
 
 " File
 nmap <leader>fn :NERDTreeToggle<CR>
