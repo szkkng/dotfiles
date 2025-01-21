@@ -9,7 +9,7 @@
     ];
   };
 
-  programs.fish.shellAliases = {
+  home.shellAliases = {
     ls = "eza";
     ll = "eza -l";
     la = "eza -la";
