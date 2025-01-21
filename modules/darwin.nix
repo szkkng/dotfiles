@@ -27,12 +27,21 @@
     casks = [
       "1password"
       "ableton-live-suite"
+      "arc"
+      "brave-browser"
       "chatgpt"
+      "cycling74-max"
       "deepl"
+      "discord"
       "font-jetbrains-mono"
       "font-jetbrains-mono-nerd-font"
       "jetbrains-toolbox"
-      "cycling74-max"
+      "karabiner-elements"
+      "keycastr"
+      "obsidian"
+      "reaper"
+      "raycast"
+      "spotify"
     ];
     masApps = {
       "Amazon Kindle" = 302584613;
