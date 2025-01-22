@@ -4,16 +4,27 @@ return {
   dependencies = { "nvim-tree/nvim-web-devicons" },
   opts = {
     options = {
-      component_separators = { left = "", right = "" },
+      component_separators = { left = "", right = "" },
       section_separators = { left = "", right = "" },
       ignore_focus = { "NvimTree" },
     },
     sections = {
       lualine_a = { "mode" },
       lualine_b = { "branch" },
-      lualine_c = { "diagnostics" },
+      lualine_c = {
+        "diagnostics",
+        { "diff", symbols = { added = " ", modified = " ", removed = " " } },
+      },
       lualine_x = { "filetype" },
-      lualine_y = { "progress" },
+      lualine_y = {},
+      lualine_z = {},
+    },
+    inactive_sections = {
+      lualine_a = {},
+      lualine_b = {},
+      lualine_c = {},
+      lualine_x = {},
+      lualine_y = {},
       lualine_z = {},
     },
   },
