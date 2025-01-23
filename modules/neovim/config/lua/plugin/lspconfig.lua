@@ -38,7 +38,17 @@ return {
           vim.keymap.set("n", "gs", "<cmd>ClangdSwitchSourceHeader<CR>")
         end,
       },
-      lua_ls = {},
+      lua_ls = {
+        settings = {
+          Lua = {
+            runtime = {
+              special = {
+                spec = "require",
+              },
+            },
+          },
+        },
+      },
       cssls = {},
       html = {},
       ts_ls = {},
