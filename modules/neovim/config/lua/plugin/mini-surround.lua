@@ -1,5 +1,5 @@
 return {
   "echasnovski/mini.surround",
-  event = "VeryLazy",
+  event = { "BufReadPre", "BufNewFile" },
   opts = {},
 }
