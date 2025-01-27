@@ -32,6 +32,9 @@ keymap("n", "<M-C-Down>", "<cmd>resize -2<CR>")
 keymap("n", "<M-C-Left>", "<cmd>vertical resize -2<CR>")
 keymap("n", "<M-C-Right>", "<cmd>vertical resize +2<CR>")
 
+-- lazy
+keymap("n", "<leader>L", "<cmd>Lazy<CR>")
+
 -- diagnostics
 local diagnostic_goto = function(next, severity)
   vim.diagnostic.jump({ count = next and 1 or -1, severity = severity or nil, float = true })
