@@ -3,18 +3,17 @@ return {
     "nvim-telescope/telescope-dap.nvim",
     lazy = true,
   },
-  { "nvim-lua/plenary.nvim", lazy = true },
+  { "nvim-tree/nvim-web-devicons", lazy = true },
   {
     "nvim-telescope/telescope.nvim",
     cmd = "Telescope",
     dependencies = {
+      "nvim-lua/plenary.nvim",
       {
         "nvim-telescope/telescope-fzf-native.nvim",
         build = "cmake -S. -Bbuild -DCMAKE_BUILD_TYPE=Release && cmake --build build --config Release",
       },
-      {
-        "nvim-telescope/telescope-ui-select.nvim",
-      },
+      "nvim-telescope/telescope-ui-select.nvim",
     },
     keys = {
       { "<leader>b", "<cmd>Telescope buffers<CR>" },
