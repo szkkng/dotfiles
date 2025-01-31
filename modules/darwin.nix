@@ -23,6 +23,7 @@
     };
     brews = [
       "sccache"
+      "ghcup"
     ];
     casks = [
       "1password"
