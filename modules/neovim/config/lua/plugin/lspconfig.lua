@@ -72,10 +72,21 @@ return {
       virtual_text = false,
       update_in_insert = false,
       severity_sort = true,
+      float = {
+        border = "rounded",
+        header = "",
+        prefix = "",
+      },
     }
 
-    vim.diagnostic.config(default_diagnostic_config)
+    local orig_util_open_floating_preview = vim.lsp.util.open_floating_preview
+    function vim.lsp.util.open_floating_preview(contents, syntax, opts, ...)
+      opts = opts or {}
+      opts.border = opts.border or "rounded"
+      return orig_util_open_floating_preview(contents, syntax, opts, ...)
+    end
 
+    vim.diagnostic.config(default_diagnostic_config)
     local capabilities = vim.lsp.protocol.make_client_capabilities()
     capabilities = require("blink.cmp").get_lsp_capabilities(capabilities)
 
