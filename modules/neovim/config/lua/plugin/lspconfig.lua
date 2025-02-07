@@ -58,6 +58,7 @@ return {
       yamlls = {},
       neocmake = {},
       nil_ls = {},
+      hls = {},
     }
 
     local default_diagnostic_config = {
