@@ -69,7 +69,7 @@
       ShowStatusBar = true;
     };
     screencapture = {
-      location = "~/screenshots";
+      location = "~/Screenshots";
     };
     NSGlobalDomain = {
       _HIHideMenuBar = true;
@@ -83,4 +83,8 @@
     enableKeyMapping = true;
     remapCapsLockToControl = true;
   };
+
+  system.activationScripts.postUserActivation.text = ''
+    mkdir -p "$HOME/Screenshots"
+  '';
 }
