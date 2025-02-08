@@ -71,6 +71,9 @@
     screencapture = {
       location = "~/screenshots";
     };
+    NSGlobalDomain = {
+      _HIHideMenuBar = true;
+    };
     ".GlobalPreferences" = {
       "com.apple.mouse.scaling" = 2.0;
     };
