@@ -34,18 +34,48 @@
   time.timeZone = "Asia/Tokyo";
 
   # Select internationalisation properties.
-  i18n.defaultLocale = "en_GB.UTF-8";
+  i18n = {
+    defaultLocale = "en_GB.UTF-8";
+    extraLocaleSettings = {
+      LC_ADDRESS = "ja_JP.UTF-8";
+      LC_IDENTIFICATION = "ja_JP.UTF-8";
+      LC_MEASUREMENT = "ja_JP.UTF-8";
+      LC_MONETARY = "ja_JP.UTF-8";
+      LC_NAME = "ja_JP.UTF-8";
+      LC_NUMERIC = "ja_JP.UTF-8";
+      LC_PAPER = "ja_JP.UTF-8";
+      LC_TELEPHONE = "ja_JP.UTF-8";
+      LC_TIME = "ja_JP.UTF-8";
+    };
+    inputMethod = {
+      type = "fcitx5";
+      enable = true;
+      fcitx5 = {
+        waylandFrontend = true;
+        addons = with pkgs; [
+          fcitx5-mozc 
+          fcitx5-gtk
+        ];
+      };
+    };
+  };
 
-  i18n.extraLocaleSettings = {
-    LC_ADDRESS = "ja_JP.UTF-8";
-    LC_IDENTIFICATION = "ja_JP.UTF-8";
-    LC_MEASUREMENT = "ja_JP.UTF-8";
-    LC_MONETARY = "ja_JP.UTF-8";
-    LC_NAME = "ja_JP.UTF-8";
-    LC_NUMERIC = "ja_JP.UTF-8";
-    LC_PAPER = "ja_JP.UTF-8";
-    LC_TELEPHONE = "ja_JP.UTF-8";
-    LC_TIME = "ja_JP.UTF-8";
+  fonts = {
+    packages = with pkgs; [
+      noto-fonts-cjk-serif
+      noto-fonts-cjk-sans
+      noto-fonts-emoji
+      nerd-fonts.jetbrains-mono
+    ];
+    fontDir.enable = true;
+    fontconfig = {
+      defaultFonts = {
+        serif = ["Noto Serif CJK JP"];
+        sansSerif = ["Noto Sans CJK JP"];
+        monospace = ["JetBrainsMono Nerd Font"];
+        emoji = ["Noto Color Emoji"];
+      };
+    };
   };
 
   # Enable the X11 windowing system.
@@ -144,10 +174,6 @@
 
   # Enable the OpenSSH daemon.
   services.openssh.enable = true;
-
-  fonts.packages = with pkgs; [
-    jetbrains-mono
-  ];
 
   # Open ports in the firewall.
   # networking.firewall.allowedTCPPorts = [ ... ];

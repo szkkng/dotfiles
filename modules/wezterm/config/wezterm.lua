@@ -68,7 +68,7 @@ tabline.setup({
 
 return {
   default_prog = { "fish", "-l" },
-  font = wezterm.font("Jetbrains Mono"),
+  font = wezterm.font("JetbrainsMono Nerd Font"),
   font_size = 14,
   line_height = 1.2,
 
