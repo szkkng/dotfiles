@@ -67,8 +67,8 @@ tabline.setup({
 })
 
 return {
-  default_prog = { "/Users/kengo/.nix-profile/bin/fish", "-l" },
-  font = wezterm.font("JetbrainsMono Nerd Font"),
+  default_prog = { "fish", "-l" },
+  font = wezterm.font("Jetbrains Mono"),
   font_size = 14,
   line_height = 1.2,
 
