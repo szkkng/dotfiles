@@ -49,10 +49,10 @@
               useUserPackages = false;
               users."kengo" = {
                 imports = [
+                  ./nixos/modules/home.nix
                   ./modules/neovim
                   ./modules/wezterm
                   # ./modules/ideavim
-                  ./modules/home.nix
                   ./modules/fish.nix
                   ./modules/git.nix
                   ./modules/starship.nix
