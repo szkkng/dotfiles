@@ -160,6 +160,7 @@
      git
      wget
      vim
+     nixfmt-rfc-style
   ];
 
   # Some programs need SUID wrappers, can be configured further or are
