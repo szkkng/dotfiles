@@ -5,10 +5,10 @@
 { config, pkgs, ... }:
 
 {
-  imports =
-    [ # Include the results of the hardware scan.
-      ./hardware-configuration.nix
-    ];
+  imports = [
+    # Include the results of the hardware scan.
+    ./hardware-configuration.nix
+  ];
 
   boot = {
     loader = {
@@ -53,7 +53,7 @@
       fcitx5 = {
         waylandFrontend = true;
         addons = with pkgs; [
-          fcitx5-mozc 
+          fcitx5-mozc
           fcitx5-gtk
         ];
       };
@@ -70,10 +70,10 @@
     fontDir.enable = true;
     fontconfig = {
       defaultFonts = {
-        serif = ["Noto Serif CJK JP"];
-        sansSerif = ["Noto Sans CJK JP"];
-        monospace = ["JetBrainsMono Nerd Font"];
-        emoji = ["Noto Color Emoji"];
+        serif = [ "Noto Serif CJK JP" ];
+        sansSerif = [ "Noto Sans CJK JP" ];
+        monospace = [ "JetBrainsMono Nerd Font" ];
+        emoji = [ "Noto Color Emoji" ];
       };
     };
   };
@@ -104,33 +104,33 @@
     pulse.enable = true;
     jack.enable = true;
 
-  #   extraConfig.pipewire."92-low-latency" = {
-  #   "context.properties" = {
-  #     "default.clock.rate" = 48000;
-  #     "default.clock.quantum" = 512;
-  #     "default.clock.min-quantum" = 512;
-  #     "default.clock.max-quantum" = 2048;
-  #     };
-  #   };
-  #
-  # extraConfig.pipewire-pulse."92-low-latency" = {
-  #   context.modules = [
-  #     {
-  #       name = "libpipewire-module-protocol-pulse";
-  #       args = {
-  #         "pulse.min.req" = "512/48000";
-  #         "pulse.default.req" = "512/48000";
-  #         "pulse.max.req" = "512/48000";
-  #         "pulse.min.quantum" = "512/48000";
-  #         "pulse.max.quantum" = "2048/48000";
-  #       };
-  #     }
-  #   ];
-  #   stream.properties = {
-  #     "node.latency" = "512/48000";
-  #     "resample.quality" = 1;
-  #   };
-  # };
+    #   extraConfig.pipewire."92-low-latency" = {
+    #   "context.properties" = {
+    #     "default.clock.rate" = 48000;
+    #     "default.clock.quantum" = 512;
+    #     "default.clock.min-quantum" = 512;
+    #     "default.clock.max-quantum" = 2048;
+    #     };
+    #   };
+    #
+    # extraConfig.pipewire-pulse."92-low-latency" = {
+    #   context.modules = [
+    #     {
+    #       name = "libpipewire-module-protocol-pulse";
+    #       args = {
+    #         "pulse.min.req" = "512/48000";
+    #         "pulse.default.req" = "512/48000";
+    #         "pulse.max.req" = "512/48000";
+    #         "pulse.min.quantum" = "512/48000";
+    #         "pulse.max.quantum" = "2048/48000";
+    #       };
+    #     }
+    #   ];
+    #   stream.properties = {
+    #     "node.latency" = "512/48000";
+    #     "resample.quality" = 1;
+    #   };
+    # };
     # use the example session manager (no others are packaged yet so this is enabled by default,
     # no need to redefine it in your config for now)
     #media-session.enable = true;
@@ -143,24 +143,31 @@
   users.users.kengo = {
     isNormalUser = true;
     description = "kengo suzuki";
-    extraGroups = [ "networkmanager" "wheel" "audio"];
+    extraGroups = [
+      "networkmanager"
+      "wheel"
+      "audio"
+    ];
     packages = with pkgs; [
-    #  thunderbird
+      #  thunderbird
     ];
   };
 
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;
 
-  nix.settings.experimental-features = [ "nix-command" "flakes" ];
+  nix.settings.experimental-features = [
+    "nix-command"
+    "flakes"
+  ];
 
   # List packages installed in system profile. To search, run:
   # $ nix search wget
   environment.systemPackages = with pkgs; [
-     git
-     wget
-     vim
-     nixfmt-rfc-style
+    git
+    wget
+    vim
+    nixfmt-rfc-style
   ];
 
   # Some programs need SUID wrappers, can be configured further or are
