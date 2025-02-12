@@ -14,6 +14,7 @@
     discord
     gnused
     ninja
+    pavucontrol
     supabase-cli
     spotify
   ];

@@ -79,16 +79,30 @@
   };
 
   # Enable the X11 windowing system.
-  services.xserver.enable = true;
+  # services.xserver.enable = true;
+
+  programs.hyprland.enable = true;
 
   # Enable the GNOME Desktop Environment.
-  services.xserver.displayManager.gdm.enable = true;
-  services.xserver.desktopManager.gnome.enable = true;
+  # services.xserver.displayManager.gdm.enable = true;
+  # services.xserver.desktopManager.gnome.enable = true;
 
   # Configure keymap in X11
-  services.xserver.xkb = {
-    layout = "us";
-    variant = "";
+  # services.xserver.xkb = {
+  #   layout = "us";
+  #   variant = "";
+  # };
+  services.greetd = {
+    enable = true;
+    settings = {
+      default_session = {
+        command = "${pkgs.greetd.greetd}/bin/agreety --cmd Hyprland";
+      };
+      initial_session = {
+        command = "Hyprland";
+        user = "kengo";
+      };
+    };
   };
 
   # Enable CUPS to print documents.
@@ -168,6 +182,7 @@
     wget
     vim
     nixfmt-rfc-style
+    kitty
   ];
 
   # Some programs need SUID wrappers, can be configured further or are
@@ -182,6 +197,9 @@
 
   # Enable the OpenSSH daemon.
   services.openssh.enable = true;
+
+  hardware.bluetooth.enable = true;
+  hardware.bluetooth.powerOnBoot = true;
 
   # Open ports in the firewall.
   # networking.firewall.allowedTCPPorts = [ ... ];
