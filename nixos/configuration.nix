@@ -12,7 +12,10 @@
 
   boot = {
     loader = {
-      systemd-boot.enable = true;
+      systemd-boot = {
+        enable = true;
+        configurationLimit = 10;
+      };
       efi.canTouchEfiVariables = true;
     };
     kernelPackages = pkgs.linuxPackages-rt_latest;
@@ -170,10 +173,20 @@
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;
 
-  nix.settings.experimental-features = [
-    "nix-command"
-    "flakes"
-  ];
+  nix = {
+    settings = {
+      auto-optimise-store = true;
+      experimental-features = [
+        "nix-command"
+        "flakes"
+      ];
+    };
+    gc = {
+      automatic = true;
+      dates = "weekly";
+      options = "--delete-older-than 1w";
+    };
+  };
 
   # List packages installed in system profile. To search, run:
   # $ nix search wget
