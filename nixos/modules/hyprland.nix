@@ -2,8 +2,12 @@
 {
   wayland.windowManager.hyprland = {
     enable = true;
+    xwayland.enable = true;
     settings = {
-      # monitor = ",preferred,auto,1";
+      monitor = [
+        "eDP-1,1920x1200,auto,1.5"
+        "DP-3,2560x1440,auto,1"
+      ];
       "$mod" = "SUPER";
       "$terminal" = "wezterm";
       bind = [
