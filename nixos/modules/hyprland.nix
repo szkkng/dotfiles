@@ -5,8 +5,8 @@
     xwayland.enable = true;
     settings = {
       monitor = [
-        "eDP-1,1920x1200,auto,1.5"
-        "DP-3,2560x1440,auto,1"
+        "eDP-1,highres,auto,1.5"
+        "DP-3,highres,auto,1.5"
       ];
       "$mod" = "SUPER";
       "$terminal" = "wezterm";
