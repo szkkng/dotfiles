@@ -52,13 +52,13 @@
               backupFileExtension = "backup";
               users."kengo" = {
                 imports = [
+                  ./nixos/modules/foot.nix
                   ./nixos/modules/home.nix
                   ./nixos/modules/hyprland.nix
                   ./nixos/modules/fish.nix
                   ./nixos/modules/rofi.nix
                   ./nixos/modules/waybar.nix
                   ./modules/neovim
-                  ./modules/wezterm
                   ./modules/git.nix
                   ./modules/starship.nix
                   ./modules/bat.nix
