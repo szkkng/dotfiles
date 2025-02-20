@@ -58,6 +58,7 @@
                   ./nixos/modules/fish.nix
                   ./nixos/modules/rofi.nix
                   ./nixos/modules/waybar.nix
+                  ./nixos/modules/tmux.nix
                   ./modules/neovim
                   ./modules/git.nix
                   ./modules/starship.nix
