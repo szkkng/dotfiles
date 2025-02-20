@@ -4,6 +4,7 @@
     enable = true;
     extraConfig = ''
             # notifications
+            set -sg escape-time 10
             setw -g monitor-activity on
             set -g visual-activity on
 
