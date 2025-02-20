@@ -20,54 +20,54 @@
         "eDP-1,highres,auto,1.5"
         "DP-3,highres,auto,1.5"
       ];
-      "$mainMod" = "SUPER";
+      "$mod" = "SUPER";
       "$terminal" = "wezterm";
       bind = [
-        "$mainMod, SPACE, exec, rofi -show drun"
-        "$mainMod, q, killactive"
-        "$mainMod, f, togglefloating"
-        "$mainMod SHIFT, f, fullscreen"
+        "$mod, SPACE, exec, rofi -show drun"
+        "$mod, q, killactive"
+        "$mod, f, togglefloating"
+        "$mod SHIFT, f, fullscreen"
 
-        "$mainMod, h, movefocus, l"
-        "$mainMod, l, movefocus, r"
-        "$mainMod, k, movefocus, u"
-        "$mainMod, j, movefocus, d"
-        "$mainMod, tab, focuscurrentorlast"
+        "$mod, h, movefocus, l"
+        "$mod, l, movefocus, r"
+        "$mod, k, movefocus, u"
+        "$mod, j, movefocus, d"
+        "$mod, tab, focuscurrentorlast"
 
-        "$mainMod SHIFT, h, movewindow, l"
-        "$mainMod SHIFT, l, movewindow, r"
-        "$mainMod SHIFT, k, movewindow, u"
-        "$mainMod SHIFT, j, movewindow, d"
+        "$mod SHIFT, h, movewindow, l"
+        "$mod SHIFT, l, movewindow, r"
+        "$mod SHIFT, k, movewindow, u"
+        "$mod SHIFT, j, movewindow, d"
 
-        "$mainMod, semicolon, workspace, e+1"
-        "$mainMod, comma, workspace, e-1"
+        "$mod, semicolon, workspace, e+1"
+        "$mod, comma, workspace, e-1"
 
-        "$mainMod, 1, workspace, 1"
-        "$mainMod, 2, workspace, 2"
-        "$mainMod, 3, workspace, 3"
-        "$mainMod, 4, workspace, 4"
-        "$mainMod, 5, workspace, 5"
+        "$mod, 1, workspace, 1"
+        "$mod, 2, workspace, 2"
+        "$mod, 3, workspace, 3"
+        "$mod, 4, workspace, 4"
+        "$mod, 5, workspace, 5"
 
-        "$mainMod SHIFT, 1, movetoworkspace, 1"
-        "$mainMod SHIFT, 2, movetoworkspace, 2"
-        "$mainMod SHIFT, 3, movetoworkspace, 3"
-        "$mainMod SHIFT, 4, movetoworkspace, 4"
-        "$mainMod SHIFT, 5, movetoworkspace, 5"
+        "$mod SHIFT, 1, movetoworkspace, 1"
+        "$mod SHIFT, 2, movetoworkspace, 2"
+        "$mod SHIFT, 3, movetoworkspace, 3"
+        "$mod SHIFT, 4, movetoworkspace, 4"
+        "$mod SHIFT, 5, movetoworkspace, 5"
       ];
       binde = [
-        "$mainMod SHIFT, left, resizeactive, -20 0"
-        "$mainMod SHIFT, right, resizeactive, 20 0"
-        "$mainMod SHIFT, up, resizeactive, 0 -20"
-        "$mainMod SHIFT, down, resizeactive, 0 20"
+        "$mod SHIFT, left, resizeactive, -20 0"
+        "$mod SHIFT, right, resizeactive, 20 0"
+        "$mod SHIFT, up, resizeactive, 0 -20"
+        "$mod SHIFT, down, resizeactive, 0 20"
 
-        "$mainMod ALT, left, moveactive, -20 0"
-        "$mainMod ALT, right, moveactive, 20 0"
-        "$mainMod ALT, up, moveactive, 0 -20"
-        "$mainMod ALT, down, moveactive, 0 20"
+        "$mod ALT, left, moveactive, -20 0"
+        "$mod ALT, right, moveactive, 20 0"
+        "$mod ALT, up, moveactive, 0 -20"
+        "$mod ALT, down, moveactive, 0 20"
       ];
       bindm = [
-        "$mainMod, mouse:272, resizewindow"
-        "$mainMod, mouse:273, movewindow"
+        "$mod, mouse:272, resizewindow"
+        "$mod, mouse:273, movewindow"
       ];
     };
   };
