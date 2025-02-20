@@ -4,7 +4,7 @@
     enable = true;
     settings = {
       main = {
-        shell = "fish -l -c tmux a -t 0 || tmux";
+        shell = "fish -c 'tmux a -t 0 || tmux'";
         font = "JetBrains Mono Nerd Font:size=12";
         dpi-aware = "yes";
         pad = "6x6";
