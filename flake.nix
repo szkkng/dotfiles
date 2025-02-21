@@ -23,6 +23,7 @@
       url = "github:musnix/musnix";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    ghostty.url = "github:ghostty-org/ghostty";
     catppuccin.url = "github:catppuccin/nix";
   };
 
@@ -33,6 +34,7 @@
       nix-darwin,
       home-manager,
       catppuccin,
+      ghostty,
       ...
     }:
     {
@@ -52,13 +54,13 @@
               backupFileExtension = "backup";
               users."kengo" = {
                 imports = [
-                  ./nixos/modules/foot.nix
                   ./nixos/modules/home.nix
                   ./nixos/modules/hyprland.nix
                   ./nixos/modules/fish.nix
                   ./nixos/modules/rofi.nix
                   ./nixos/modules/waybar.nix
                   ./nixos/modules/tmux.nix
+                  ./nixos/modules/ghostty.nix
                   ./modules/neovim
                   ./modules/git.nix
                   ./modules/starship.nix

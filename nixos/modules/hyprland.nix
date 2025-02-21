@@ -21,13 +21,12 @@
         "DP-3,highres,auto,1.5"
       ];
       "$mod" = "SUPER";
-      "$terminal" = "foot";
       bind = [
         "$mod, SPACE, exec, rofi -show drun"
         "$mod, q, killactive"
         "$mod, f, togglefloating"
         "$mod SHIFT, f, fullscreen"
-        "$mod, RETURN, exec, $terminal"
+        "$mod, RETURN, exec, ghostty"
 
         "$mod, h, movefocus, l"
         "$mod, l, movefocus, r"
