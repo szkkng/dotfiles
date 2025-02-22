@@ -3,13 +3,14 @@
   programs.ghostty = {
     enable = true;
     package = ghostty.packages.x86_64-linux.default;
-    clearDefaultKeybinds = true;
     settings = {
-      command = "fish -c 'tmux a -t 0 || tmux'";
+      command = "tmux attach -t 0 || tmux";
       app-notifications = "no-clipboard-copy";
       cursor-style = "block";
       cursor-style-blink = false;
       shell-integration-features = "no-cursor";
+      confirm-close-surface = false;
+      mouse-hide-while-typing = true;
       font-size = 12;
       window-padding-x = 6;
       gtk-tabs-location = "hidden";
