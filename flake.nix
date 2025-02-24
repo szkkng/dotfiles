@@ -60,7 +60,7 @@
                   ./nixos/modules/rofi.nix
                   ./nixos/modules/waybar.nix
                   ./nixos/modules/tmux.nix
-                  ./nixos/modules/ghostty.nix
+                  ./nixos/modules/foot.nix
                   ./nixos/modules/cursor.nix
                   ./nixos/modules/gtk.nix
                   ./modules/neovim

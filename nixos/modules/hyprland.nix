@@ -29,7 +29,7 @@
         "$mod, q, killactive"
         "$mod, f, togglefloating"
         "$mod SHIFT, f, fullscreen"
-        "$mod, RETURN, exec, ghostty"
+        "$mod, RETURN, exec, foot"
 
         "$mod, h, movefocus, l"
         "$mod, l, movefocus, r"
