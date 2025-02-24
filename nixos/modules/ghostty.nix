@@ -4,7 +4,7 @@
     enable = true;
     package = ghostty.packages.x86_64-linux.default;
     settings = {
-      command = "tmux attach -t 0 || tmux";
+      command = "fish -c 'tmux attach -t 0 || tmux'";
       app-notifications = "no-clipboard-copy";
       cursor-style = "block";
       cursor-style-blink = false;

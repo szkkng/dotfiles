@@ -5,6 +5,9 @@
     xwayland.enable = true;
     settings = {
       xwayland.force_zero_scaling = true;
+      env = [
+        "HYPRCURSOR_SIZE,32"
+      ];
       input = {
         kb_options = "ctrl:nocaps";
         repeat_rate = 40;

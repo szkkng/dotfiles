@@ -61,6 +61,8 @@
                   ./nixos/modules/waybar.nix
                   ./nixos/modules/tmux.nix
                   ./nixos/modules/ghostty.nix
+                  ./nixos/modules/cursor.nix
+                  ./nixos/modules/gtk.nix
                   ./modules/neovim
                   ./modules/git.nix
                   ./modules/starship.nix

@@ -17,5 +17,6 @@
     pavucontrol
     supabase-cli
     spotify
+    xdg-desktop-portal-gtk
   ];
 }
