@@ -38,13 +38,13 @@
       ...
     }:
     {
-      nixosConfigurations."kengo-tuxedo" = nixpkgs.lib.nixosSystem {
+      nixosConfigurations."tuxedo-gen9" = nixpkgs.lib.nixosSystem {
         specialArgs = inputs;
         system = "x86_64-linux";
         modules = [
           catppuccin.nixosModules.catppuccin
+          ./hosts/tuxedo-gen9
           ./modules/musnix.nix
-          ./nixos/configuration.nix
           home-manager.nixosModules.home-manager
           {
             home-manager = {
