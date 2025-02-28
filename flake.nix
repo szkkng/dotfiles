@@ -38,7 +38,7 @@
       ...
     }:
     {
-      nixosConfigurations."kengo-thinkpad" = nixpkgs.lib.nixosSystem {
+      nixosConfigurations."kengo-tuxedo" = nixpkgs.lib.nixosSystem {
         specialArgs = inputs;
         system = "x86_64-linux";
         modules = [

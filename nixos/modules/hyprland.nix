@@ -28,7 +28,7 @@
         };
       };
       monitor = [
-        "eDP-1,highres,auto,1.5"
+        "eDP-1,2880x1800@60Hz,auto,2.0"
         "DP-3,highres,auto,1.5"
       ];
       "$mod" = "SUPER";

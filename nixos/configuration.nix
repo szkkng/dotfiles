@@ -18,12 +18,12 @@
       };
       efi.canTouchEfiVariables = true;
     };
-    kernelPackages = pkgs.linuxPackages-rt_latest;
+    # kernelPackages = pkgs.linuxPackages-rt_latest;
   };
 
   # boot.kernelParams = [ "preempt=full" ];
 
-  networking.hostName = "kengo-thinkpad"; # Define your hostname.
+  networking.hostName = "kengo-tuxedo"; # Define your hostname.
   # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
 
   # Configure network proxy if necessary
