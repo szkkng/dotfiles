@@ -7,6 +7,7 @@
     _1password-gui
     act
     brave
+    brightnessctl
     bun
     cmake
     cargo

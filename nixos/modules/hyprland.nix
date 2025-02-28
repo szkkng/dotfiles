@@ -75,6 +75,9 @@
         "$mod ALT, right, moveactive, 20 0"
         "$mod ALT, up, moveactive, 0 -20"
         "$mod ALT, down, moveactive, 0 20"
+
+        ", F1, exec, brightnessctl set 10%-"
+        ", F2, exec, brightnessctl set 10%+"
       ];
       bindm = [
         "$mod, mouse:272, resizewindow"
