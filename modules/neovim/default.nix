@@ -14,6 +14,7 @@
     extraPackages = with pkgs; [
       gcc
       cmake
+      gnumake
 
       # lsp
       nil
