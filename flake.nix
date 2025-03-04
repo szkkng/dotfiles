@@ -60,10 +60,10 @@
           }
         ];
       };
-      darwinConfigurations."kengo-macbook-pro" = nix-darwin.lib.darwinSystem {
+      darwinConfigurations."macbook-pro-2023" = nix-darwin.lib.darwinSystem {
         specialArgs = inputs;
         modules = [
-          ./hosts/kengo-macbook-pro
+          ./hosts/macbook-pro-2023
           home-manager.darwinModules.home-manager
           {
             home-manager = {
@@ -81,6 +81,6 @@
         ];
       };
 
-      darwinPackages = self.darwinConfigurations."kengo-macbook-pro".pkgs;
+      darwinPackages = self.darwinConfigurations."macbook-pro-2023".pkgs;
     };
 }
