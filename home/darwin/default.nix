@@ -5,7 +5,7 @@
     ./ideavim
     ./karabiner
     ./neovim
-    ./wezterm
+    ./wezterm.nix
     ./fish.nix
   ];
 
