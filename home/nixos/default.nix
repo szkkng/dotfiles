@@ -4,7 +4,6 @@
     ./../common
     ./neovim
     ./cursor.nix
-    ./fish.nix
     ./foot.nix
     ./gtk.nix
     ./hyprland.nix

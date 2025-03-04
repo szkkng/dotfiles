@@ -15,5 +15,6 @@
     ./tmux.nix
     ./yazi.nix
     ./zoxide.nix
+    ./fish.nix
   ];
 }
