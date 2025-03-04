@@ -42,9 +42,8 @@
         specialArgs = inputs;
         system = "x86_64-linux";
         modules = [
-          catppuccin.nixosModules.catppuccin
           ./hosts/tuxedo-gen9
-          ./modules/musnix.nix
+          catppuccin.nixosModules.catppuccin
           home-manager.nixosModules.home-manager
           {
             home-manager = {
@@ -54,29 +53,7 @@
               backupFileExtension = "backup";
               users."kengo" = {
                 imports = [
-                  ./nixos/modules/home.nix
-                  ./nixos/modules/hyprland.nix
-                  ./nixos/modules/fish.nix
-                  ./nixos/modules/rofi.nix
-                  ./nixos/modules/waybar.nix
-                  ./nixos/modules/tmux.nix
-                  ./nixos/modules/foot.nix
-                  ./nixos/modules/cursor.nix
-                  ./nixos/modules/gtk.nix
-                  ./nixos/modules/neovim
-                  ./modules/git.nix
-                  ./modules/starship.nix
-                  ./modules/bat.nix
-                  ./modules/fzf.nix
-                  ./modules/fd.nix
-                  ./modules/gh.nix
-                  ./modules/jq.nix
-                  ./modules/ripgrep.nix
-                  ./modules/eza.nix
-                  ./modules/zoxide.nix
-                  ./modules/catppuccin.nix
-                  ./modules/lazygit.nix
-                  ./modules/yazi.nix
+                  ./home/nixos
                 ];
               };
             };
@@ -86,7 +63,7 @@
       darwinConfigurations."kengo-macbook-pro" = nix-darwin.lib.darwinSystem {
         specialArgs = inputs;
         modules = [
-          ./modules/darwin.nix
+          ./hosts/kengo-macbook-pro
           home-manager.darwinModules.home-manager
           {
             home-manager = {
@@ -96,25 +73,7 @@
               backupFileExtension = "backup";
               users."kengo" = {
                 imports = [
-                  ./modules/neovim
-                  ./modules/wezterm
-                  ./modules/ideavim
-                  ./modules/karabiner
-                  ./modules/home.nix
-                  ./modules/fish.nix
-                  ./modules/git.nix
-                  ./modules/starship.nix
-                  ./modules/bat.nix
-                  ./modules/fzf.nix
-                  ./modules/fd.nix
-                  ./modules/gh.nix
-                  ./modules/jq.nix
-                  ./modules/ripgrep.nix
-                  ./modules/eza.nix
-                  ./modules/zoxide.nix
-                  ./modules/catppuccin.nix
-                  ./modules/lazygit.nix
-                  ./modules/yazi.nix
+                  ./home/darwin
                 ];
               };
             };

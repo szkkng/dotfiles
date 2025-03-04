@@ -12,7 +12,7 @@
 
   xdg.configFile = {
     "wezterm" = {
-      source = config.lib.file.mkOutOfStoreSymlink "${config.home.homeDirectory}/dotfiles/modules/wezterm/config";
+      source = config.lib.file.mkOutOfStoreSymlink "${config.home.homeDirectory}/dotfiles/home/darwin/wezterm/config";
       recursive = true;
     };
     "wezterm/wezterm.lua".enable = false;
