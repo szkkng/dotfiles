@@ -11,21 +11,6 @@
     viAlias = true;
     vimAlias = true;
     package = neovim-nightly-overlay.packages.${pkgs.system}.default;
-    extraPackages = with pkgs; [
-      gcc
-      cmake
-      gnumake
-
-      # lsp
-      nil
-      lua-language-server
-
-      # formatter
-      stylua
-      gersemi
-      prettierd
-      actionlint
-    ];
   };
 
   xdg.configFile = {
