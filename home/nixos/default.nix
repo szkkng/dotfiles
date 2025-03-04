@@ -10,7 +10,6 @@
     ./home.nix
     ./hyprland.nix
     ./rofi.nix
-    ./tmux.nix
     ./waybar.nix
   ];
 }

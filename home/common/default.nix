@@ -12,6 +12,7 @@
     ./lazygit.nix
     ./ripgrep.nix
     ./starship.nix
+    ./tmux.nix
     ./yazi.nix
     ./zoxide.nix
   ];
