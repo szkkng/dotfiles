@@ -30,7 +30,7 @@
 
   xdg.configFile = {
     "nvim" = {
-      source = config.lib.file.mkOutOfStoreSymlink "${config.home.homeDirectory}/dotfiles/nixos/modules/neovim/config";
+      source = config.lib.file.mkOutOfStoreSymlink "${config.home.homeDirectory}/dotfiles/home/nixos/neovim/config";
       recursive = true;
     };
     "nvim/init.lua".enable = false;
