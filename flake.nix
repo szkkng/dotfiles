@@ -63,7 +63,7 @@
                   ./nixos/modules/foot.nix
                   ./nixos/modules/cursor.nix
                   ./nixos/modules/gtk.nix
-                  ./modules/neovim
+                  ./nixos/modules/neovim
                   ./modules/git.nix
                   ./modules/starship.nix
                   ./modules/bat.nix
