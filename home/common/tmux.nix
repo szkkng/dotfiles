@@ -14,6 +14,7 @@
     shell = "${pkgs.fish}/bin/fish";
     terminal = "tmux-256color";
     extraConfig = ''
+      set-option -ga terminal-overrides ',xterm-256color:Tc'
       bind c new-window -c "#{pane_current_path}"
       bind | split-window -h -c '#{pane_current_path}'
       bind - split-window -c '#{pane_current_path}'
