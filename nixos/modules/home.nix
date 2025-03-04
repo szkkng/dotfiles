@@ -4,8 +4,10 @@
   home.stateVersion = "23.05";
   programs.home-manager.enable = true;
   home.packages = with pkgs; [
+    _1password-gui
     act
     brave
+    brightnessctl
     bun
     cmake
     cargo
@@ -13,7 +15,9 @@
     discord
     gnused
     ninja
+    pavucontrol
     supabase-cli
     spotify
+    xdg-desktop-portal-gtk
   ];
 }
