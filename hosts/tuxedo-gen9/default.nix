@@ -3,6 +3,7 @@
   imports = [
     ./hardware-configuration.nix
     ./musnix.nix
+    ./catppuccin.nix
   ];
 
   boot = {
