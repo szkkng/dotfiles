@@ -43,7 +43,6 @@
         system = "x86_64-linux";
         modules = [
           ./hosts/tuxedo-gen9
-          catppuccin.nixosModules.catppuccin
           home-manager.nixosModules.home-manager
           {
             home-manager = {
