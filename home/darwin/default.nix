@@ -3,7 +3,6 @@
   imports = [
     ./../common
     ./karabiner
-    ./neovim
     ./wezterm.nix
     ./fish.nix
   ];
