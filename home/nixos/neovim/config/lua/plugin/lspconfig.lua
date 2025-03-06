@@ -30,11 +30,11 @@ return {
     })
 
     local servers = {
-      -- clangd = {
-      --   on_attach = function()
-      --     vim.keymap.set("n", "gs", "<cmd>ClangdSwitchSourceHeader<CR>")
-      --   end,
-      -- },
+      clangd = {
+        on_attach = function()
+          vim.keymap.set("n", "gs", "<cmd>ClangdSwitchSourceHeader<CR>")
+        end,
+      },
       lua_ls = {
         settings = {
           Lua = {

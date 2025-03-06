@@ -15,7 +15,6 @@
     act
     brave
     bun
-    cmake
     cargo
     delta
     discord
