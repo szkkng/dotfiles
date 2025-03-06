@@ -1,7 +1,7 @@
-{ catppuccin, ... }:
+{ inputs, ... }:
 {
   imports = [
-    catppuccin.nixosModules.catppuccin
+    inputs.catppuccin.nixosModules.catppuccin
   ];
 
   catppuccin.enable = true;
