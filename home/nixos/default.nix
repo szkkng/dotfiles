@@ -2,12 +2,13 @@
 {
   imports = [
     ./../common
+    ./hyprland
     ./cursor.nix
     ./foot.nix
     ./gtk.nix
-    ./hyprland.nix
     ./rofi.nix
     ./waybar.nix
+    ./xdg.nix
   ];
 
   home.username = "kengo";
