@@ -23,7 +23,6 @@
       url = "github:musnix/musnix";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-    ghostty.url = "github:ghostty-org/ghostty";
     catppuccin.url = "github:catppuccin/nix";
   };
 
@@ -34,7 +33,6 @@
       nix-darwin,
       home-manager,
       catppuccin,
-      ghostty,
       ...
     }:
     {
