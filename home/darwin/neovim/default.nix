@@ -1,7 +1,7 @@
 {
-  neovim-nightly-overlay,
   config,
   pkgs,
+  inputs,
   ...
 }:
 {
@@ -10,7 +10,7 @@
     defaultEditor = true;
     viAlias = true;
     vimAlias = true;
-    package = neovim-nightly-overlay.packages.${pkgs.system}.default;
+    package = inputs.neovim-nightly-overlay.packages.${pkgs.system}.default;
   };
 
   xdg.configFile = {

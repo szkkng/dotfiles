@@ -1,11 +1,15 @@
-{ self, pkgs, ... }:
+{ pkgs, inputs, ... }:
 {
+  imports = [
+    ./home-manager.nix
+  ];
+
   nixpkgs.config.allowUnfree = true;
   nixpkgs.hostPlatform = "aarch64-darwin";
   nix.package = pkgs.nix;
   nix.settings.experimental-features = "nix-command flakes";
   system.stateVersion = 5;
-  system.configurationRevision = self.rev or self.dirtyRev or null;
+  system.configurationRevision = inputs.rev or inputs.dirtyRev or null;
   security.pam.services.sudo_local.touchIdAuth = true;
 
   users.users.kengo = {
