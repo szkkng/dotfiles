@@ -68,10 +68,6 @@
               clang-tools
               cmake
             ];
-
-            shellHook = ''
-              fish
-            '';
           };
         }
       );

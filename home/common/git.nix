@@ -4,6 +4,10 @@
     enable = true;
     userName = "szkkng";
     userEmail = "hi@kengo.dev";
+    ignores = [
+      ".direnv"
+      ".envrc"
+    ];
     aliases = {
       st = "status";
       ci = "commit";
