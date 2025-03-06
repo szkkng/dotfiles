@@ -1,5 +1,5 @@
 {
-  description = "kengo's nix-darwin and home-manager configs";
+  description = "My NixOS and macOS configuration";
 
   inputs = {
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
@@ -39,47 +39,15 @@
     }:
     {
       nixosConfigurations."tuxedo-gen9" = nixpkgs.lib.nixosSystem {
-        specialArgs = inputs;
         system = "x86_64-linux";
-        modules = [
-          ./hosts/tuxedo-gen9
-          home-manager.nixosModules.home-manager
-          {
-            home-manager = {
-              extraSpecialArgs = inputs;
-              useGlobalPkgs = true;
-              useUserPackages = false;
-              backupFileExtension = "backup";
-              users."kengo" = {
-                imports = [
-                  ./home/nixos
-                ];
-              };
-            };
-          }
-        ];
-      };
-      darwinConfigurations."macbook-pro-2023" = nix-darwin.lib.darwinSystem {
-        specialArgs = inputs;
-        modules = [
-          ./hosts/macbook-pro-2023
-          home-manager.darwinModules.home-manager
-          {
-            home-manager = {
-              extraSpecialArgs = inputs;
-              useGlobalPkgs = true;
-              useUserPackages = false;
-              backupFileExtension = "backup";
-              users."kengo" = {
-                imports = [
-                  ./home/darwin
-                ];
-              };
-            };
-          }
-        ];
+        specialArgs = { inherit inputs; };
+        modules = [ ./hosts/tuxedo-gen9 ];
       };
 
-      darwinPackages = self.darwinConfigurations."macbook-pro-2023".pkgs;
+      darwinConfigurations."macbook-pro-2023" = nix-darwin.lib.darwinSystem {
+        system = "aarch64-darwin";
+        specialArgs = { inherit inputs; };
+        modules = [ ./hosts/macbook-pro-2023 ];
+      };
     };
 }
