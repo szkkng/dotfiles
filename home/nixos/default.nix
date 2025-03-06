@@ -13,6 +13,7 @@
   home.username = "kengo";
   home.stateVersion = "23.05";
   programs.home-manager.enable = true;
+  home.shell.enableFishIntegration = true;
   home.packages = with pkgs; [
     _1password-gui
     act

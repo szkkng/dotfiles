@@ -17,5 +17,6 @@
     ./yazi.nix
     ./zoxide.nix
     ./fish.nix
+    ./direnv.nix
   ];
 }
