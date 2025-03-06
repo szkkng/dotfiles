@@ -1,6 +1,6 @@
-{ pkgs, musnix, ... }:
+{ pkgs, inputs, ... }:
 {
-  imports = [ musnix.nixosModules.musnix ];
+  imports = [ inputs.musnix.nixosModules.musnix ];
 
   musnix = {
     enable = true;
