@@ -2,7 +2,6 @@
 {
   imports = [
     ./../common
-    ./ideavim
     ./karabiner
     ./neovim
     ./wezterm.nix
