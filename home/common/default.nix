@@ -1,6 +1,7 @@
 { ... }:
 {
   imports = [
+    ./neovim
     ./bat.nix
     ./catppuccin.nix
     ./eza.nix

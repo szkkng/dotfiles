@@ -2,7 +2,6 @@
 {
   imports = [
     ./../common
-    ./neovim
     ./cursor.nix
     ./foot.nix
     ./gtk.nix
