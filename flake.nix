@@ -35,6 +35,18 @@
       catppuccin,
       ...
     }:
+    let
+      supportedSystems = [
+        "x86_64-linux"
+        "aarch64-darwin"
+      ];
+
+      forEachSupportedSystem =
+        function:
+        nixpkgs.lib.genAttrs supportedSystems (
+          system: function { pkgs = import nixpkgs { inherit system; }; }
+        );
+    in
     {
       nixosConfigurations."tuxedo-gen9" = nixpkgs.lib.nixosSystem {
         system = "x86_64-linux";
@@ -47,5 +59,21 @@
         specialArgs = { inherit inputs; };
         modules = [ ./hosts/macbook-pro-2023 ];
       };
+
+      devShells = forEachSupportedSystem (
+        { pkgs }:
+        {
+          default = pkgs.mkShell {
+            packages = with pkgs; [
+              clang-tools
+              cmake
+            ];
+
+            shellHook = ''
+              fish
+            '';
+          };
+        }
+      );
     };
 }

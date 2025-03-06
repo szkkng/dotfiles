@@ -20,7 +20,6 @@
     brave
     brightnessctl
     bun
-    cmake
     cargo
     delta
     discord
