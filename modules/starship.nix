@@ -9,23 +9,24 @@
         "$git_branch"
         "$git_state"
         "$git_status"
-        "$cmd_duration"
         "$line_break"
         "$character"
       ];
       directory = {
-        style = "lavender";
+        style = "blue";
       };
       character = {
-        success_symbol = "[󰘧](lavender)";
-        error_symbol = "[󰘧](red)";
-        vimcmd_symbol = "[󰘧](yellow)";
+        success_symbol = "[ᗌ](#9cabcA)";
+        error_symbol = "[ᗌ](#e46876)";
+        vicmd_symbol = "[ᗌ](#818596)";
       };
       git_branch = {
-        format = "[$branch](surface2)";
+        format = "[$branch]($style)";
+        style = "bright-black";
       };
       git_status = {
-        format = "[[(*$conflicted$untracked$modified$staged$renamed$deleted)](pink) ($ahead_behind$stashed)](lavender)";
+        format = "[[(*$conflicted$untracked$modified$staged$renamed$deleted)](218) ($ahead_behind$stashed)]($style)";
+        style = "cyan";
         conflicted = "​";
         untracked = "​";
         modified = "​";
@@ -35,10 +36,8 @@
         stashed = "≡";
       };
       git_state = {
-        format = "\\([$state( $progress_current/$progress_total)](blue)\\) ";
-      };
-      cmd_duration = {
-        format = " [$duration](mauve) ";
+        format = "\\([$state( $progress_current/$progress_total)]($style)\\) ";
+        style = "bright-black";
       };
     };
   };

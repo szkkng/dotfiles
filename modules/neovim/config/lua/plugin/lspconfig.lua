@@ -2,6 +2,9 @@ return {
   "neovim/nvim-lspconfig",
   event = { "BufReadPre", "BufNewFile" },
   dependencies = {
+    { "williamboman/mason.nvim", config = true },
+    "williamboman/mason-lspconfig.nvim",
+    "WhoIsSethDaniel/mason-tool-installer.nvim",
     "saghen/blink.cmp",
   },
   config = function()
@@ -46,16 +49,16 @@ return {
           },
         },
       },
-      -- cssls = {},
-      -- html = {},
-      -- ts_ls = {},
-      -- eslint = {},
-      -- bashls = {},
-      -- jsonls = {},
-      -- yamlls = {},
-      -- neocmake = {},
+      cssls = {},
+      html = {},
+      ts_ls = {},
+      eslint = {},
+      bashls = {},
+      jsonls = {},
+      yamlls = {},
+      neocmake = {},
       nil_ls = {},
-      -- hls = {},
+      hls = {},
     }
 
     local default_diagnostic_config = {
@@ -88,9 +91,25 @@ return {
     local capabilities = vim.lsp.protocol.make_client_capabilities()
     capabilities = require("blink.cmp").get_lsp_capabilities(capabilities)
 
-    for server_name, server in pairs(servers) do
-      server.capabilities = vim.tbl_deep_extend("force", {}, capabilities, server.capabilities or {})
-      require("lspconfig")[server_name].setup(server)
-    end
+    require("mason").setup()
+
+    local ensure_installed = vim.tbl_keys(servers or {})
+    vim.list_extend(ensure_installed, {
+      "actionlint",
+      "stylua",
+      "gersemi",
+      "prettierd",
+    })
+    require("mason-tool-installer").setup({ ensure_installed = ensure_installed })
+
+    require("mason-lspconfig").setup({
+      handlers = {
+        function(server_name)
+          local server = servers[server_name] or {}
+          server.capabilities = vim.tbl_deep_extend("force", {}, capabilities, server.capabilities or {})
+          require("lspconfig")[server_name].setup(server)
+        end,
+      },
+    })
   end,
 }
