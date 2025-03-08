@@ -63,12 +63,93 @@
       devShells = forEachSupportedSystem (
         { pkgs }:
         {
-          default = pkgs.mkShell {
-            packages = with pkgs; [
-              clang-tools
-              cmake
-            ];
-          };
+          cpp =
+            pkgs.mkShell.override
+              {
+                stdenv = pkgs.llvmPackages.stdenv;
+              }
+              {
+                packages = with pkgs; [
+                  llvmPackages.clang-tools
+                  cmake
+                  ninja
+                  sccache
+                ];
+              };
+        }
+        // pkgs.lib.optionals pkgs.stdenv.isLinux {
+          juce =
+            pkgs.mkShell.override
+              {
+                stdenv = pkgs.llvmPackages.stdenv;
+              }
+              {
+                nativeBuildInputs = with pkgs; [
+                  llvmPackages.clang-tools
+                  llvmPackages.bintools
+                  cmake
+                  ninja
+                  sccache
+                  pkg-config
+                ];
+
+                buildInputs = with pkgs; [
+                  # https://github.com/juce-framework/JUCE/blob/master/docs/Linux%20Dependencies.md#packages
+
+                  ### juce_audio_devices ###
+                  alsa-lib
+                  libjack2
+
+                  ### juce_audio_processors ###
+                  ladspa-sdk
+
+                  ### juce_core ###
+                  curl
+
+                  ### juce_graphics ###
+                  fontconfig
+                  freetype
+
+                  ### juce_gui_basics ###
+                  xorg.libX11
+                  xorg.libXcomposite
+                  xorg.libXcursor
+                  xorg.libXext
+                  xorg.libXinerama
+                  xorg.libXrandr
+                  xorg.libXrender
+
+                  ### juce_gui_extra ###
+                  webkitgtk_4_1
+
+                  ### others
+                  libuuid
+                  libxkbcommon
+                  libthai
+                  libdatrie
+                  libepoxy
+                  libselinux
+                  libsepol
+                  libsysprof-capture
+                  xorg.libXdmcp
+                  xorg.libXtst
+                  lerc
+                  pcre2
+                  sqlite
+                ];
+
+                hardeningDisable = [ "fortify" ];
+
+                NIX_LDFLAGS = (
+                  toString [
+                    "-lX11"
+                    "-lXext"
+                    "-lXcursor"
+                    "-lXinerama"
+                    "-lXrandr"
+                  ]
+                );
+              };
         }
       );
     };
