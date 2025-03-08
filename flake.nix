@@ -31,7 +31,7 @@
       ...
     }:
     {
-      darwinConfigurations."kengo-macbook-pro" = nix-darwin.lib.darwinSystem {
+      darwinConfigurations."macbook-pro-2023" = nix-darwin.lib.darwinSystem {
         specialArgs = inputs;
         modules = [
           ./modules/darwin.nix
@@ -45,9 +45,8 @@
               users."kengo" = {
                 imports = [
                   ./modules/neovim
-                  ./modules/wezterm
-                  ./modules/ideavim
                   ./modules/karabiner
+                  ./modules/wezterm.nix
                   ./modules/home.nix
                   ./modules/fish.nix
                   ./modules/git.nix
@@ -59,6 +58,7 @@
                   ./modules/jq.nix
                   ./modules/ripgrep.nix
                   ./modules/eza.nix
+                  ./modules/tmux.nix
                   ./modules/zoxide.nix
                   ./modules/catppuccin.nix
                   ./modules/lazygit.nix
