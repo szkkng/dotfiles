@@ -35,18 +35,6 @@
       catppuccin,
       ...
     }:
-    let
-      supportedSystems = [
-        "x86_64-linux"
-        "aarch64-darwin"
-      ];
-
-      forEachSupportedSystem =
-        function:
-        nixpkgs.lib.genAttrs supportedSystems (
-          system: function { pkgs = import nixpkgs { inherit system; }; }
-        );
-    in
     {
       nixosConfigurations."tuxedo-gen9" = nixpkgs.lib.nixosSystem {
         system = "x86_64-linux";
@@ -60,8 +48,25 @@
         modules = [ ./hosts/macbook-pro-2023 ];
       };
 
-      devShells = forEachSupportedSystem (
-        { pkgs }:
+      devShells."aarch64-darwin" =
+        let
+          pkgs = import nixpkgs { system = "aarch64-darwin"; };
+        in
+        {
+          cpp = pkgs.mkShell {
+            packages = with pkgs; [
+              clang-tools
+              cmake
+              ninja
+              sccache
+            ];
+          };
+        };
+
+      devShells."x86_64-linux" =
+        let
+          pkgs = import nixpkgs { system = "x86_64-linux"; };
+        in
         {
           cpp =
             pkgs.mkShell.override
@@ -76,8 +81,7 @@
                   sccache
                 ];
               };
-        }
-        // pkgs.lib.optionals pkgs.stdenv.isLinux {
+
           juce =
             pkgs.mkShell.override
               {
@@ -122,7 +126,7 @@
                   ### juce_gui_extra ###
                   webkitgtk_4_1
 
-                  ### others
+                  ### others ###
                   libuuid
                   libxkbcommon
                   libthai
@@ -150,7 +154,6 @@
                   ]
                 );
               };
-        }
-      );
+        };
     };
 }
