@@ -6,8 +6,16 @@
 
   nixpkgs.config.allowUnfree = true;
   nixpkgs.hostPlatform = "aarch64-darwin";
-  nix.package = pkgs.nix;
-  nix.settings.experimental-features = "nix-command flakes";
+
+  nix = {
+    gc = {
+      automatic = true;
+      options = "--delete-older-than 1w";
+    };
+    optimise.automatic = true;
+    settings.experimental-features = "nix-command flakes";
+  };
+
   system.stateVersion = 5;
   system.configurationRevision = inputs.rev or inputs.dirtyRev or null;
   security.pam.services.sudo_local.touchIdAuth = true;
