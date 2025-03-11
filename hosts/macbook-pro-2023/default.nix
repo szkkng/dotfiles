@@ -33,7 +33,6 @@
       upgrade = true;
     };
     brews = [
-      "sccache"
       "ghcup"
     ];
     casks = [
