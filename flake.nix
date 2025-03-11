@@ -15,10 +15,6 @@
       url = "github:nix-community/neovim-nightly-overlay";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-    wezterm = {
-      url = "github:wez/wezterm?dir=nix";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
     musnix = {
       url = "github:musnix/musnix";
       inputs.nixpkgs.follows = "nixpkgs";
