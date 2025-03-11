@@ -54,6 +54,7 @@
               clang-tools
               cmake
               ninja
+              sccache
             ];
           };
         };
@@ -73,6 +74,7 @@
                   llvmPackages.clang-tools
                   cmake
                   ninja
+                  sccache
                 ];
               };
 
@@ -87,6 +89,7 @@
                   llvmPackages.bintools
                   cmake
                   ninja
+                  sccache
                   pkg-config
                 ];
 
