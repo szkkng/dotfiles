@@ -1,3 +1,3 @@
 # dotfiles
 
-<img width="1395" alt="Screenshot 2025-01-27 at 16 05 54" src="https://github.com/user-attachments/assets/434ed10b-c8ff-4574-a7cf-7bd2eb9764b8" />
+<img width="1512" alt="Screenshot 2025-03-12 at 1 53 15" src="https://github.com/user-attachments/assets/425a520e-bc9f-4723-adb4-74dd4ae53078" />
