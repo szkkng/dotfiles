@@ -21,6 +21,5 @@
     gnused
     ninja
     supabase-cli
-    spotify
   ];
 }
