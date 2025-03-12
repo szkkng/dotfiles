@@ -20,8 +20,11 @@ jobs:
           private-key: ${{ secrets.CI_APP_PRIVATE_KEY }}
           owner: ${{ github.repository_owner }}
       - name: Update flake.lock
+        id: update
         uses: DeterminateSystems/update-flake-lock@v24
         with:
           token: ${{ steps.app-token.outputs.token }}
-          pr-labels: |
-            dependencies
+      - name: Enable auto-merge
+        run: gh pr merge --rebase --auto ${{ steps.update.outputs.pull-request-number }}
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
