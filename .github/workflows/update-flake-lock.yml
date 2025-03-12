@@ -25,6 +25,8 @@ jobs:
         with:
           token: ${{ steps.app-token.outputs.token }}
       - name: Enable auto-merge
-        run: gh pr merge --rebase --auto ${{ steps.update.outputs.pull-request-number }}
+        run: |
+          gh pr review --approve ${{ steps.update.outputs.pull-request-number }}
+          gh pr merge --rebase --auto ${{ steps.update.outputs.pull-request-number }}
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
