@@ -2,7 +2,10 @@ name: update-flake-lock
 on:
   workflow_dispatch:
   schedule:
-    - cron: "0 0 * * 0"
+    - cron: "37 21 * * 3,6"
+permissions:
+  contents: write
+  pull-requests: write
 jobs:
   lockfile:
     runs-on: ubuntu-latest
@@ -20,6 +23,5 @@ jobs:
         uses: DeterminateSystems/update-flake-lock@v24
         with:
           token: ${{ steps.app-token.outputs.token }}
-          pr-title: "Update flake.lock"
           pr-labels: |
             dependencies
