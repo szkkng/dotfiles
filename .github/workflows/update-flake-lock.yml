@@ -24,6 +24,8 @@ jobs:
         uses: DeterminateSystems/update-flake-lock@v24
         with:
           token: ${{ steps.app-token.outputs.token }}
+          commit-msg: "Update flake.lock"
+          pr-title: "Update flake.lock"
       - name: Enable auto-merge
         run: gh pr merge --rebase --auto --delete-branch ${{ steps.update.outputs.pull-request-number }}
         env:
