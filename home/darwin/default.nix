@@ -19,7 +19,9 @@
     delta
     discord
     gnused
+    cmake
     ninja
+    sccache
     supabase-cli
   ];
 }
