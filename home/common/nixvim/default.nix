@@ -44,6 +44,7 @@
       # ./plugin/cmp.nix
       ./plugin/dap.nix
       ./plugin/ts-comments.nix
+      ./plugin/yazi.nix
     ];
   };
 }
