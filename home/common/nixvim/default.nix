@@ -46,6 +46,7 @@
       ./plugin/ts-comments.nix
       ./plugin/yazi.nix
       ./plugin/blink-cmp.nix
+      ./plugin/lint.nix
     ];
   };
 }
