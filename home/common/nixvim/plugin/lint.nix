@@ -7,14 +7,14 @@
     };
     autoCmd = {
       event = [
-        "BufReadPre"
-        "BufNewFile"
+        "BufEnter"
+        "BufWritePost"
         "InsertLeave"
       ];
       group = "lint";
       callback.__raw = ''
         function()
-          require ('lint').try_lint()
+          require ("lint").try_lint()
         end
       '';
     };
