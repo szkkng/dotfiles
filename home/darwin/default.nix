@@ -12,16 +12,7 @@
   home.stateVersion = "23.05";
   home.shell.enableFishIntegration = true;
   home.packages = with pkgs; [
-    act
-    brave
-    bun
-    cargo
     delta
-    discord
     gnused
-    cmake
-    ninja
-    sccache
-    supabase-cli
   ];
 }

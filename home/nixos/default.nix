@@ -17,16 +17,11 @@
   home.shell.enableFishIntegration = true;
   home.packages = with pkgs; [
     _1password-gui
-    act
     brave
     brightnessctl
-    bun
-    cargo
     delta
     discord
-    gnused
     pavucontrol
-    supabase-cli
     spotify
     xdg-desktop-portal-gtk
   ];

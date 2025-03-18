@@ -9,7 +9,6 @@
     ./fzf.nix
     ./gh.nix
     ./git.nix
-    ./jq.nix
     ./lazygit.nix
     ./ripgrep.nix
     ./starship.nix

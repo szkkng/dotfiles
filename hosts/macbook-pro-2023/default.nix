@@ -32,13 +32,9 @@
       autoUpdate = true;
       upgrade = true;
     };
-    brews = [
-      "ghcup"
-    ];
     casks = [
       "1password"
       "ableton-live-suite"
-      "arc"
       "brave-browser"
       "chatgpt"
       "cycling74-max"
@@ -46,7 +42,6 @@
       "discord"
       "font-jetbrains-mono"
       "font-jetbrains-mono-nerd-font"
-      "jetbrains-toolbox"
       "karabiner-elements"
       "keycastr"
       "obsidian"
