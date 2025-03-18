@@ -5,9 +5,19 @@
   programs.nixvim = {
     enable = true;
     package = inputs.neovim-nightly-overlay.packages.${pkgs.system}.default;
+    extraPackages = with pkgs; [
+      actionlint
+      gersemi
+      prettierd
+    ];
     defaultEditor = true;
     viAlias = true;
     nixpkgs.config.allowUnfree = true;
+
+    imports = [
+      ./core
+      ./plugin
+    ];
 
     globals.mapleader = " ";
 
@@ -42,35 +52,5 @@
         prefix = "";
       };
     };
-
-    imports = [
-      ./core/option.nix
-      ./core/keymap.nix
-      ./core/autocmd.nix
-      ./core/filetype.nix
-      ./plugin/autopairs.nix
-      ./plugin/conform.nix
-      ./plugin/treesitter.nix
-      ./plugin/web-devicons.nix
-      ./plugin/telescope.nix
-      ./plugin/lsp.nix
-      ./plugin/gitsigns.nix
-      ./plugin/indent-blankline.nix
-      ./plugin/copilot.nix
-      ./plugin/mini.nix
-      ./plugin/inc-rename.nix
-      # ./plugin/cmp.nix
-      ./plugin/dap.nix
-      ./plugin/ts-comments.nix
-      ./plugin/yazi.nix
-      ./plugin/blink-cmp.nix
-      ./plugin/lint.nix
-    ];
-
-    extraPackages = with pkgs; [
-      actionlint
-      gersemi
-      prettierd
-    ];
   };
 }
