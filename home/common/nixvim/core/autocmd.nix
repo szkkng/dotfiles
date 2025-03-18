@@ -11,14 +11,23 @@
         '';
       };
     }
+    {
+      event = [ "VimResized" ];
+      callback = {
+        __raw = ''
+          function()
+            local current_tab = vim.fn.tabpagenr()
+            vim.cmd("tabdo wincmd =")
+            vim.cmd("tabnext " .. current_tab)
+          end
+        '';
+      };
+    }
     # {
-    #   event = [ "FileType" ];
+    #   event = [ "BufWritePost" ];
     #   callback = {
     #     __raw = ''
-    #       function(event)
-    #         local cs = vim.bo[event.buf].commentstring
-    #         vim.bo[event.buf].commentstring = cs:gsub("(%S)%%s", "%1 %%s"):gsub("%%s(%S)", "%%s %1")
-    #       end
+    #       require("lint").try_lint()
     #     '';
     #   };
     # }
