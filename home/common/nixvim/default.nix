@@ -1,4 +1,4 @@
-{ inputs, ... }:
+{ inputs, pkgs, ... }:
 {
   imports = [ inputs.nixvim.homeManagerModules.default ];
 
@@ -48,6 +48,12 @@
       ./plugin/yazi.nix
       ./plugin/blink-cmp.nix
       ./plugin/lint.nix
+    ];
+
+    extraPackages = with pkgs; [
+      actionlint
+      gersemi
+      prettierd
     ];
   };
 }
