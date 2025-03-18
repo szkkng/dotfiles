@@ -45,6 +45,7 @@
       ./plugin/dap.nix
       ./plugin/ts-comments.nix
       ./plugin/yazi.nix
+      ./plugin/blink-cmp.nix
     ];
   };
 }
