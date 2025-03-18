@@ -57,6 +57,7 @@
       ./plugin/gitsigns.nix
       ./plugin/indent-blankline.nix
       ./plugin/copilot.nix
+      ./plugin/mini.nix
       # ./plugin/cmp.nix
       ./plugin/dap.nix
       ./plugin/ts-comments.nix
