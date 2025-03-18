@@ -32,6 +32,7 @@
       ./core/option.nix
       ./core/keymap.nix
       ./core/autocmd.nix
+      ./core/filetype.nix
       ./plugin/autopairs.nix
       ./plugin/conform.nix
       ./plugin/treesitter.nix
