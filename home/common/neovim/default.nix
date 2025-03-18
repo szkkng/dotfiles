@@ -6,7 +6,7 @@
 }:
 {
   programs.neovim = {
-    enable = true;
+    # enable = true;
     defaultEditor = true;
     viAlias = true;
     vimAlias = true;
@@ -28,11 +28,11 @@
     ];
   };
 
-  xdg.configFile = {
-    "nvim" = {
-      source = config.lib.file.mkOutOfStoreSymlink "${config.home.homeDirectory}/dotfiles/home/common/neovim/config";
-      recursive = true;
-    };
-    "nvim/init.lua".enable = false;
-  };
+  # xdg.configFile = {
+  #   "nvim" = {
+  #     source = config.lib.file.mkOutOfStoreSymlink "${config.home.homeDirectory}/dotfiles/home/common/neovim/config";
+  #     recursive = true;
+  #   };
+  #   "nvim/init.lua".enable = false;
+  # };
 }
