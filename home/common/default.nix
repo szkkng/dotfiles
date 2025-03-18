@@ -2,6 +2,7 @@
 {
   imports = [
     ./neovim
+    ./nixvim
     ./bat.nix
     ./catppuccin.nix
     ./eza.nix
