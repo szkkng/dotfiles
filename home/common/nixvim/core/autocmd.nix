@@ -23,13 +23,5 @@
         '';
       };
     }
-    # {
-    #   event = [ "BufWritePost" ];
-    #   callback = {
-    #     __raw = ''
-    #       require("lint").try_lint()
-    #     '';
-    #   };
-    # }
   ];
 }
