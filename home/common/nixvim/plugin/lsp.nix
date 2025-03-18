@@ -32,8 +32,7 @@
           "--completion-style=detailed"
         ];
         onAttach.function = ''
-          vim.keymap.set("n", "gs", "<cmd>ClangdSwitchSourceHeader<CR>", {
-            buffer = bufnr})
+          vim.keymap.set("n", "gs", "<cmd>ClangdSwitchSourceHeader<CR>")
         '';
       };
       nil_ls = {
