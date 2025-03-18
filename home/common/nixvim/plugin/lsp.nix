@@ -5,13 +5,13 @@
     servers = {
       clangd = {
         enable = true;
-        # cmd = [
-        #   "clangd"
-        #   "--offset-encoding=utf-16"
-        #   "--completion-style=detailed"
-        # ];
+        cmd = [
+          "clangd"
+          "--offset-encoding=utf-16"
+          "--completion-style=detailed"
+        ];
         onAttach.function = ''
-          vim.keymap.set("n", "<leader>ls", "<cmd>ClangdSwitchSourceHeader<CR>", {
+          vim.keymap.set("n", "<leader>gs", "<cmd>ClangdSwitchSourceHeader<CR>", {
             buffer = bufnr})
         '';
       };
