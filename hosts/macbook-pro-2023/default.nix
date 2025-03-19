@@ -18,7 +18,10 @@
 
   system.stateVersion = 5;
   system.configurationRevision = inputs.rev or inputs.dirtyRev or null;
-  security.pam.services.sudo_local.touchIdAuth = true;
+  security.pam.services.sudo_local = {
+    touchIdAuth = true;
+    reattach = true;
+  };
 
   users.users.kengo = {
     name = "kengo";
