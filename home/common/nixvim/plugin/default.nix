@@ -17,5 +17,6 @@
     ./yazi.nix
     ./blink-cmp.nix
     ./lint.nix
+    ./zen-mode.nix
   ];
 }
