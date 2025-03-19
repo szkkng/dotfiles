@@ -31,8 +31,6 @@
       self,
       nixpkgs,
       nix-darwin,
-      home-manager,
-      catppuccin,
       ...
     }:
     {
