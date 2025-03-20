@@ -141,27 +141,26 @@
   extraConfigLua = # lua
     ''
       -- diagnostics
+      -- v0.11
+      -- local diagnostic_goto = function(next, severity)
+      --   return function()
+      --     vim.diagnostic.jump({ count = next and 1 or -1, severity = severity or nil, float = true })
+      --   end
+      -- end
+      -- v0.10
       local diagnostic_goto = function(next, severity)
-        vim.diagnostic.jump({ count = next and 1 or -1, severity = severity or nil, float = true })
+        local go = next and vim.diagnostic.goto_next or vim.diagnostic.goto_prev
+        severity = severity and vim.diagnostic.severity[severity] or nil
+        return function()
+          go({ severity = severity })
+        end
       end
       vim.keymap.set("n", "<leader>cd", vim.diagnostic.open_float)
-      vim.keymap.set("n", "]d", function()
-        diagnostic_goto(true)
-      end)
-      vim.keymap.set("n", "[d", function()
-        diagnostic_goto(false)
-      end)
-      vim.keymap.set("n", "]w", function()
-        diagnostic_goto(true, "WARN")
-      end)
-      vim.keymap.set("n", "[w", function()
-        diagnostic_goto(false, "WARN")
-      end)
-      vim.keymap.set("n", "]e", function()
-        diagnostic_goto(true, "ERROR")
-      end)
-      vim.keymap.set("n", "[e", function()
-        diagnostic_goto(false, "ERROR")
-      end)
+      vim.keymap.set("n", "]d", diagnostic_goto(true))
+      vim.keymap.set("n", "[d", diagnostic_goto(false))
+      vim.keymap.set("n", "]w", diagnostic_goto(true, "WARN"))
+      vim.keymap.set("n", "[w", diagnostic_goto(false, "WARN"))
+      vim.keymap.set("n", "]e", diagnostic_goto(true, "ERROR"))
+      vim.keymap.set("n", "[e", diagnostic_goto(false, "ERROR"))
     '';
 }
