@@ -59,6 +59,9 @@
       jsonls = {
         enable = true;
       };
+      neocmake = {
+        enable = true;
+      };
     };
   };
 }
