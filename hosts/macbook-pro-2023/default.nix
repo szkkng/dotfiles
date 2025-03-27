@@ -45,7 +45,6 @@
       "discord"
       "font-jetbrains-mono"
       "font-jetbrains-mono-nerd-font"
-      "jetbrains-toolbox"
       "karabiner-elements"
       "keycastr"
       "obsidian"
