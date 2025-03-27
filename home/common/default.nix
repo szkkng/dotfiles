@@ -1,4 +1,4 @@
-{ ... }:
+{ pkgs, ... }:
 {
   imports = [
     ./nixvim
@@ -18,5 +18,11 @@
     ./zoxide.nix
     ./fish.nix
     ./direnv.nix
+  ];
+
+  home.packages = with pkgs; [
+    jetbrains.clion
+    jetbrains.webstorm
+    jetbrains.idea-ultimate
   ];
 }
