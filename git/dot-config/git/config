@@ -1,0 +1,29 @@
+[user]
+  name = szkkng
+  email = hi@kengo.dev
+[init]
+  defaultBranch = main
+[alias]
+  st = status
+  br = branch
+  co = commit
+  sw = switch
+  di = diff
+  sm = submodule
+  last = log -1
+  ll = log --oneline
+[pull]
+  ff = only
+[fetch]
+  prune = true
+[core]
+  autocrlf = input
+  ignorecase = false
+  pager = delta
+[interactive]
+  diffFilter = delta --color-only
+[include]
+  path = ~/.config/delta/themes/catppuccin.gitconfig
+[delta]
+  features = catppuccin-mocha
+  line-numbers = true
