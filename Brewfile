@@ -1,0 +1,50 @@
+tap "supabase/tap"
+brew "bat"
+brew "cmake"
+brew "eza"
+brew "fd"
+brew "fish"
+brew "fisher"
+brew "fzf"
+brew "gh"
+brew "ghcup"
+brew "git"
+brew "git-delta"
+brew "gnu-sed"
+brew "mas"
+brew "neovim"
+brew "ninja"
+brew "ripgrep"
+brew "starship"
+brew "stow"
+brew "tmux"
+brew "volta"
+brew "yazi"
+brew "zoxide"
+brew "supabase/tap/supabase"
+cask "1password"
+cask "ableton-live-suite"
+cask "brave-browser"
+cask "chatgpt"
+cask "cycling74-max"
+cask "deepl"
+cask "discord"
+cask "font-jetbrains-mono"
+cask "font-jetbrains-mono-nerd-font"
+cask "jetbrains-toolbox"
+cask "karabiner-elements"
+cask "keycastr"
+cask "obsidian"
+cask "raycast"
+cask "reaper"
+cask "spotify"
+cask "wezterm"
+mas "GarageBand", id: 682658836
+mas "iMovie", id: 408981434
+mas "Kindle", id: 302584613
+mas "Klack", id: 6446206067
+mas "LINE", id: 539883307
+mas "Logic Pro", id: 634148309
+mas "Magnet", id: 441258766
+mas "Spark", id: 1176895641
+mas "Xcode", id: 497799835
