@@ -1,0 +1,33 @@
+name: Update flake.lock
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "37 21 * * 3,6"
+permissions:
+  contents: write
+  pull-requests: write
+jobs:
+  lockfile:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
+      - name: Install Nix
+        uses: cachix/install-nix-action@02a151ada4993995686f9ed4f1be7cfbb229e56f # v31
+      - uses: actions/create-github-app-token@af35edadc00be37caa72ed9f3e6d5f7801bfdf09 # v1.11.7
+        id: app-token
+        with:
+          app-id: ${{ secrets.CI_APP_ID }}
+          private-key: ${{ secrets.CI_APP_PRIVATE_KEY }}
+          owner: ${{ github.repository_owner }}
+      - name: Update flake.lock
+        id: update
+        uses: DeterminateSystems/update-flake-lock@a2bbe0274e3a0c4194390a1e445f734c597ebc37 # v24
+        with:
+          token: ${{ steps.app-token.outputs.token }}
+          commit-msg: "Update flake.lock"
+          pr-title: "Update flake.lock"
+      - name: Enable auto-merge
+        if: ${{ steps.update.outputs.pull-request-number }}
+        run: gh pr merge --rebase --auto --delete-branch ${{ steps.update.outputs.pull-request-number }}
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
