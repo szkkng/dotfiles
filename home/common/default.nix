@@ -18,6 +18,7 @@
     ./zoxide.nix
     ./fish.nix
     ./direnv.nix
+    ./zed.nix
   ];
 
   home.packages = with pkgs; [
