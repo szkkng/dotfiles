@@ -5,6 +5,8 @@
     extensions = [
       "nix"
       "neocmake"
+      "git-firefly"
+      "toml"
     ];
     userSettings = {
       auto_update = false;
