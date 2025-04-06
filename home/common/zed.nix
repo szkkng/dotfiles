@@ -14,13 +14,9 @@
       buffer_font_size = 15;
       cursor_blink = false;
       scrollbar.show = "never";
-      format_on_save = true;
+      format_on_save = "on";
       relative_line_numbers = true;
-      terminal = {
-        shell = {
-          program = "${pkgs.fish}/bin/fish";
-        };
-      };
+      terminal.shell.program = lib.getExe pkgs.fish;
       vim_mode = true;
       languages = {
         Nix = {
