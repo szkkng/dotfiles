@@ -173,7 +173,6 @@
     git
     wget
     vim
-    nixfmt-rfc-style
   ];
 
   # Enable the OpenSSH daemon.
