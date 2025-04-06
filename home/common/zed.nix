@@ -1,4 +1,4 @@
-{ pkgs, ... }:
+{ lib, pkgs, ... }:
 {
   programs.zed-editor = {
     enable = true;
@@ -22,6 +22,23 @@
         };
       };
       vim_mode = true;
+      languages = {
+        Nix = {
+          language_servers = [
+            "nixd"
+            "!nil"
+          ];
+        };
+        CMake = {
+          formatter.external = {
+            command = lib.getExe pkgs.gersemi;
+            arguments = [
+              "--quiet"
+              "-"
+            ];
+          };
+        };
+      };
     };
     userKeymaps = [
       {

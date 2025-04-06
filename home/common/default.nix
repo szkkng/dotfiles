@@ -22,6 +22,8 @@
   ];
 
   home.packages = with pkgs; [
+    nixd
+    nixfmt-rfc-style
     jetbrains.clion
     jetbrains.webstorm
     jetbrains.idea-ultimate
