@@ -17,6 +17,9 @@
       cursor_blink = false;
       scrollbar.show = "never";
       format_on_save = "on";
+      file_types = {
+        "C++" = [ "gen" ];
+      };
       relative_line_numbers = true;
       terminal.shell.program = lib.getExe pkgs.fish;
       vim_mode = true;
