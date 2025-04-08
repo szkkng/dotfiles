@@ -35,7 +35,7 @@
           vim.keymap.set("n", "gs", "<cmd>ClangdSwitchSourceHeader<CR>")
         '';
       };
-      nil_ls = {
+      nixd = {
         enable = true;
       };
       lua_ls = {
