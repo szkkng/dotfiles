@@ -60,6 +60,10 @@
             "Right"
           ];
           "space w q" = "pane::CloseActiveItem";
+
+          "space g p" = "editor::ToggleSelectedDiffHunks";
+          "space g r" = "git::Restore";
+          "space g R" = "git::RestoreFile";
         };
       }
       {
@@ -73,6 +77,12 @@
           "y" = "project_panel::Copy";
           "p" = "project_panel::Paste";
           "d" = "project_panel::Delete";
+        };
+      }
+      {
+        context = "EmptyPane || SharedScreen";
+        bindings = {
+          "space f f" = "file_finder::Toggle";
         };
       }
       {
