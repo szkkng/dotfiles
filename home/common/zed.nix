@@ -64,6 +64,17 @@
           "space g p" = "editor::ToggleSelectedDiffHunks";
           "space g r" = "git::Restore";
           "space g R" = "git::RestoreFile";
+
+          "space s h" = "editor::SwitchSourceHeader";
+
+          "space l r" = "editor::Rename";
+          "space l a" = "editor::ToggleCodeActions";
+        };
+      }
+      {
+        context = "Editor && renaming";
+        bindings = {
+          "ctrl-[" = "editor::Cancel";
         };
       }
       {
@@ -83,6 +94,12 @@
         context = "EmptyPane || SharedScreen";
         bindings = {
           "space f f" = "file_finder::Toggle";
+        };
+      }
+      {
+        context = "BufferSearchBar";
+        bindings = {
+          "ctrl-[" = "buffer_search::Dismiss";
         };
       }
       {
