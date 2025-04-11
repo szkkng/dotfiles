@@ -16,6 +16,7 @@
       buffer_font_size = 15;
       cursor_blink = false;
       scrollbar.show = "never";
+      features.edit_prediction_provider = "copilot";
       format_on_save = "on";
       file_types = {
         "C++" = [ "gen" ];
