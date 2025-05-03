@@ -33,7 +33,7 @@
       };
     };
 
-    diagnostics = {
+    diagnostics.settings = {
       signs = {
         text = {
           "__rawKey__vim.diagnostic.severity.ERROR" = "";
