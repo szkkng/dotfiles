@@ -11,6 +11,7 @@
     viAlias = true;
     vimAlias = true;
     package = inputs.neovim-nightly-overlay.packages.${pkgs.system}.default;
+    withNodeJs = true;
     extraPackages = with pkgs; [
       gcc
       cmake
