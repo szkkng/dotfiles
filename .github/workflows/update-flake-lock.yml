@@ -21,7 +21,7 @@ jobs:
           owner: ${{ github.repository_owner }}
       - name: Update flake.lock
         id: update
-        uses: DeterminateSystems/update-flake-lock@a2bbe0274e3a0c4194390a1e445f734c597ebc37 # v24
+        uses: DeterminateSystems/update-flake-lock@428c2b58a4b7414dabd372acb6a03dba1084d3ab # v25
         with:
           token: ${{ steps.app-token.outputs.token }}
           commit-msg: "Update flake.lock"
