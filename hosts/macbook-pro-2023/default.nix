@@ -16,6 +16,7 @@
     settings.experimental-features = "nix-command flakes";
   };
 
+  system.primaryUser = "kengo";
   system.stateVersion = 5;
   system.configurationRevision = inputs.rev or inputs.dirtyRev or null;
   security.pam.services.sudo_local = {
@@ -92,7 +93,7 @@
     remapCapsLockToControl = true;
   };
 
-  system.activationScripts.postUserActivation.text = ''
+  system.activationScripts.postActivation.text = ''
     mkdir -p "$HOME/Screenshots"
   '';
 }
