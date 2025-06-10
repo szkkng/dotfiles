@@ -40,6 +40,18 @@
             ];
           };
         };
+        JavaScript = {
+          code_actions_on_format."source.fixAll.eslint" = true;
+        };
+        JSX = {
+          code_actions_on_format."source.fixAll.eslint" = true;
+        };
+        TypeScript = {
+          code_actions_on_format."source.fixAll.eslint" = true;
+        };
+        TSX = {
+          code_actions_on_format."source.fixAll.eslint" = true;
+        };
       };
     };
     userKeymaps = [
