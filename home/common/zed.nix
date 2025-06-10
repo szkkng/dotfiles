@@ -7,6 +7,7 @@
       "neocmake"
       "git-firefly"
       "toml"
+      "sql"
     ];
     userSettings = {
       auto_update = false;
