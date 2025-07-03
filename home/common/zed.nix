@@ -83,6 +83,16 @@
 
           "space l r" = "editor::Rename";
           "space l a" = "editor::ToggleCodeActions";
+
+          "space d b" = "editor::ToggleBreakpoint";
+          "space d d" = "debugger::Start";
+          "space d q" = "debugger::Stop";
+          "space d r" = "debugger::RerunLastSession";
+          "space d o" = "debugger::StepOver";
+          "space d O" = "debugger::StepOut";
+          "space d i" = "debugger::StepInto";
+          "space d c" = "debugger::Continue";
+          "space d s" = "debugger::ShowStackTrace";
         };
       }
       {
