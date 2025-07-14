@@ -85,6 +85,7 @@
           "space l a" = "editor::ToggleCodeActions";
 
           "space d b" = "editor::ToggleBreakpoint";
+          "space d x" = "debugger::ClearAllBreakpoints";
           "space d d" = "debugger::Start";
           "space d q" = "debugger::Stop";
           "space d r" = "debugger::RerunLastSession";
