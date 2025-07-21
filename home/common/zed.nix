@@ -97,6 +97,9 @@
           "space d i" = "debugger::StepInto";
           "space d c" = "debugger::Continue";
           "space d s" = "debugger::ShowStackTrace";
+
+          "space t t" = "task::Spawn";
+          "space t ." = "task::Rerun";
         };
       }
       {
