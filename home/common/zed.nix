@@ -25,6 +25,15 @@
       relative_line_numbers = true;
       terminal.shell.program = lib.getExe pkgs.fish;
       vim_mode = true;
+      lsp = {
+        clangd = {
+          binary = {
+            arguments = [
+              "--header-insertion=never"
+            ];
+          };
+        };
+      };
       languages = {
         Nix = {
           language_servers = [
@@ -44,13 +53,7 @@
         JavaScript = {
           code_actions_on_format."source.fixAll.eslint" = true;
         };
-        JSX = {
-          code_actions_on_format."source.fixAll.eslint" = true;
-        };
         TypeScript = {
-          code_actions_on_format."source.fixAll.eslint" = true;
-        };
-        TSX = {
           code_actions_on_format."source.fixAll.eslint" = true;
         };
       };
