@@ -21,6 +21,10 @@
       format_on_save = "on";
       file_types = {
         "C++" = [ "gen" ];
+        "YAML" = [
+          ".clang-format"
+          ".clang-tidy"
+        ];
       };
       relative_line_numbers = true;
       terminal.shell.program = lib.getExe pkgs.fish;
