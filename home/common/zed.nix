@@ -107,6 +107,13 @@
         };
       }
       {
+        context = "vim_mode == insert";
+        bindings = {
+          "alt-n" = "copilot::NextSuggestion";
+          "alt-p" = "copilot::PreviousSuggestion";
+        };
+      }
+      {
         context = "Editor && renaming";
         bindings = {
           "ctrl-[" = "editor::Cancel";
