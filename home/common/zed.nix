@@ -72,13 +72,19 @@
           "space shift-d" = "diagnostics::Deploy";
 
           "space w v" = "pane::SplitRight";
-          "space w h" = [
-            "workspace::ActivatePaneInDirection"
-            "Left"
+          "space w h" = "workspace::ActivatePaneLeft";
+          "space w l" = "workspace::ActivatePaneRight";
+          "space w H" = [
+            "workspace::MoveItemToPaneInDirection"
+            {
+              direction = "left";
+            }
           ];
-          "space w l" = [
-            "workspace::ActivatePaneInDirection"
-            "Right"
+          "space w L" = [
+            "workspace::MoveItemToPaneInDirection"
+            {
+              direction = "right";
+            }
           ];
           "space w q" = "pane::CloseActiveItem";
 
@@ -95,7 +101,7 @@
           "space d x" = "debugger::ClearAllBreakpoints";
           "space d d" = "debugger::Start";
           "space d q" = "debugger::Stop";
-          "space d r" = "debugger::RerunLastSession";
+          "space d r" = "debugger::Rerun";
           "space d o" = "debugger::StepOver";
           "space d O" = "debugger::StepOut";
           "space d i" = "debugger::StepInto";
