@@ -33,6 +33,8 @@
       bind k select-pane -U
       bind l select-pane -R
 
+      bind G display-popup -d "#{pane_current_path}" -w 80% -h 80% -E "lazygit"
+
       set -g status-style "bg=#{@thm_bg}"
       set -g status-left ""
       set -g status-right ""
