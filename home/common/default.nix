@@ -11,6 +11,7 @@
     ./gh.nix
     ./git.nix
     ./lazygit.nix
+    ./opencode.nix
     ./ripgrep.nix
     ./starship.nix
     ./tmux.nix
