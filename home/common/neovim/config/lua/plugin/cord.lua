@@ -5,6 +5,9 @@ return {
     editor = {
       tooltip = "Neovim",
     },
+    timestamp = {
+      reset_on_idle = true,
+    },
     text = {
       workspace = "",
       viewing = "Viewing",
