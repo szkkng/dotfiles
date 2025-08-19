@@ -22,6 +22,36 @@ return {
     { "<leader>d1", "<cmd>DapStepOver<CR>" },
     { "<leader>d2", "<cmd>DapStepInto<CR>" },
     { "<leader>d3", "<cmd>DapStepOut<CR>" },
+    {
+      "<leader>dl",
+      function()
+        require("fzf-lua").dap_breakpoints()
+      end,
+    },
+    {
+      "<leader>dc",
+      function()
+        require("fzf-lua").dap_configurations()
+      end,
+    },
+    {
+      "<leader>dv",
+      function()
+        require("fzf-lua").dap_variables()
+      end,
+    },
+    {
+      "<leader>df",
+      function()
+        require("fzf-lua").dap_frames()
+      end,
+    },
+    {
+      "<leader>dh",
+      function()
+        require("fzf-lua").dap_commands()
+      end,
+    },
   },
   config = function()
     local dap = require("dap")
