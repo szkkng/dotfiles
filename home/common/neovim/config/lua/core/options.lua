@@ -4,6 +4,7 @@ opt.completeopt = "menu,menuone,noselect"
 opt.confirm = true
 opt.cursorline = true
 opt.expandtab = true
+opt.guicursor:remove({ "t:block-blinkon500-blinkoff500-TermCursor" })
 opt.ignorecase = true
 opt.laststatus = 0
 opt.list = true
