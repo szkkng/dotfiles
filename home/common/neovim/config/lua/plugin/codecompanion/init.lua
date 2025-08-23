@@ -6,7 +6,7 @@ return {
     "j-hui/fidget.nvim",
   },
   init = function()
-    require("plugin.codecompanion.ui.fidget-spinner"):init()
+    require("plugin.codecompanion.fidget-spinner"):init()
   end,
   cmd = {
     "CodeCompanion",
