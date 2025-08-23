@@ -3,7 +3,11 @@ return {
   dependencies = {
     "nvim-lua/plenary.nvim",
     "nvim-treesitter/nvim-treesitter",
+    "j-hui/fidget.nvim",
   },
+  init = function()
+    require("plugin.codecompanion.ui.fidget-spinner"):init()
+  end,
   cmd = {
     "CodeCompanion",
     "CodeCompanionChat",
