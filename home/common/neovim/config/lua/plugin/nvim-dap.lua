@@ -55,23 +55,27 @@ return {
   },
   config = function()
     local dap = require("dap")
-    dap.adapters.codelldb = {
-      type = "server",
-      port = "${port}",
-      executable = {
-        command = "codelldb",
-        args = { "--port", "${port}" },
-      },
+    dap.adapters.lldb = {
+      type = "executable",
+      command = "lldb-dap",
+      name = "lldb",
     }
     dap.configurations.cpp = {
       {
         name = "Launch file",
-        type = "codelldb",
+        type = "lldb",
         request = "launch",
         program = function()
           return vim.fn.input("Path to executable: ", vim.fn.getcwd() .. "/", "file")
         end,
         cwd = "${workspaceFolder}",
+        stopOnEntry = false,
+      },
+      {
+        name = "Ableton Live",
+        type = "lldb",
+        request = "launch",
+        program = "/Applications/Ableton Live 12 Suite.app",
         stopOnEntry = false,
       },
     }
