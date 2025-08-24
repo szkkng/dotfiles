@@ -50,7 +50,7 @@ return {
     display = {
       chat = {
         window = {
-          width = 0.3,
+          width = 0.33,
         },
       },
     },
