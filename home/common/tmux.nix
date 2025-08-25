@@ -10,11 +10,13 @@
     escapeTime = 0;
     historyLimit = 5000;
     keyMode = "vi";
-    prefix = "C-j";
+    prefix = "C-SPACE";
     shell = "${pkgs.fish}/bin/fish";
     terminal = "tmux-256color";
     extraConfig = ''
       set-option -ga terminal-overrides ',xterm-256color:Tc'
+      set -g renumber-windows on
+
       bind c new-window -c "#{pane_current_path}"
       bind | split-window -h -c '#{pane_current_path}'
       bind - split-window -c '#{pane_current_path}'
@@ -33,11 +35,12 @@
       bind k select-pane -U
       bind l select-pane -R
 
-      bind G display-popup -d "#{pane_current_path}" -w 80% -h 80% -E "lazygit"
+      bind g display-popup -d "#{pane_current_path}" -w 90% -h 90% -E "lazygit"
 
       set -g status-style "bg=#{@thm_bg}"
-      set -g status-left ""
+      set -g status-left "#S"
       set -g status-right ""
+      set -g status-justify absolute-centre
       set -g window-status-format "#[fg=#{@thm_bg},bg=#{@thm_overlay_0},nobold,nounderscore,noitalics] #I #[fg=#{@thm_surface_2},bg=#{@thm_bg},nobold,nounderscore,noitalics] #W "
       set -g window-status-current-format "#[fg=#{@thm_bg},bg=#{@thm_lavender},nobold,nounderscore,noitalics] #I #[fg=#{@thm_fg},bg=#{@thm_bg},nobold,nounderscore,noitalics] #W "
     '';
