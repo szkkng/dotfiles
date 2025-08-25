@@ -10,7 +10,7 @@
         local wezterm = require("wezterm")
 
         return {
-          default_prog = { "${pkgs.fish}/bin/fish", "-c", "tmux a -t 0 || tmux" },
+          default_prog = { "${pkgs.fish}/bin/fish" },
           color_scheme = "Catppuccin Mocha",
           font = wezterm.font("JetbrainsMono Nerd Font"),
           font_size = 14,
