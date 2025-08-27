@@ -37,9 +37,9 @@ return {
           ["]l"] = "@loop.outer",
         },
         goto_next_end = {
-          ["]f"] = "@function.outer",
-          ["]i"] = "@conditional.outer",
-          ["]l"] = "@loop.outer",
+          ["]F"] = "@function.outer",
+          ["]I"] = "@conditional.outer",
+          ["]L"] = "@loop.outer",
         },
         goto_previous_start = {
           ["[f"] = "@function.outer",
@@ -47,9 +47,9 @@ return {
           ["[l"] = "@loop.outer",
         },
         goto_previous_end = {
-          ["[f"] = "@function.outer",
-          ["[i"] = "@conditional.outer",
-          ["[l"] = "@loop.outer",
+          ["[F"] = "@function.outer",
+          ["[I"] = "@conditional.outer",
+          ["[L"] = "@loop.outer",
         },
       },
     },
