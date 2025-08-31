@@ -120,6 +120,12 @@ return {
   },
   keys = {
     {
+      "<leader>fr",
+      function()
+        require("fzf-lua").resume()
+      end,
+    },
+    {
       "<leader>ff",
       function()
         require("fzf-lua").files()
