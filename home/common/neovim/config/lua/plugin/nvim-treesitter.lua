@@ -9,6 +9,7 @@ return {
       "haskell",
       "javascript",
       "json",
+      "just",
       "lua",
       "markdown",
       "markdown_inline",
