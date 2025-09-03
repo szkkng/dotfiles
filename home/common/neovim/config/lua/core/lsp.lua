@@ -3,6 +3,7 @@ vim.lsp.enable({
   "clangd",
   "cssls",
   "html",
+  "just",
   "ts_ls",
   "eslint",
   "bashls",
