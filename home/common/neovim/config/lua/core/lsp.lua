@@ -12,6 +12,7 @@ vim.lsp.enable({
   "neocmake",
   "nixd",
   "hls",
+  "copilot",
 })
 
 vim.api.nvim_create_autocmd("LspAttach", {
@@ -74,6 +75,15 @@ vim.api.nvim_create_autocmd("LspAttach", {
 
     if client and client.name == "clangd" then
       keymap("n", "gs", "<cmd>LspClangdSwitchSourceHeader<CR>")
+    end
+
+    if client and client.name == "copilot" then
+      vim.lsp.inline_completion.enable(true, { bufnr = event.buf })
+      vim.keymap.set("i", "<tab>", function()
+        if not vim.lsp.inline_completion.get() then
+          return "<tab>"
+        end
+      end, { expr = true })
     end
   end,
 })

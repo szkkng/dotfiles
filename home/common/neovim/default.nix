@@ -17,6 +17,7 @@
       cmake
       gnumake
       lua-language-server
+      copilot-language-server
       stylua
     ];
   };
