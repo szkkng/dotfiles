@@ -2,7 +2,6 @@
 {
   imports = [
     ./neovim
-    ./ideavim
     ./bat.nix
     ./catppuccin.nix
     ./eza.nix
@@ -24,8 +23,5 @@
   home.packages = with pkgs; [
     nixd
     nixfmt-rfc-style
-    jetbrains.clion
-    jetbrains.webstorm
-    jetbrains.idea-ultimate
   ];
 }
