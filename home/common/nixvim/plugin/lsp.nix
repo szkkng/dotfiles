@@ -3,7 +3,10 @@
   plugins.lsp = {
     enable = true;
     servers = {
-      clangd.enable = true;
+      clangd = {
+        enable = true;
+        packageFallback = true;
+      };
       nixd.enable = true;
       lua_ls.enable = true;
       cssls.enable = true;
