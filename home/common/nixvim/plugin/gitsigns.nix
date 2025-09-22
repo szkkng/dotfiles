@@ -16,6 +16,16 @@
     }
     {
       mode = "n";
+      key = "<leader>gh";
+      action = "<cmd>lua require('gitsigns').stage_hunk()<CR>";
+    }
+    {
+      mode = "v";
+      key = "<leader>gh";
+      action = "<cmd>lua require('gitsigns').stage_hunk({ vim.fn.line '.', vim.fn.line 'v' })<CR>";
+    }
+    {
+      mode = "n";
       key = "<leader>gr";
       action = "<cmd>lua require('gitsigns').reset_hunk()<CR>";
     }
