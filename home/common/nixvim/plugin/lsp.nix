@@ -17,6 +17,7 @@
       jsonls.enable = true;
       neocmake.enable = true;
       just.enable = true;
+      zls.enable = true;
     };
     onAttach = # lua
       ''

@@ -22,6 +22,7 @@
       vimdoc
       xml
       yaml
+      zig
     ];
     settings = {
       highlight = {
