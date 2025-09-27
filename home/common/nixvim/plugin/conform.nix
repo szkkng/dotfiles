@@ -14,6 +14,7 @@
         json = [ "prettierd" ];
         markdown = [ "prettierd" ];
         nix = [ "nixfmt" ];
+        zig = [ "zigfmt" ];
       };
       format_on_save = {
         timeout_ms = 500;
