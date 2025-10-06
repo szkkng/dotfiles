@@ -132,7 +132,7 @@ return {
       end,
     },
     {
-      "<leader>fb",
+      "<leader>b",
       function()
         require("fzf-lua").buffers()
       end,
