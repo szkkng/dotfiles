@@ -5,11 +5,9 @@ return {
   opts = {
     transparent_background = true,
     integrations = {
-      blink_cmp = true,
       indent_blankline = {
         scope_color = "lavender",
       },
-      mason = true,
     },
   },
   config = function(_, opts)
