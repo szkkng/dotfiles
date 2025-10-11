@@ -33,19 +33,21 @@ return {
   },
   opts = {
     adapters = {
-      copilot = function()
-        return require("codecompanion.adapters").extend("copilot", {
-          schema = {
-            model = {
-              default = "gpt-5-mini",
-              choices = {
-                "gpt-5",
-                "gpt-5-mini",
+      http = {
+        copilot = function()
+          return require("codecompanion.adapters").extend("copilot", {
+            schema = {
+              model = {
+                default = "gpt-5",
+                choices = {
+                  "gpt-5",
+                  "gpt-5-mini",
+                },
               },
             },
-          },
-        })
-      end,
+          })
+        end,
+      },
     },
     display = {
       chat = {
