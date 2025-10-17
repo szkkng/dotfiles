@@ -8,22 +8,21 @@
     baseIndex = 1;
     clock24 = true;
     escapeTime = 0;
-    historyLimit = 5000;
+    historyLimit = 50000;
     keyMode = "vi";
     prefix = "C-SPACE";
     shell = "${pkgs.fish}/bin/fish";
-    terminal = "tmux-256color";
+    terminal = "$TERM";
     extraConfig = ''
-      set-option -ga terminal-overrides ',xterm-256color:Tc'
+      bind r source-file ~/.config/tmux/tmux.conf \; display-message "Configuration reloaded"
+
+      set -sa terminal-features "$TERM:RGB"
       set -g renumber-windows on
 
       bind c new-window -c "#{pane_current_path}"
       bind | split-window -h -c '#{pane_current_path}'
       bind - split-window -c '#{pane_current_path}'
       bind K  "kill-window"
-
-      bind -n M-Right next-window
-      bind -n M-Left  previous-window
 
       bind -n S-Up resize-pane -U 2
       bind -n S-Down resize-pane -D 2
@@ -37,7 +36,7 @@
 
       bind g display-popup -d "#{pane_current_path}" -w 90% -h 90% -E "lazygit"
 
-      set -g status-style "bg=#{@thm_bg}"
+      set -g status-style ""
       set -g status-left "#S"
       set -g status-right ""
       set -g status-justify absolute-centre
