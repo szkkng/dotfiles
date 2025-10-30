@@ -2,21 +2,23 @@
 {
   programs.git = {
     enable = true;
-    userName = "szkkng";
-    userEmail = "hi@kengo.dev";
     ignores = [
       ".direnv"
       ".envrc"
     ];
-    aliases = {
-      st = "status";
-      ci = "commit";
-      co = "checkout";
-      sw = "switch";
-      last = "log - 1";
-      logol = "log - -oneline";
-    };
-    extraConfig = {
+    settings = {
+      user = {
+        name = "szkkng";
+        email = "hi@kengo.dev";
+      };
+      aliases = {
+        st = "status";
+        ci = "commit";
+        co = "checkout";
+        sw = "switch";
+        last = "log -1";
+        logol = "log --oneline";
+      };
       init = {
         defaultBranch = "main";
       };
@@ -30,12 +32,6 @@
       };
       pull = {
         ff = "only";
-      };
-    };
-    delta = {
-      enable = true;
-      options = {
-        line-numbers = true;
       };
     };
   };
