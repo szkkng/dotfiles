@@ -11,7 +11,7 @@
         name = "szkkng";
         email = "hi@kengo.dev";
       };
-      aliases = {
+      alias = {
         st = "status";
         ci = "commit";
         co = "checkout";
