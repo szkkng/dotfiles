@@ -19,7 +19,6 @@
     _1password-gui
     brave
     brightnessctl
-    delta
     discord
     pavucontrol
     spotify

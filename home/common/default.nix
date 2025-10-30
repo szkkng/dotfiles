@@ -4,6 +4,7 @@
     ./neovim
     ./bat.nix
     ./catppuccin.nix
+    ./delta.nix
     ./eza.nix
     ./fd.nix
     ./fzf.nix

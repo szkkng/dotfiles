@@ -12,7 +12,6 @@
   home.stateVersion = "23.05";
   home.shell.enableFishIntegration = true;
   home.packages = with pkgs; [
-    delta
     gnused
   ];
 }
