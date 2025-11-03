@@ -15,5 +15,9 @@
         src = pkgs.fishPlugins.fzf.src;
       }
     ];
+    shellAbbrs = {
+      zb = "zig build";
+      zbr = "zig build run";
+    };
   };
 }
