@@ -10,7 +10,7 @@
     defaultEditor = true;
     viAlias = true;
     vimAlias = true;
-    package = inputs.neovim-nightly-overlay.packages.${pkgs.system}.default;
+    package = inputs.neovim-nightly-overlay.packages.${pkgs.stdenv.hostPlatform.system}.default;
     withNodeJs = true;
     extraPackages = with pkgs; [
       gcc
