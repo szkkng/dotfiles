@@ -19,7 +19,8 @@
 
           adjust_window_size_when_changing_font_size = false,
           window_close_confirmation = "NeverPrompt",
-          window_background_opacity = 1.0,
+          window_background_opacity = 0.9,
+          macos_window_background_blur = 20,
           window_decorations = "RESIZE",
           window_padding = {
             left = 10,
