@@ -13,5 +13,12 @@
         "text/html" = "html | colorize";
       };
     };
+    templates = {
+      thanks = ''
+        Thanks!
+
+        {{exec "{ git remote get-url --push origin; git reflog -2 origin/master --pretty=format:%h | xargs printf '%s\n' | tac; } | xargs printf 'To %s\n   %s..%s  master -> master'" ""}}
+      '';
+    };
   };
 }
