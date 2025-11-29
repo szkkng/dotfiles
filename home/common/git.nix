@@ -8,7 +8,7 @@
     ];
     settings = {
       user = {
-        name = "szkkng";
+        name = "Kengo Suzuki";
         email = "hi@kengo.dev";
       };
       alias = {
