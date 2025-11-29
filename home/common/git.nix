@@ -33,6 +33,12 @@
       pull = {
         ff = "only";
       };
+      sendemail = {
+        smtpserver = "mail.privateemail.com";
+        smtpuser = "hi@kengo.dev";
+        smtpencryption = "ssl";
+        smtpserverport = 465;
+      };
     };
   };
 }
