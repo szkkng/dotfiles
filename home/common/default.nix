@@ -2,6 +2,7 @@
 {
   imports = [
     ./neovim
+    ./aerc.nix
     ./bat.nix
     ./catppuccin.nix
     ./delta.nix
