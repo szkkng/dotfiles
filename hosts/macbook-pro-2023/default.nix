@@ -44,6 +44,7 @@
       "cycling74-max"
       "deepl"
       "discord"
+      "fastmail"
       "font-jetbrains-mono"
       "font-jetbrains-mono-nerd-font"
       "karabiner-elements"
