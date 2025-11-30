@@ -9,7 +9,7 @@
     settings = {
       user = {
         name = "Kengo Suzuki";
-        email = "hi@kengo.dev";
+        email = "git@kengo.dev";
       };
       alias = {
         st = "status";
@@ -34,7 +34,7 @@
         ff = "only";
       };
       sendemail = {
-        smtpserver = "mail.privateemail.com";
+        smtpserver = "smtp.fastmail.com";
         smtpuser = "hi@kengo.dev";
         smtpencryption = "ssl";
         smtpserverport = 465;
