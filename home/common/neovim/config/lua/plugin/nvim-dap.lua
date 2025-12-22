@@ -2,10 +2,10 @@ return {
   "mfussenegger/nvim-dap",
   dependencies = {
     {
-      "rcarriga/nvim-dap-ui",
-      dependencies = {
-        "nvim-neotest/nvim-nio",
-      },
+      "igorlfs/nvim-dap-view",
+      ---@module 'dap-view'
+      ---@type dapview.Config
+      opts = {},
     },
     {
       "theHamsta/nvim-dap-virtual-text",
@@ -85,19 +85,18 @@ return {
     sign("DapBreakpointCondition", { text = "●", texthl = "DapBreakpointCondition", linehl = "", numhl = "" })
     sign("DapLogPoint", { text = "◆", texthl = "DapLogPoint", linehl = "", numhl = "" })
 
-    local dapui = require("dapui")
-    dapui.setup()
-    dap.listeners.before.attach.dapui_config = function()
-      dapui.open()
+    local dapview = require("dap-view")
+    dap.listeners.before.attach.dapview_config = function()
+      dapview.open()
     end
-    dap.listeners.before.launch.dapui_config = function()
-      dapui.open()
+    dap.listeners.before.launch.dapview_config = function()
+      dapview.open()
     end
-    dap.listeners.before.event_terminated.dapui_config = function()
-      dapui.close()
+    dap.listeners.before.event_terminated.dapview_config = function()
+      dapview.close()
     end
-    dap.listeners.before.event_exited.dapui_config = function()
-      dapui.close()
+    dap.listeners.before.event_exited.dapview_config = function()
+      dapview.close()
     end
   end,
 }
