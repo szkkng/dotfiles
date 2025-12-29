@@ -41,8 +41,6 @@
       "ableton-live-suite"
       "brave-browser"
       "chatgpt"
-      "cycling74-max"
-      "deepl"
       "discord"
       "fastmail"
       "font-jetbrains-mono"
@@ -55,7 +53,6 @@
       "spotify"
     ];
     masApps = {
-      "Amazon Kindle" = 302584613;
       "LINE" = 539883307;
       "Logic Pro" = 634148309;
       "Magnet" = 441258766;
