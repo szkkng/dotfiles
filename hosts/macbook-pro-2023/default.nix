@@ -41,6 +41,7 @@
       "ableton-live-suite"
       "brave-browser"
       "chatgpt"
+      "cycling74-max"
       "discord"
       "fastmail"
       "font-jetbrains-mono"
