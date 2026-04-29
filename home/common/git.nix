@@ -6,6 +6,7 @@
       ".direnv"
       ".envrc"
     ];
+    signing.format = null;
     settings = {
       user = {
         name = "Kengo Suzuki";

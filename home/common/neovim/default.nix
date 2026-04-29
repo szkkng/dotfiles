@@ -2,6 +2,7 @@
   config,
   pkgs,
   inputs,
+  lib,
   ...
 }:
 {
@@ -12,6 +13,8 @@
     vimAlias = true;
     package = inputs.neovim-nightly-overlay.packages.${pkgs.stdenv.hostPlatform.system}.default;
     withNodeJs = true;
+    withRuby = false;
+    withPython3 = false;
     extraPackages = with pkgs; [
       gcc
       cmake
@@ -27,6 +30,6 @@
       source = config.lib.file.mkOutOfStoreSymlink "${config.home.homeDirectory}/dotfiles/home/common/neovim/config";
       recursive = true;
     };
-    "nvim/init.lua".enable = false;
+    "nvim/init.lua".enable = lib.mkForce false;
   };
 }
