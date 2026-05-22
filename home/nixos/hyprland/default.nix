@@ -1,4 +1,4 @@
-{ ... }:
+{ config, ... }:
 {
   imports = [
     ./hyprpaper.nix
@@ -6,7 +6,8 @@
 
   wayland.windowManager.hyprland = {
     enable = true;
-    xwayland.enable = true;
+    configType = "hyprlang";
+    systemd.enable = false;
     settings = {
       xwayland.force_zero_scaling = true;
       env = [

@@ -71,23 +71,20 @@
     };
   };
 
-  programs.hyprland.enable = true;
+  programs.hyprland = {
+    enable = true;
+    withUWSM = true;
+    xwayland.enable = true;
+  };
+
+  environment.loginShellInit = ''
+    if uwsm check may-start; then
+      exec uwsm start hyprland.desktop
+    fi
+  '';
 
   environment.sessionVariables = {
     NIXOS_OZONE_WL = "1";
-  };
-
-  services.greetd = {
-    enable = true;
-    settings = {
-      default_session = {
-        command = "${pkgs.greetd}/bin/agreety --cmd Hyprland";
-      };
-      initial_session = {
-        command = "Hyprland";
-        user = "kengo";
-      };
-    };
   };
 
   # Enable CUPS to print documents.
