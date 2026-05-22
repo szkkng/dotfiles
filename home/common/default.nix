@@ -25,5 +25,6 @@
   home.packages = with pkgs; [
     nixd
     nixfmt
+    fastmail-desktop
   ];
 }
