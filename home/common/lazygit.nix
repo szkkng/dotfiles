@@ -4,10 +4,12 @@
     enable = true;
     settings = {
       git = {
-        paging = {
-          colorArg = "always";
-          pager = "delta --dark --paging=never";
-        };
+        pagers = [
+          {
+            pager = "delta --dark --paging=never";
+            colorArg = "always";
+          }
+        ];
       };
       gui = {
         nerdFontsVersion = "3";
