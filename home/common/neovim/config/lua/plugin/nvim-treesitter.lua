@@ -1,8 +1,8 @@
 return {
   "nvim-treesitter/nvim-treesitter",
   build = ":TSUpdate",
-  opts = {
-    ensure_installed = {
+  config = function()
+    local parsers = {
       "bash",
       "cpp",
       "cmake",
@@ -18,10 +18,15 @@ return {
       "tsx",
       "nix",
       "zig",
-    },
-    highlight = { enable = true },
-  },
-  config = function(_, opts)
-    require("nvim-treesitter.configs").setup(opts)
+    }
+
+    require("nvim-treesitter").install(parsers)
+
+    vim.api.nvim_create_autocmd("FileType", {
+      pattern = "*",
+      callback = function()
+        pcall(vim.treesitter.start)
+      end,
+    })
   end,
 }

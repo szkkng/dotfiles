@@ -19,6 +19,7 @@
       gcc
       cmake
       gnumake
+      tree-sitter
       lua-language-server
       copilot-language-server
       stylua
