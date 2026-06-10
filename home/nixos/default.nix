@@ -7,7 +7,6 @@
     ./foot.nix
     ./gtk.nix
     ./rofi.nix
-    ./waybar.nix
     ./xdg.nix
   ];
 
