@@ -4,6 +4,8 @@
     ./hyprpaper.nix
   ];
 
+  catppuccin.hyprland.enable = false;
+
   wayland.windowManager.hyprland = {
     enable = true;
     configType = "hyprlang";
