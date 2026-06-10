@@ -10,7 +10,12 @@
       enable = true;
       settings = {
         preload = [ wallpaper ];
-        wallpaper = [ ",${wallpaper}" ];
+        wallpaper = [
+          {
+            monitor = "";
+            path = wallpaper;
+          }
+        ];
       };
     };
 }
