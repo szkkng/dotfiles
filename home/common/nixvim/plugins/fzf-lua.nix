@@ -11,6 +11,9 @@
       "<leader>/" = "lgrep_curbuf";
     };
     settings = {
+      winopts = {
+        backdrop = 100;
+      };
       files = {
         prompt = " ";
         cwd_prompt = false;
