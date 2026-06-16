@@ -1,7 +1,7 @@
 { pkgs, ... }:
 {
   imports = [
-    ./neovim
+    ./nixvim
     ./aerc.nix
     ./bat.nix
     ./catppuccin.nix
