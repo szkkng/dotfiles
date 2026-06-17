@@ -17,6 +17,7 @@
       neocmake.enable = true;
       just.enable = true;
       zls.enable = true;
+      hls.enable = true;
     };
     onAttach = # lua
       ''

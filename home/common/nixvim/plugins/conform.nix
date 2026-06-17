@@ -15,6 +15,7 @@
         markdown = [ "prettierd" ];
         nix = [ "nixfmt" ];
         zig = [ "zigfmt" ];
+        haskell = [ "fourmolu" ];
       };
       format_on_save = {
         timeout_ms = 500;
