@@ -5,7 +5,7 @@
     keymaps = {
       "<leader>fr" = "resume";
       "<leader>ff" = "files";
-      "<leader>fb" = "buffers";
+      "<leader>b" = "buffers";
       "<leader>fg" = "live_grep";
       "<leader>fh" = "help_tags";
       "<leader>/" = "lgrep_curbuf";
