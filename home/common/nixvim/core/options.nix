@@ -19,7 +19,6 @@
     scrolloff = 4;
     shiftround = true;
     shiftwidth = 2;
-    showcmd = false;
     shortmess = "ltToOCF" + "WIcCS";
     showmode = false;
     signcolumn = "yes";
