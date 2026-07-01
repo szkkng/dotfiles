@@ -2,9 +2,9 @@
 {
   imports = [
     ./nixvim
+    ./yazi
     ./aerc.nix
     ./bat.nix
-    ./catppuccin.nix
     ./delta.nix
     ./eza.nix
     ./fd.nix
@@ -13,9 +13,7 @@
     ./git.nix
     ./lazygit.nix
     ./ripgrep.nix
-    ./starship.nix
     ./tmux.nix
-    ./yazi.nix
     ./zoxide.nix
     ./fish.nix
     ./direnv.nix

@@ -4,7 +4,6 @@
     ./hardware-configuration.nix
     ./home-manager.nix
     ./musnix.nix
-    ./catppuccin.nix
   ];
 
   boot = {

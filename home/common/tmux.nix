@@ -22,7 +22,7 @@
       bind c new-window -c "#{pane_current_path}"
       bind | split-window -h -c '#{pane_current_path}'
       bind - split-window -c '#{pane_current_path}'
-      bind K  "kill-window"
+      bind K kill-window
 
       bind -n S-Up resize-pane -U 2
       bind -n S-Down resize-pane -D 2
@@ -36,12 +36,19 @@
 
       # bind g display-popup -d "#{pane_current_path}" -w 90% -h 90% -E "lazygit"
 
+      # Kanagawa Paper Ink
+      # https://github.com/thesimonho/kanagawa-paper.nvim/blob/ecf19801a2673054c19421d82b766f7641688320/palette_colors.md
       set -g status-style ""
       set -g status-left "#S"
       set -g status-right ""
       set -g status-justify absolute-centre
-      set -g window-status-format "#[fg=#{@thm_bg},bg=#{@thm_overlay_0},nobold,nounderscore,noitalics] #I #[fg=#{@thm_surface_2},bg=#{@thm_bg},nobold,nounderscore,noitalics] #W "
-      set -g window-status-current-format "#[fg=#{@thm_bg},bg=#{@thm_lavender},nobold,nounderscore,noitalics] #I #[fg=#{@thm_fg},bg=#{@thm_bg},nobold,nounderscore,noitalics] #W "
+
+      set -g window-status-format "#[fg=#1f1f28,bg=#363646,nobold,nounderscore,noitalics] #I #[fg=#9e9b93,bg=#1f1f28,nobold,nounderscore,noitalics] #W "
+      set -g window-status-current-format "#[fg=#1f1f28,bg=#c4b28a,nobold,nounderscore,noitalics] #I #[fg=#dcd7ba,bg=#1f1f28,nobold,nounderscore,noitalics] #W "
+
+      set -g message-style "fg=#dcd7ba,bg=#1f1f28"
+      set -g message-command-style "fg=#dcd7ba,bg=#1f1f28"
+      set -g mode-style "fg=#c4b28a,bg=#363646"
     '';
   };
 }
