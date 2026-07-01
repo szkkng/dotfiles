@@ -5,6 +5,10 @@
       clangd = {
         enable = true;
         packageFallback = true;
+        config.cmd = [
+          "clangd"
+          "--header-insertion=never"
+        ];
       };
       nixd.enable = true;
       lua_ls.enable = true;
