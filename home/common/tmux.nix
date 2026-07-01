@@ -34,7 +34,7 @@
       bind k select-pane -U
       bind l select-pane -R
 
-      bind g display-popup -d "#{pane_current_path}" -w 90% -h 90% -E "lazygit"
+      # bind g display-popup -d "#{pane_current_path}" -w 90% -h 90% -E "lazygit"
 
       set -g status-style ""
       set -g status-left "#S"

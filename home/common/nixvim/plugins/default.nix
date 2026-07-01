@@ -18,5 +18,6 @@
     ./fzf-lua.nix
     ./treesitter-textobjects.nix
     ./zen-mode.nix
+    ./lazygit.nix
   ];
 }
