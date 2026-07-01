@@ -4,8 +4,6 @@
     ./nixvim
     ./yazi
     ./aerc.nix
-    ./bat.nix
-    ./delta.nix
     ./eza.nix
     ./fd.nix
     ./fzf.nix
@@ -17,7 +15,6 @@
     ./zoxide.nix
     ./fish.nix
     ./direnv.nix
-    ./zed.nix
   ];
 
   home.packages = with pkgs; [
