@@ -169,7 +169,13 @@
     git
     wget
     vim
+    man-pages
+    man-pages-posix
   ];
+
+  documentation = {
+    enable = true;
+  };
 
   # Enable the OpenSSH daemon.
   services.openssh.enable = true;
