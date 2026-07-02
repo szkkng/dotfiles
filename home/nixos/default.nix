@@ -3,7 +3,6 @@
   imports = [
     ./../common
     ./hyprland
-    ./cursor.nix
     ./foot.nix
     ./gtk.nix
     ./rofi.nix
