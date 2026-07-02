@@ -42,7 +42,7 @@
         "$mod, q, killactive"
         "$mod, f, togglefloating"
         "$mod SHIFT, f, fullscreen"
-        "$mod, RETURN, exec, foot"
+        "$mod, RETURN, exec, wezterm"
 
         "$mod, h, movefocus, l"
         "$mod, l, movefocus, r"

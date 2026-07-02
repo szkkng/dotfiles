@@ -15,6 +15,7 @@
     ./zoxide.nix
     ./fish.nix
     ./direnv.nix
+    ./wezterm.nix
   ];
 
   home.packages = with pkgs; [
