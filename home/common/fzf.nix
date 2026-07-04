@@ -10,7 +10,7 @@
       "--color=header:#b6927b,info:#658594,pointer:#7AA89F"
       "--color=marker:#7AA89F,prompt:#c4746e,spinner:#8ea49e"
     ];
-    fileWidgetOptions = [
+    fileWidget.options = [
       "--walker-skip .git,node_modules,target"
       "--preview 'bat -n --color=always {}'"
     ];
