@@ -16,6 +16,7 @@
     ./fish.nix
     ./direnv.nix
     ./wezterm.nix
+    ./radicle.nix
   ];
 
   home.packages = with pkgs; [
