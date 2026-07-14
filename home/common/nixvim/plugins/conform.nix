@@ -16,6 +16,7 @@
         nix = [ "nixfmt" ];
         zig = [ "zigfmt" ];
         haskell = [ "fourmolu" ];
+        rust = [ "rustfmt" ];
       };
       format_on_save = {
         timeout_ms = 500;

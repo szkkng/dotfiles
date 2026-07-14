@@ -22,6 +22,7 @@
       just.enable = true;
       zls.enable = true;
       hls.enable = true;
+      rust_analyzer.enable = true;
     };
     onAttach = # lua
       ''

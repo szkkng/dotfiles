@@ -23,6 +23,7 @@
       xml
       yaml
       zig
+      rust
     ];
     settings = {
       highlight = {
