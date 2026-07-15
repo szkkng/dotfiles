@@ -20,7 +20,10 @@
       jsonls.enable = true;
       neocmake.enable = true;
       just.enable = true;
-      zls.enable = true;
+      zls = {
+        enable = true;
+        packageFallback = true;
+      };
       hls.enable = true;
       rust_analyzer.enable = true;
     };
