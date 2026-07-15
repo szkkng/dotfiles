@@ -39,6 +39,7 @@
     casks = [
       "1password"
       "ableton-live-suite"
+      "bitwig-studio"
       "brave-browser"
       "chatgpt"
       "cycling74-max"
